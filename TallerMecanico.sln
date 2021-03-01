@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controlador", "Controlador", "{D3101486-1FA7-4FAC-8F7A-4DE8555C2F4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modelo", "Modelo", "{A927F48D-13D7-47B2-82C4-66993B572961}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vista", "Vista", "{715C3976-6A7E-41AF-B3A8-DF41454C8AC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallerMecanico", "TallerMecanico\TallerMecanico.csproj", "{CE017491-8E33-4CEF-8DA5-439F305F5179}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallerMecanico.Entidades", "TallerMecanico.Entidades\TallerMecanico.Entidades.csproj", "{57A8A076-F4F7-46FA-9452-E527C04A2DB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallerMecanico.Datos", "TallerMecanico.Datos\TallerMecanico.Datos.csproj", "{92C2D927-4706-47BF-8339-6EBEAACF18FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallerMecanico.Negocios", "TallerMecanico.Negocios\TallerMecanico.Negocios.csproj", "{8DB814B4-DF18-402E-B49D-3FCDE2691879}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE017491-8E33-4CEF-8DA5-439F305F5179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE017491-8E33-4CEF-8DA5-439F305F5179}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE017491-8E33-4CEF-8DA5-439F305F5179}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE017491-8E33-4CEF-8DA5-439F305F5179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57A8A076-F4F7-46FA-9452-E527C04A2DB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A8A076-F4F7-46FA-9452-E527C04A2DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A8A076-F4F7-46FA-9452-E527C04A2DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A8A076-F4F7-46FA-9452-E527C04A2DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92C2D927-4706-47BF-8339-6EBEAACF18FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C2D927-4706-47BF-8339-6EBEAACF18FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92C2D927-4706-47BF-8339-6EBEAACF18FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92C2D927-4706-47BF-8339-6EBEAACF18FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB814B4-DF18-402E-B49D-3FCDE2691879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB814B4-DF18-402E-B49D-3FCDE2691879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB814B4-DF18-402E-B49D-3FCDE2691879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB814B4-DF18-402E-B49D-3FCDE2691879}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CE017491-8E33-4CEF-8DA5-439F305F5179} = {715C3976-6A7E-41AF-B3A8-DF41454C8AC5}
+		{57A8A076-F4F7-46FA-9452-E527C04A2DB1} = {A927F48D-13D7-47B2-82C4-66993B572961}
+		{92C2D927-4706-47BF-8339-6EBEAACF18FD} = {A927F48D-13D7-47B2-82C4-66993B572961}
+		{8DB814B4-DF18-402E-B49D-3FCDE2691879} = {D3101486-1FA7-4FAC-8F7A-4DE8555C2F4A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5377C899-2138-4121-B4F7-70F6DFB5CE6F}
+	EndGlobalSection
+EndGlobal

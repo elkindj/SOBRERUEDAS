@@ -1,0 +1,31 @@
+C:\visual\TallerMecanico\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.csprojAssemblyReference.cache
+C:\visual\TallerMecanico\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.Properties.Resources.resources
+C:\visual\TallerMecanico\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.csproj.GenerateResource.cache
+C:\visual\TallerMecanico\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.csproj.CoreCompileInputs.cache
+C:\visual\TallerMecanico\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Negocios.exe.config
+C:\visual\TallerMecanico\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Negocios.exe
+C:\visual\TallerMecanico\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Negocios.pdb
+C:\visual\TallerMecanico\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Datos.exe
+C:\visual\TallerMecanico\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Entidades.dll
+C:\visual\TallerMecanico\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Datos.pdb
+C:\visual\TallerMecanico\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Datos.exe.config
+C:\visual\TallerMecanico\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Entidades.pdb
+C:\visual\TallerMecanico\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.csproj.CopyComplete
+C:\visual\TallerMecanico\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.exe
+C:\visual\TallerMecanico\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.pdb
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Negocios.exe.config
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Negocios.exe
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Negocios.pdb
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Datos.exe
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Entidades.dll
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Datos.pdb
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Datos.exe.config
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\bin\Debug\TallerMecanico.Entidades.pdb
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.csprojAssemblyReference.cache
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.Form1.resources
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.Properties.Resources.resources
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.csproj.GenerateResource.cache
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.csproj.CoreCompileInputs.cache
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.csproj.CopyComplete
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.exe
+D:\Project\Sobre ruedas\TallerMecanico.Negocios\obj\Debug\TallerMecanico.Negocios.pdb
