@@ -22,22 +22,5 @@ C:\visual\TallerMecanico\TallerMecanico\bin\Debug\TallerMecanico.Datos.exe.confi
 C:\visual\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.csproj.CopyComplete
 C:\visual\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.exe
 C:\visual\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.pdb
-D:\Project\Sobre ruedas\TallerMecanico\bin\Debug\TallerMecanico.exe.config
-D:\Project\Sobre ruedas\TallerMecanico\bin\Debug\TallerMecanico.exe
-D:\Project\Sobre ruedas\TallerMecanico\bin\Debug\TallerMecanico.pdb
-D:\Project\Sobre ruedas\TallerMecanico\bin\Debug\TallerMecanico.Entidades.dll
-D:\Project\Sobre ruedas\TallerMecanico\bin\Debug\TallerMecanico.Negocios.exe
-D:\Project\Sobre ruedas\TallerMecanico\bin\Debug\TallerMecanico.Datos.exe
-D:\Project\Sobre ruedas\TallerMecanico\bin\Debug\TallerMecanico.Entidades.pdb
-D:\Project\Sobre ruedas\TallerMecanico\bin\Debug\TallerMecanico.Negocios.pdb
-D:\Project\Sobre ruedas\TallerMecanico\bin\Debug\TallerMecanico.Negocios.exe.config
-D:\Project\Sobre ruedas\TallerMecanico\bin\Debug\TallerMecanico.Datos.pdb
-D:\Project\Sobre ruedas\TallerMecanico\bin\Debug\TallerMecanico.Datos.exe.config
-D:\Project\Sobre ruedas\TallerMecanico\obj\Debug\TallerMecanico.csprojAssemblyReference.cache
-D:\Project\Sobre ruedas\TallerMecanico\obj\Debug\TallerMecanico.FrmCategoria.resources
-D:\Project\Sobre ruedas\TallerMecanico\obj\Debug\TallerMecanico.Properties.Resources.resources
-D:\Project\Sobre ruedas\TallerMecanico\obj\Debug\TallerMecanico.csproj.GenerateResource.cache
-D:\Project\Sobre ruedas\TallerMecanico\obj\Debug\TallerMecanico.csproj.CoreCompileInputs.cache
-D:\Project\Sobre ruedas\TallerMecanico\obj\Debug\TallerMecanico.csproj.CopyComplete
-D:\Project\Sobre ruedas\TallerMecanico\obj\Debug\TallerMecanico.exe
-D:\Project\Sobre ruedas\TallerMecanico\obj\Debug\TallerMecanico.pdb
+C:\visual\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.MenuIni.resources
+C:\visual\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.FrmIngreso.resources

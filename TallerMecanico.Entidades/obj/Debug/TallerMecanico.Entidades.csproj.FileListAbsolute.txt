@@ -10,9 +10,3 @@ C:\visual\TallerMecanico\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entid
 C:\visual\TallerMecanico\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csproj.CoreCompileInputs.cache
 C:\visual\TallerMecanico\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.dll
 C:\visual\TallerMecanico\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.pdb
-D:\Project\Sobre ruedas\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.dll
-D:\Project\Sobre ruedas\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.pdb
-D:\Project\Sobre ruedas\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csprojAssemblyReference.cache
-D:\Project\Sobre ruedas\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csproj.CoreCompileInputs.cache
-D:\Project\Sobre ruedas\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.dll
-D:\Project\Sobre ruedas\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.pdb

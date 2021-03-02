@@ -12,17 +12,3 @@ C:\visual\TallerMecanico\TallerMecanico.Datos\bin\Debug\System.Data.SqlClient.xm
 C:\visual\TallerMecanico\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CopyComplete
 C:\visual\TallerMecanico\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.exe
 C:\visual\TallerMecanico\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.pdb
-D:\Project\Sobre ruedas\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.exe.config
-D:\Project\Sobre ruedas\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.exe
-D:\Project\Sobre ruedas\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.pdb
-D:\Project\Sobre ruedas\TallerMecanico.Datos\bin\Debug\System.Data.SqlClient.dll
-D:\Project\Sobre ruedas\TallerMecanico.Datos\bin\Debug\TallerMecanico.Entidades.dll
-D:\Project\Sobre ruedas\TallerMecanico.Datos\bin\Debug\TallerMecanico.Entidades.pdb
-D:\Project\Sobre ruedas\TallerMecanico.Datos\bin\Debug\System.Data.SqlClient.xml
-D:\Project\Sobre ruedas\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csprojAssemblyReference.cache
-D:\Project\Sobre ruedas\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.Properties.Resources.resources
-D:\Project\Sobre ruedas\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.GenerateResource.cache
-D:\Project\Sobre ruedas\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CoreCompileInputs.cache
-D:\Project\Sobre ruedas\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CopyComplete
-D:\Project\Sobre ruedas\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.exe
-D:\Project\Sobre ruedas\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.pdb
