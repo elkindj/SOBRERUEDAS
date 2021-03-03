@@ -27,6 +27,26 @@ namespace TallerMecanico.Datos
             set { _cadenaConexion = value; }
         }
 
+        public List<Parametros> Listado()
+        {
+            List<Parametros> lista = new List<Parametros>();
+            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            {
+                con.Open(); SqlCommand cmd = new SqlCommand("ListarModelo", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        Parametros c = new Parametros((int)dr["Id"],(string)dr["Nombre"]);
+                        lista.Add(c);
+                    }
+                }
+            }
+            return lista;
+        }
+
         //metodo para traer la lista de todas las categorías de la tabla
         public List<Productos> Listar()
         {

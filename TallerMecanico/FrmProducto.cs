@@ -15,6 +15,7 @@ namespace TallerMecanico
     public partial class FrmProducto : Form
     {
         List<Productos> lista = null;
+        List<Parametros> autocomplete = null;
         BLProducto bLProducto = new BLProducto();
         Productos c;
         bool _nuevo = false;
@@ -51,17 +52,8 @@ namespace TallerMecanico
 
         private void CargarDatos()
         {
-            var Valores = new List<Valor>();
-            Valores.Add(new Valor() { Index = "carro", Value = "1" });
-            Valores.Add(new Valor() { Index = "EM", Value = "Empresa" });
-            Valores.Add(new Valor() { Index = "XA", Value = "Externo" });
-            comboBox1.DataSource = Valores;
-            comboBox1.DisplayMember ="Value";
-            comboBox1.ValueMember = "Index";
-
             if (lista == null)
             {
-
                 lista = bLProducto.Listar();
             }
             if (lista.Count > 0)
@@ -69,7 +61,19 @@ namespace TallerMecanico
                 dataGridView1.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    dataGridView1.Rows.Add(lista[i].Id, lista[i].Codigo, lista[i].Modelo, lista[i].Nombre,lista[i].Detalles,lista[i].Precio);
+                    dataGridView1.Rows.Add(lista[i].Id, lista[i].Codigo, lista[i].Modelo, lista[i].Nombre, lista[i].Detalles, lista[i].Precio);
+                }
+            }
+            if (autocomplete == null)
+            {
+                autocomplete = bLProducto.Listado();
+            }
+            if (autocomplete.Count > 0)
+            {
+                comboBox1.Items.Clear();
+                for (int i = 0; i < autocomplete.Count; i++)
+                {
+                    comboBox1.Items.Add(autocomplete[i].Nombre.ToString());
                 }
             }
         }
@@ -110,7 +114,7 @@ namespace TallerMecanico
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
@@ -118,13 +122,12 @@ namespace TallerMecanico
             int n = -1;
             if (_nuevo)
             {
-                c = new Productos(0, txtCodigo.Text, 1, txtProducto.Text, txtDetalle.Text, txtPrecio.DecimalPlaces);
+                c = new Productos(0, txtCodigo.Text, 1, txtProducto.Text, txtDetalle.Text, 67);
                 n = bLProducto.Insertar(c);
             }
             else
             {
                 c.Codigo = txtCodigo.Text;
-                //c.Modelo = txtModelo.DecimalPlaces;
                 c.Nombre = txtProducto.Text;
                 c.Detalles = txtDetalle.Text;
                 c.Precio = txtPrecio.DecimalPlaces;
@@ -199,10 +202,15 @@ namespace TallerMecanico
         {
 
         }
-        public class Valor
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            public string Value { get; set; }
-            public string Index { get; set; }
+
+        }
+
+        private void FrmProducto_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }

@@ -44,6 +44,7 @@ namespace TallerMecanico
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtPrecio = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@ namespace TallerMecanico
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).BeginInit();
@@ -69,7 +69,7 @@ namespace TallerMecanico
             this.PdcNombreProducto,
             this.PdcDetalles,
             this.PdcPrecio});
-            this.dataGridView1.Location = new System.Drawing.Point(59, 245);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 265);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(547, 184);
             this.dataGridView1.TabIndex = 0;
@@ -118,15 +118,17 @@ namespace TallerMecanico
             // 
             this.txtProducto.Location = new System.Drawing.Point(79, 85);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(117, 20);
+            this.txtProducto.Size = new System.Drawing.Size(252, 20);
             this.txtProducto.TabIndex = 3;
             this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
             // 
             // txtDetalle
             // 
-            this.txtDetalle.Location = new System.Drawing.Point(79, 122);
+            this.txtDetalle.Location = new System.Drawing.Point(79, 121);
+            this.txtDetalle.MaximumSize = new System.Drawing.Size(0, 100);
+            this.txtDetalle.MinimumSize = new System.Drawing.Size(106, 50);
             this.txtDetalle.Name = "txtDetalle";
-            this.txtDetalle.Size = new System.Drawing.Size(212, 20);
+            this.txtDetalle.Size = new System.Drawing.Size(252, 50);
             this.txtDetalle.TabIndex = 4;
             this.txtDetalle.TextChanged += new System.EventHandler(this.txtDetalle_TextChanged);
             // 
@@ -185,16 +187,27 @@ namespace TallerMecanico
             this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.txtProducto);
             this.groupBox1.Controls.Add(this.txtDetalle);
-            this.groupBox1.Location = new System.Drawing.Point(68, 35);
+            this.groupBox1.Location = new System.Drawing.Point(14, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(351, 187);
+            this.groupBox1.Size = new System.Drawing.Size(360, 228);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(79, 51);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(187, 21);
+            this.comboBox1.TabIndex = 13;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(79, 153);
+            this.txtPrecio.Location = new System.Drawing.Point(79, 180);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(120, 20);
             this.txtPrecio.TabIndex = 12;
@@ -204,7 +217,7 @@ namespace TallerMecanico
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 153);
+            this.label5.Location = new System.Drawing.Point(3, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 16);
             this.label5.TabIndex = 10;
@@ -263,9 +276,9 @@ namespace TallerMecanico
             this.groupBox2.Controls.Add(this.btnGrabar);
             this.groupBox2.Controls.Add(this.btnEditar);
             this.groupBox2.Controls.Add(this.btnNuevo);
-            this.groupBox2.Location = new System.Drawing.Point(422, 35);
+            this.groupBox2.Location = new System.Drawing.Point(377, 22);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(184, 187);
+            this.groupBox2.Size = new System.Drawing.Size(184, 228);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
@@ -273,7 +286,7 @@ namespace TallerMecanico
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(24, 153);
+            this.btnSalir.Location = new System.Drawing.Point(24, 189);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(143, 23);
             this.btnSalir.TabIndex = 12;
@@ -281,20 +294,12 @@ namespace TallerMecanico
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(79, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 13;
-            // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(678, 450);
+            this.ClientSize = new System.Drawing.Size(575, 461);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -302,7 +307,8 @@ namespace TallerMecanico
             this.MinimizeBox = false;
             this.Name = "FrmProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FrmProducto";
+            this.Text = "PRODUCTO";
+            this.Load += new System.EventHandler(this.FrmProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
