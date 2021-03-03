@@ -21,7 +21,6 @@ namespace TallerMecanico
 
         private void btnIngreso_Click(object sender, EventArgs e)
         {
-          bool usu, Clave, msj;
         }
 
         private void txtPass_TextChanged(object sender, EventArgs e)
