@@ -230,7 +230,6 @@ namespace TallerMecanico
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCategoria";
-            this.Text = "FrmCategoria";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             this.gbControl.ResumeLayout(false);
