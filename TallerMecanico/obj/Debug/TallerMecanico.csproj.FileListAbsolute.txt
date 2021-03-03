@@ -46,3 +46,4 @@ D:\Project\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.pdb
 D:\Project\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmLogin.resources
 D:\Project\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmPrincipal.resources
 D:\Project\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmUsuario.resources
+D:\Project\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmProducto.resources
