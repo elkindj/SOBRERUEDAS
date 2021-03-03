@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace TallerMecanico
 {
-    public partial class MenuIni : Form
+    public partial class FrmUsuario : Form
     {
-        public MenuIni()
+        public FrmUsuario()
         {
             InitializeComponent();
         }
 
-        private void MenuIni_Load(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

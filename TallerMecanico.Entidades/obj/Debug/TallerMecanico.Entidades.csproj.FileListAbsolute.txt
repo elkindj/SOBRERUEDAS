@@ -10,9 +10,9 @@ C:\visual\TallerMecanico\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entid
 C:\visual\TallerMecanico\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csproj.CoreCompileInputs.cache
 C:\visual\TallerMecanico\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.dll
 C:\visual\TallerMecanico\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.pdb
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.dll
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.pdb
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csprojAssemblyReference.cache
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csproj.CoreCompileInputs.cache
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.dll
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.pdb
+D:\Project\SOBRERUEDAS\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.dll
+D:\Project\SOBRERUEDAS\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.pdb
+D:\Project\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csprojAssemblyReference.cache
+D:\Project\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csproj.CoreCompileInputs.cache
+D:\Project\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.dll
+D:\Project\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.pdb
