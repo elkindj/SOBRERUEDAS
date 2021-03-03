@@ -58,17 +58,7 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="FrmPrincipal.cs">
-=======
-    <Compile Include="FrmProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmProducto.Designer.cs">
-      <DependentUpon>FrmProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MenuIni.cs">
->>>>>>> 1896ee0effb3fd4dfffd3b8d3cddeae96943846f
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPrincipal.Designer.cs">
@@ -91,16 +81,8 @@
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="FrmProducto.resx">
-      <DependentUpon>FrmProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuIni.resx">
-      <DependentUpon>MenuIni.cs</DependentUpon>
->>>>>>> 1896ee0effb3fd4dfffd3b8d3cddeae96943846f
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

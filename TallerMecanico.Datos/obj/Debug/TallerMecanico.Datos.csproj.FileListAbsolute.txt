@@ -12,7 +12,6 @@ C:\visual\TallerMecanico\TallerMecanico.Datos\bin\Debug\System.Data.SqlClient.xm
 C:\visual\TallerMecanico\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CopyComplete
 C:\visual\TallerMecanico\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.exe
 C:\visual\TallerMecanico\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.pdb
-<<<<<<< HEAD
 D:\Project\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.exe.config
 D:\Project\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.exe
 D:\Project\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.pdb
@@ -27,19 +26,3 @@ D:\Project\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.cspro
 D:\Project\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CopyComplete
 D:\Project\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.exe
 D:\Project\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.pdb
-=======
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.exe.config
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.exe
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.pdb
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\System.Data.SqlClient.dll
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Entidades.dll
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Entidades.pdb
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\System.Data.SqlClient.xml
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csprojAssemblyReference.cache
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.Properties.Resources.resources
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.GenerateResource.cache
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CoreCompileInputs.cache
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CopyComplete
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.exe
-C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.pdb
->>>>>>> 1896ee0effb3fd4dfffd3b8d3cddeae96943846f
