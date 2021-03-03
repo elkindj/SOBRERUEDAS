@@ -24,6 +24,7 @@ C:\visual\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.exe
 C:\visual\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.pdb
 C:\visual\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.MenuIni.resources
 C:\visual\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.FrmIngreso.resources
+<<<<<<< HEAD
 D:\Project\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.exe.config
 D:\Project\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.exe
 D:\Project\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.pdb
@@ -46,3 +47,27 @@ D:\Project\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.pdb
 D:\Project\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmLogin.resources
 D:\Project\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmPrincipal.resources
 D:\Project\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmUsuario.resources
+=======
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.exe.config
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.exe
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.pdb
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.Entidades.dll
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.Negocios.exe
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.Datos.exe
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.Entidades.pdb
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.Negocios.pdb
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.Negocios.exe.config
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.Datos.pdb
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\bin\Debug\TallerMecanico.Datos.exe.config
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.csprojAssemblyReference.cache
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmCategoria.resources
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmIngreso.resources
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.MenuIni.resources
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.Properties.Resources.resources
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.csproj.GenerateResource.cache
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.csproj.CoreCompileInputs.cache
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.csproj.CopyComplete
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.exe
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.pdb
+C:\gitProyecto\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmProducto.resources
+>>>>>>> 1896ee0effb3fd4dfffd3b8d3cddeae96943846f

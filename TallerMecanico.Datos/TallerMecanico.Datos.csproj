@@ -51,7 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAOCategoria.cs" />
+<<<<<<< HEAD
     <Compile Include="DAOUsuario.cs" />
+=======
+    <Compile Include="DAOProductos.cs" />
+>>>>>>> 1896ee0effb3fd4dfffd3b8d3cddeae96943846f
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
