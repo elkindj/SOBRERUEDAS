@@ -105,18 +105,19 @@ namespace TallerMecanico
 
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e) { 
-         _nuevo = true;
-         ActivarControlDatos(gbDatos, true);
-         btnEditar.Text = "Cancelar";
-         ActivarButton(true);
-         LimpiarControl(gbDatos);
-         txtCodigo.Focus();
-        // textBox1.Focus();
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            _nuevo = true;
+            ActivarControlDatos(gbDatos, true);
+            btnEditar.Text = "Cancelar";
+            ActivarButton(true);
+            LimpiarControl(gbDatos);
+            txtCodigo.Focus();
+            // textBox1.Focus();
 
         }
 
-    private void btnGrabar_Click(object sender, EventArgs e)
+        private void btnGrabar_Click(object sender, EventArgs e)
         {
             int n = -1;
             if (_nuevo)
@@ -156,26 +157,26 @@ namespace TallerMecanico
         {
             _nuevo = false;
             if (btnEditar.Text == "Cancelar")
- {
-     LimpiarControl(gbDatos);
-     ActivarControlDatos(gbDatos, false);
-     ActivarButton(true);
-     dgvDatos.Enabled = true;
-     btnEditar.Text = "Editar";
-     }
-     else
-     {
-     if (dgvDatos.RowCount > 0)
-     {
-     c = blCategoria.CategoriaTraerPorId((int)dgvDatos[0, dgvDatos.
-     CurrentRow.Index].Value);
-     txtCodigo.Text = c.Codigo;
-     txtNombre.Text = c.Nombre;
-     txtObservacion.Text = c.Observacion;
-     ActivarControlDatos(gbDatos, true);
-     ActivarButton(false);
-     dgvDatos.Enabled = false;
-     btnEditar.Text = "Cancelar";
+            {
+                LimpiarControl(gbDatos);
+                ActivarControlDatos(gbDatos, false);
+                ActivarButton(true);
+                dgvDatos.Enabled = true;
+                btnEditar.Text = "Editar";
+            }
+            else
+            {
+                if (dgvDatos.RowCount > 0)
+                {
+                    c = blCategoria.CategoriaTraerPorId((int)dgvDatos[0, dgvDatos.
+                    CurrentRow.Index].Value);
+                    txtCodigo.Text = c.Codigo;
+                    txtNombre.Text = c.Nombre;
+                    txtObservacion.Text = c.Observacion;
+                    ActivarControlDatos(gbDatos, true);
+                    ActivarButton(false);
+                    dgvDatos.Enabled = false;
+                    btnEditar.Text = "Cancelar";
                 }
             }
         }

@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLCategoria.cs" />
+    <Compile Include="BLProducto.cs" />
     <Compile Include="program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BLUsuario.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
