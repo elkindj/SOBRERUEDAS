@@ -17,6 +17,7 @@ namespace TallerMecanico
         List<Categoria> lista = null;
         BLCategoria blCategoria = new BLCategoria();
         Categoria c;
+        int itemIndex;
         bool _nuevo = false;
 
         public FrmCategoria()
@@ -175,6 +176,7 @@ namespace TallerMecanico
                     txtObservacion.Text = c.Observacion;
                     ActivarControlDatos(gbDatos, true);
                     ActivarButton(false);
+                    btnGrabar.Enabled = true;
                     dgvDatos.Enabled = false;
                     btnEditar.Text = "Cancelar";
                 }
@@ -185,8 +187,8 @@ namespace TallerMecanico
         {
             if (dgvDatos.RowCount > 0)
             {
-                c = blCategoria.CategoriaTraerPorId((int)dgvDatos[0, dgvDatos.
-                CurrentRow.Index].Value);
+                itemIndex = (int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value;
+                c = blCategoria.CategoriaTraerPorId(itemIndex);
                 DialogResult rpta =
                 MessageBox.Show("Desea eliminar el registro", "Eliminar",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);

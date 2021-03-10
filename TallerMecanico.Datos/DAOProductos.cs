@@ -12,25 +12,11 @@ namespace TallerMecanico.Datos
 {
     public class DAOProductos
     {
-        string _cadenaConexion;
-        public string CadenaConexion
-        {
-            get
-            {
-                if (_cadenaConexion == null)
-                {
-                    _cadenaConexion = ConfigurationManager.
-                    ConnectionStrings["Conex"].ConnectionString;
-                }
-                return _cadenaConexion;
-            }
-            set { _cadenaConexion = value; }
-        }
-
+        DatabaseConexion databaseConexion = new DatabaseConexion();
         public List<Parametros> Listado()
         {
             List<Parametros> lista = new List<Parametros>();
-            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open(); SqlCommand cmd = new SqlCommand("ListarModelo", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -51,7 +37,7 @@ namespace TallerMecanico.Datos
         public List<Productos> Listar()
         {
             List<Productos> lista = new List<Productos>();
-            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open(); SqlCommand cmd = new SqlCommand("ListarProductos", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -71,17 +57,17 @@ namespace TallerMecanico.Datos
         public Productos TraerPorId(int Id)
         {
             Productos Productos = new Productos();
-            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open();
                 return Productos;
             }
         }
-        // metodo para actualizar una Productos puentual 
+        // metodo para actualizar una Productos puntual 
 
         public int Actualizar(Productos Productos)
         {
-            int n = -1; using (SqlConnection con = new SqlConnection(CadenaConexion))
+            int n = -1; using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("ActualizarProductos", con);
@@ -102,7 +88,7 @@ namespace TallerMecanico.Datos
         {
             int n = -1;
             Productos Productos = null;
-            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 SqlCommand cmd;
 
@@ -132,7 +118,7 @@ namespace TallerMecanico.Datos
         {
             int n = -1;
             using (SqlConnection con = new
-           SqlConnection(CadenaConexion))
+           SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("InsertarProductos", con);

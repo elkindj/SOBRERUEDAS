@@ -14,11 +14,11 @@ namespace TallerMecanico.Datos
     {
         //metodo para traer la lista de todas las categorías de la tabla
 
-        Conexion conexion = new Conexion();
+        DatabaseConexion databaseConexion = new DatabaseConexion();
         public List<Categoria> Listar()
         {
             List<Categoria> lista = new List<Categoria>();
-            using (SqlConnection con = new SqlConnection(conexion.CadenaConexion))
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open(); SqlCommand cmd = new SqlCommand("ListarCategorias", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -39,23 +39,35 @@ namespace TallerMecanico.Datos
         public Categoria TraerPorId(int Id)
         {
             Categoria Categoria = new Categoria();
-            using (SqlConnection con = new SqlConnection(conexion.CadenaConexion))
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open();
-                return Categoria;
+                SqlCommand cmd = new SqlCommand("TraerCategoriaPorId", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ID", Id);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    dr.Read();
+                    Categoria = new Categoria((int)dr["Id"],
+                        (string)dr["Codigo"], (string)dr["Nombre"],
+                        (string)dr["Observacion"]);
+                }
             }
+            return Categoria;
         }
 
         // metodo para actualizar una categoria puentual 
         public int Actualizar(Categoria categoria)
         {
-            int n = -1; using (SqlConnection con = new SqlConnection(conexion.CadenaConexion))
+            int n = -1; 
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("ActualizarCategoria", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id", categoria.Id);
-                cmd.Parameters.AddWithValue("@Codigo", categoria.Codigo);
+                cmd.Parameters.AddWithValue("@CODIGO", categoria.Codigo);
                 cmd.Parameters.AddWithValue("@Nombre", categoria.Nombre);
                 cmd.Parameters.AddWithValue("@Observacion", categoria.Observacion);
                 n = cmd.ExecuteNonQuery();
@@ -67,37 +79,22 @@ namespace TallerMecanico.Datos
         public int Eliminar(int Id)
         {
             int n = -1;
-            Categoria categoria = null;
-            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
-                SqlCommand cmd;
-
-                con.Open(); cmd = new SqlCommand("EliminarCategoria", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id", Id);
-                n = cmd.ExecuteNonQuery();
-                cmd = new SqlCommand("TraerCategoriaPorId", con);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("EliminarCategoria", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ID", Id);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr != null && dr.HasRows)
-                {
-                    dr.Read();
-                    categoria = new Categoria(
-                    (int)dr["Id"],
-                    (string)dr["Codigo"],
-                    (string)dr["Nombre"],
-                    (string)dr["Observacion"]);
-                }
+                n = cmd.ExecuteNonQuery();
             }
-            return categoria.Id;
+            return n;
         }
 
         public int Insertar(Categoria Categoria)
         {
             int n = -1;
             using (SqlConnection con = new
-           SqlConnection(conexion.CadenaConexion))
+           SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("InsertarCategoria", con);
