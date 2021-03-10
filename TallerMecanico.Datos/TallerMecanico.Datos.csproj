@@ -53,6 +53,7 @@
     <Compile Include="DAOCategoria.cs" />
     <Compile Include="DAOProductos.cs" />
     <Compile Include="DAOUsuario.cs" />
+    <Compile Include="DatabaseConexion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
