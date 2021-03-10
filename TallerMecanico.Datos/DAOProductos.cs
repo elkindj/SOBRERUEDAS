@@ -74,9 +74,26 @@ namespace TallerMecanico.Datos
             using (SqlConnection con = new SqlConnection(CadenaConexion))
             {
                 con.Open();
-                return Productos;
+                SqlCommand cmd = new
+    SqlCommand("TraerProductosPorId", con);
+                cmd.CommandType =
+               CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ID", Id);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    dr.Read();
+                    Productos = new Productos(
+                   (int)dr["Id"],
+                   (string)dr["Codigo"],
+                   (int)dr["Modelo"],
+                   (string)dr["Nombre"],
+                   (string)dr["Detalles"],
+                   (int)dr["Precio"]);
+                }
             }
-        }
+            return Productos;
+    }
         // metodo para actualizar una Productos puentual 
 
         public int Actualizar(Productos Productos)
@@ -108,9 +125,8 @@ namespace TallerMecanico.Datos
 
                 con.Open(); cmd = new SqlCommand("EliminarProductos", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id", Id);
-                n = cmd.ExecuteNonQuery();
-                cmd = new SqlCommand("TraerProductosPorId", con);
+                cmd.Parameters.AddWithValue("@ID", Id);
+                n = cmd.ExecuteNonQuery(); cmd = new SqlCommand("TraerProductosPorId", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ID", Id);
                 SqlDataReader dr = cmd.ExecuteReader();

@@ -44,6 +44,7 @@ namespace TallerMecanico
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@ namespace TallerMecanico
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -61,6 +61,7 @@ namespace TallerMecanico
             // 
             // dataGridView1
             // 
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codProducto,
@@ -163,6 +164,7 @@ namespace TallerMecanico
             this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -173,6 +175,7 @@ namespace TallerMecanico
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox1
             // 
@@ -193,6 +196,14 @@ namespace TallerMecanico
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(79, 182);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(228, 20);
+            this.txtPrecio.TabIndex = 14;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged_1);
             // 
             // comboBox1
             // 
@@ -296,14 +307,6 @@ namespace TallerMecanico
             this.label6.TabIndex = 12;
             this.label6.Text = "PRODUCTOS";
             this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(79, 182);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(228, 20);
-            this.txtPrecio.TabIndex = 14;
-            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged_1);
             // 
             // FrmProducto
             // 
