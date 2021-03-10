@@ -53,6 +53,7 @@ namespace TallerMecanico
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).BeginInit();
@@ -69,7 +70,7 @@ namespace TallerMecanico
             this.PdcNombreProducto,
             this.PdcDetalles,
             this.PdcPrecio});
-            this.dataGridView1.Location = new System.Drawing.Point(14, 265);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 297);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(547, 184);
             this.dataGridView1.TabIndex = 0;
@@ -118,17 +119,17 @@ namespace TallerMecanico
             // 
             this.txtProducto.Location = new System.Drawing.Point(79, 85);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(252, 20);
+            this.txtProducto.Size = new System.Drawing.Size(228, 20);
             this.txtProducto.TabIndex = 3;
             this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
             // 
             // txtDetalle
             // 
             this.txtDetalle.Location = new System.Drawing.Point(79, 121);
-            this.txtDetalle.MaximumSize = new System.Drawing.Size(0, 100);
-            this.txtDetalle.MinimumSize = new System.Drawing.Size(106, 50);
+            this.txtDetalle.MaximumSize = new System.Drawing.Size(4, 100);
+            this.txtDetalle.MinimumSize = new System.Drawing.Size(228, 50);
             this.txtDetalle.Name = "txtDetalle";
-            this.txtDetalle.Size = new System.Drawing.Size(252, 50);
+            this.txtDetalle.Size = new System.Drawing.Size(228, 50);
             this.txtDetalle.TabIndex = 4;
             this.txtDetalle.TextChanged += new System.EventHandler(this.txtDetalle_TextChanged);
             // 
@@ -187,7 +188,7 @@ namespace TallerMecanico
             this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.txtProducto);
             this.groupBox1.Controls.Add(this.txtDetalle);
-            this.groupBox1.Location = new System.Drawing.Point(14, 22);
+            this.groupBox1.Location = new System.Drawing.Point(14, 48);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(360, 228);
             this.groupBox1.TabIndex = 10;
@@ -276,7 +277,7 @@ namespace TallerMecanico
             this.groupBox2.Controls.Add(this.btnGrabar);
             this.groupBox2.Controls.Add(this.btnEditar);
             this.groupBox2.Controls.Add(this.btnNuevo);
-            this.groupBox2.Location = new System.Drawing.Point(377, 22);
+            this.groupBox2.Location = new System.Drawing.Point(377, 48);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(184, 228);
             this.groupBox2.TabIndex = 11;
@@ -294,12 +295,24 @@ namespace TallerMecanico
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(214, 14);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 25);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "PRODUCTOS";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(575, 461);
+            this.ClientSize = new System.Drawing.Size(572, 525);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -315,6 +328,7 @@ namespace TallerMecanico
             ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -344,5 +358,6 @@ namespace TallerMecanico
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown txtPrecio;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label6;
     }
 }
