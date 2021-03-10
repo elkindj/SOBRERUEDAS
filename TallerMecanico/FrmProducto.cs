@@ -122,15 +122,16 @@ namespace TallerMecanico
             int n = -1;
             if (_nuevo)
             {
-                c = new Productos(0, txtCodigo.Text, 1, txtProducto.Text, txtDetalle.Text, 67);
+                c = new Productos(0, txtCodigo.Text, comboBox1.SelectedIndex, txtProducto.Text, txtDetalle.Text, Convert.ToInt32(txtPrecio.Text));
                 n = bLProducto.Insertar(c);
             }
             else
             {
                 c.Codigo = txtCodigo.Text;
+                c.Modelo = comboBox1.SelectedIndex;
                 c.Nombre = txtProducto.Text;
                 c.Detalles = txtDetalle.Text;
-                c.Precio = txtPrecio.DecimalPlaces;
+                c.Precio = Convert.ToInt32(txtPrecio.Text);
                 n = bLProducto.Actualizar(c);
             }
             if (n > 0)
@@ -214,6 +215,11 @@ namespace TallerMecanico
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrecio_TextChanged_1(object sender, EventArgs e)
         {
 
         }
