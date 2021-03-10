@@ -122,15 +122,16 @@ namespace TallerMecanico
             int n = -1;
             if (_nuevo)
             {
-                c = new Productos(0, txtCodigo.Text, 1, txtProducto.Text, txtDetalle.Text, 67);
+                c = new Productos(0, txtCodigo.Text, comboBox1.SelectedIndex, txtProducto.Text, txtDetalle.Text, Convert.ToInt32(txtPrecio.Text));
                 n = bLProducto.Insertar(c);
             }
             else
             {
                 c.Codigo = txtCodigo.Text;
+                c.Modelo = comboBox1.SelectedIndex;
                 c.Nombre = txtProducto.Text;
                 c.Detalles = txtDetalle.Text;
-                c.Precio = txtPrecio.DecimalPlaces;
+                c.Precio = Convert.ToInt32(txtPrecio.Text);
                 n = bLProducto.Actualizar(c);
             }
             if (n > 0)
@@ -211,6 +212,74 @@ namespace TallerMecanico
         private void FrmProducto_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrecio_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            _nuevo = false;
+            if (btnEditar.Text == "Cancelar")
+            {
+                LimpiarControl(groupBox1);
+                ActivarControlDatos(groupBox1, false);
+                ActivarButton(true);
+                dataGridView1.Enabled = true;
+                btnEditar.Text = "Editar";
+            }
+            else
+            {
+                if (dataGridView1.RowCount > 0)
+                {
+                    c = bLProducto.ProductoTraerPorId((int)dataGridView1[0, dataGridView1.
+                    CurrentRow.Index].Value);
+                    txtCodigo.Text = c.Codigo;
+                    txtDetalle.Text = c.Detalles;
+                    int precio = c.Precio;
+                    txtPrecio.Text = precio.ToString();
+                    txtProducto.Text = c.Nombre;
+                    ActivarControlDatos(groupBox1, true);
+                    ActivarButton(true);
+                    dataGridView1.Enabled = false;
+                    btnEditar.Text = "Cancelar";
+                }
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.RowCount > 0)
+            {
+                c = bLProducto.ProductoTraerPorId((int)dataGridView1[0, dataGridView1.
+                CurrentRow.Index].Value);
+                DialogResult rpta =
+                MessageBox.Show("Desea eliminar el registro", "Eliminar",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rpta == System.Windows.Forms.DialogResult.Yes)
+                {
+                    int n = bLProducto.Eliminar(c.Id);
+                    if (n > 0)
+                    {
+                        MessageBox.Show("Registro eliminado", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        lista = bLProducto.Listar();
+                        CargarDatos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al eliminar", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
     }

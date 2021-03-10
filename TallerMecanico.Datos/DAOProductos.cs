@@ -94,9 +94,8 @@ namespace TallerMecanico.Datos
 
                 con.Open(); cmd = new SqlCommand("EliminarProductos", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id", Id);
-                n = cmd.ExecuteNonQuery();
-                cmd = new SqlCommand("TraerProductosPorId", con);
+                cmd.Parameters.AddWithValue("@ID", Id);
+                n = cmd.ExecuteNonQuery(); cmd = new SqlCommand("TraerProductosPorId", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ID", Id);
                 SqlDataReader dr = cmd.ExecuteReader();
