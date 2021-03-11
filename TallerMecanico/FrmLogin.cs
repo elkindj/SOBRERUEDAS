@@ -24,7 +24,7 @@ namespace TallerMecanico
         {
             lblErroPws.Visible = false;
 
-            if (blUsuario.ListarUsuario(txtUsuario.Text, txtContrasena.Text))
+            if (blUsuario.ValidarUsuario(txtUsuario.Text, txtContrasena.Text))
             {
                 this.Visible = false;
                 FrmPrincipal frmPrincipal = new FrmPrincipal();

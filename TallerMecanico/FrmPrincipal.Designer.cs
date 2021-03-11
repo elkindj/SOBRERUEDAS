@@ -34,6 +34,7 @@ namespace TallerMecanico
             this.tSMUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.tSMCategoria = new System.Windows.Forms.ToolStripMenuItem();
             this.tSmSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tSMProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,8 +52,9 @@ namespace TallerMecanico
             // administraciónToolStripMenuItem
             // 
             this.administraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tSMUsuarios,
-            this.tSMCategoria});
+            this.tSMCategoria,
+            this.tSMProducto,
+            this.tSMUsuarios});
             this.administraciónToolStripMenuItem.Name = "administraciónToolStripMenuItem";
             this.administraciónToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.administraciónToolStripMenuItem.Text = "Administración";
@@ -77,6 +79,13 @@ namespace TallerMecanico
             this.tSmSalir.Size = new System.Drawing.Size(41, 20);
             this.tSmSalir.Text = "Salir";
             this.tSmSalir.Click += new System.EventHandler(this.tSmSalir_Click);
+            // 
+            // tSMProducto
+            // 
+            this.tSMProducto.Name = "tSMProducto";
+            this.tSMProducto.Size = new System.Drawing.Size(180, 22);
+            this.tSMProducto.Text = "Productos";
+            this.tSMProducto.Click += new System.EventHandler(this.tSMProducto_Click);
             // 
             // FrmPrincipal
             // 
@@ -105,5 +114,6 @@ namespace TallerMecanico
         private System.Windows.Forms.ToolStripMenuItem tSmSalir;
         private System.Windows.Forms.ToolStripMenuItem tSMUsuarios;
         private System.Windows.Forms.ToolStripMenuItem tSMCategoria;
+        private System.Windows.Forms.ToolStripMenuItem tSMProducto;
     }
 }

@@ -17,6 +17,22 @@ namespace TallerMecanico
             InitializeComponent();
         }
 
+        private void tSMCategoria_Click(object sender, EventArgs e)
+        {
+            FrmCategoria frmCategoria = new FrmCategoria();
+            frmCategoria.MdiParent = this;
+            frmCategoria.WindowState = FormWindowState.Maximized;
+            frmCategoria.Show();
+        }
+
+        private void tSMProducto_Click(object sender, EventArgs e)
+        {
+            FrmProducto frmProducto = new FrmProducto();
+            frmProducto.MdiParent = this;
+            frmProducto.WindowState = FormWindowState.Maximized;
+            frmProducto.Show();
+        }
+
         private void tSMUsuarios_Click(object sender, EventArgs e)
         {
             FrmUsuario frmUsuario = new FrmUsuario();
@@ -32,14 +48,6 @@ namespace TallerMecanico
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
             this.Close();
-        }
-
-        private void tSMCategoria_Click(object sender, EventArgs e)
-        {
-            FrmCategoria frmCategoria = new FrmCategoria();
-            frmCategoria.MdiParent = this;
-            frmCategoria.WindowState = FormWindowState.Maximized;
-            frmCategoria.Show();
         }
     }
 }

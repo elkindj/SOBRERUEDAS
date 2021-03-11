@@ -48,10 +48,15 @@ namespace TallerMecanico
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.gridUsuarios = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.gridUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -193,19 +198,10 @@ namespace TallerMecanico
             // 
             this.button1.Location = new System.Drawing.Point(12, 292);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 23);
+            this.button1.Size = new System.Drawing.Size(239, 23);
             this.button1.TabIndex = 20;
             this.button1.Text = "Grabar";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(152, 292);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 23);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // comboBox3
             // 
@@ -226,24 +222,64 @@ namespace TallerMecanico
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(297, 292);
+            this.btnSalir.Location = new System.Drawing.Point(257, 292);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(138, 23);
+            this.btnSalir.Size = new System.Drawing.Size(257, 23);
             this.btnSalir.TabIndex = 24;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // gridUsuarios
+            // 
+            this.gridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Apellido1,
+            this.Documento,
+            this.Usuario});
+            this.gridUsuarios.Location = new System.Drawing.Point(12, 339);
+            this.gridUsuarios.Name = "gridUsuarios";
+            this.gridUsuarios.Size = new System.Drawing.Size(502, 222);
+            this.gridUsuarios.TabIndex = 25;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Usu_Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Apellido1
+            // 
+            this.Apellido1.DataPropertyName = "Usu_ApellidoPat";
+            this.Apellido1.HeaderText = "Apellido Paterno";
+            this.Apellido1.Name = "Apellido1";
+            this.Apellido1.ReadOnly = true;
+            // 
+            // Documento
+            // 
+            this.Documento.DataPropertyName = "Usu_Documento";
+            this.Documento.HeaderText = "Documento";
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
+            // 
+            // Usuario
+            // 
+            this.Usuario.DataPropertyName = "Usu_Usuario";
+            this.Usuario.HeaderText = "Usuario";
+            this.Usuario.Name = "Usuario";
+            this.Usuario.ReadOnly = true;
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 450);
+            this.ClientSize = new System.Drawing.Size(526, 573);
             this.ControlBox = false;
+            this.Controls.Add(this.gridUsuarios);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -263,6 +299,7 @@ namespace TallerMecanico
             this.Controls.Add(this.textBox1);
             this.Name = "FrmUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.gridUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,9 +325,13 @@ namespace TallerMecanico
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.DataGridView gridUsuarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
     }
 }

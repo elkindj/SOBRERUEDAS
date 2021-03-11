@@ -27,7 +27,7 @@ namespace TallerMecanico.Datos
             set { _cadenaConexion = value; }
         }
 
-        public List<Usuario> ListarUsuario(string pUsuario, string pContrasena)
+        public List<Usuario> ValidarUsuario(string pUsuario, string pContrasena)
         {
             List<Usuario> lista = new List<Usuario>();
             using (SqlConnection con = new SqlConnection(CadenaConexion))
@@ -48,6 +48,28 @@ namespace TallerMecanico.Datos
             }
 
             return lista;
+        }
+
+        public List<Usuario> ListarUsuarios()
+        {
+            List<Usuario> lista = new List<Usuario>();
+            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            {
+                con.Open(); SqlCommand cmd = new SqlCommand("up_usu_listar_usuarios", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        Usuario usu = new Usuario((int)dr["IdUsuario"], (string)dr["Usu_Nombre"], (string)dr["Usu_ApellidoPat"], (string)dr["Usu_ApellidoMat"], (int)dr["Usu_IdTipoDocumento"], (int)dr["Usu_Documento"], (string)dr["Usu_Usuario"]);
+                        lista.Add(usu);
+                    }
+                }
+            }
+
+            return lista;
+
         }
     }
 }

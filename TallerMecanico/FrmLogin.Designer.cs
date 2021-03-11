@@ -95,7 +95,7 @@ namespace TallerMecanico
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(335, 34);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Taller de mecanicá";
+            this.label4.Text = "Taller de mecanica";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtUsuario
