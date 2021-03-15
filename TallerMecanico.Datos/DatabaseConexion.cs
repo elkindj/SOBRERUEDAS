@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TallerMecanico.Datos
 {
-    public class Conexion
+    public class DatabaseConexion
     {
         string _cadenaConexion;
         public string CadenaConexion
