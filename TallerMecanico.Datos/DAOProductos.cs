@@ -60,7 +60,7 @@ namespace TallerMecanico.Datos
                 {
                     while (dr.Read())
                     {
-                        Productos c = new Productos((int)dr["Id"], (string)dr["Codigo"], (int)dr["Modelo"], (string)dr["Nombre"], (string)dr["Detalles"],(int)dr["Precio"]);
+                        Productos c = new Productos((int)dr["Id"],(string)dr["Codigo"],(int)dr["CodP"], (string)dr["Modelo"], (string)dr["Nombre"],(string)dr["Detalles"],(int)dr["Precio"],(bool)dr["Estado"]);
                         lista.Add(c);
                     }
                 }
@@ -75,7 +75,7 @@ namespace TallerMecanico.Datos
             {
                 con.Open();
                 SqlCommand cmd = new
-    SqlCommand("TraerProductosPorId", con);
+              SqlCommand("TraerProductosPorId", con);
                 cmd.CommandType =
                CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ID", Id);
@@ -86,10 +86,12 @@ namespace TallerMecanico.Datos
                     Productos = new Productos(
                    (int)dr["Id"],
                    (string)dr["Codigo"],
-                   (int)dr["Modelo"],
+                   (int)dr["CodP"],
+                   (string)dr["Modelo"],
                    (string)dr["Nombre"],
                    (string)dr["Detalles"],
-                   (int)dr["Precio"]);
+                   (int)dr["Precio"],
+                   (bool)dr["Estado"]);
                 }
             }
             return Productos;
@@ -115,35 +117,35 @@ namespace TallerMecanico.Datos
         }
         //metodo para eliminar una categoría puntual 
 
-        public int Eliminar(int Id)
-        {
-            int n = -1;
-            Productos Productos = null;
-            using (SqlConnection con = new SqlConnection(CadenaConexion))
-            {
-                SqlCommand cmd;
+        //public int Eliminar(int Id)
+        //{
+        //    int n = -1;
+        //    Productos Productos = null;
+        //    using (SqlConnection con = new SqlConnection(CadenaConexion))
+        //    {
+        //        SqlCommand cmd;
 
-                con.Open(); cmd = new SqlCommand("EliminarProductos", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ID", Id);
-                n = cmd.ExecuteNonQuery(); cmd = new SqlCommand("TraerProductosPorId", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ID", Id);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr != null && dr.HasRows)
-                {
-                    dr.Read();
-                    Productos = new Productos(
-                    (int)dr["Id"],
-                    (string)dr["Codigo"],
-                    (int)dr["Modelo"],
-                    (string)dr["Nombre"],
-                    (string)dr["Detalles"],
-                    (int)dr["Precio"]);
-                }
-            }
-            return Productos.Id;
-        }
+        //        con.Open(); cmd = new SqlCommand("EliminarProductos", con);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        cmd.Parameters.AddWithValue("@ID", Id);
+        //        n = cmd.ExecuteNonQuery(); cmd = new SqlCommand("TraerProductosPorId", con);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        cmd.Parameters.AddWithValue("@ID", Id);
+        //        SqlDataReader dr = cmd.ExecuteReader();
+        //        if (dr != null && dr.HasRows)
+        //        {
+        //            dr.Read();
+        //            Productos = new Productos(
+        //            (int)dr["Id"],
+        //            (string)dr["Codigo"],
+        //            (int)dr["Modelo"],
+        //            (string)dr["Nombre"],
+        //            (string)dr["Detalles"],
+        //            (int)dr["Precio"]);
+        //        }
+        //    }
+        //    return Productos.Id;
+        //}
         public int Insertar(Productos Productos)
         {
             int n = -1;
@@ -154,11 +156,12 @@ namespace TallerMecanico.Datos
                 SqlCommand cmd = new SqlCommand("InsertarProductos", con);
                 cmd.CommandType =
                CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Codigo", Productos.Codigo);
+                //cmd.Parameters.AddWithValue("@Codigo", Productos.Codigo);
                 cmd.Parameters.AddWithValue("@Modelo", Productos.Modelo);
                 cmd.Parameters.AddWithValue("@Nombre", Productos.Nombre);
                 cmd.Parameters.AddWithValue("@Detalles", Productos.Detalles);
                 cmd.Parameters.AddWithValue("@Precio", Productos.Precio);
+                cmd.Parameters.AddWithValue("@Estado",Productos.Estado);
                 n = cmd.ExecuteNonQuery();
             }
             return n;
