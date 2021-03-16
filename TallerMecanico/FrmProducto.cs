@@ -15,7 +15,6 @@ namespace TallerMecanico
     public partial class FrmProducto : Form
     {
         List<Productos> lista = null;
-        //List<Parametros> autocomplete = null;
         List<Categoria> categorias = null;
         BLCategoria bLCategoria = new BLCategoria();
         BLProducto bLProducto = new BLProducto();
@@ -63,7 +62,7 @@ namespace TallerMecanico
                 dataGridView1.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    dataGridView1.Rows.Add(lista[i].Id, lista[i].Codigo,lista[i].CodP, lista[i].Nombre, lista[i].Modelo, lista[i].Precio, lista[i].Detalles,lista[i].Estado);
+                    dataGridView1.Rows.Add(lista[i].Id,lista[i].Codigo, lista[i].NombreP, lista[i].Nombre, lista[i].Modelo, lista[i].Precio, lista[i].Detalles,lista[i].Estado);
                 }
             }
             if (categorias == null)
@@ -75,7 +74,7 @@ namespace TallerMecanico
                 txtCodigo.Items.Clear();
                 for (int i = 0; i < categorias.Count; i++)
                 {
-                    txtCodigo.Items.Add(categorias[i].Codigo.ToString());
+                    txtCodigo.Items.Add(categorias[i].Nombre);
                 }
             }
         }
@@ -124,18 +123,19 @@ namespace TallerMecanico
             int n = -1;
             if (_nuevo)
             {
-                c = new Productos(0, txtCodigo.SelectedIndex.ToString(), 0, txtMarca.Text, txtProducto.Text, txtDetalle.Text, Convert.ToInt32(txtPrecio.Text),chckEstado.Checked);
+                c = new Productos(0, txtProducto.Text, txtCodP.Text, txtMarca.Text, txtCodigo.SelectedIndex.ToString(), txtDetalle.Text, Convert.ToInt32(txtPrecio.Text), Convert.ToBoolean(chckEstado.Checked));
                 n = bLProducto.Insertar(c);
+
             }
             else
             {
-               
-                c.Codigo = txtCodigo.SelectedIndex.ToString();
-                c.Modelo = txtMarca.Text;
                 c.Nombre = txtProducto.Text;
+                c.Codigo = txtCodP.Text;
+                c.Modelo = txtMarca.Text;
+                c.NombreP = txtCodigo.SelectedIndex.ToString();
                 c.Detalles = txtDetalle.Text;
                 c.Precio = Convert.ToInt32(txtPrecio.Text);
-                c.Estado = chckEstado.Checked;
+                c.Estado = Convert.ToBoolean(chckEstado.Checked);
                 n = bLProducto.Actualizar(c);
             }
             if (n > 0)
@@ -258,34 +258,6 @@ namespace TallerMecanico
             }
         }
 
-        //private void btnEliminar_Click(object sender, EventArgs e)
-        //{
-        //    if (dataGridView1.RowCount > 0)
-        //    {
-        //        c = bLProducto.ProductoTraerPorId((int)dataGridView1[0, dataGridView1.
-        //        CurrentRow.Index].Value);
-        //        DialogResult rpta =
-        //        MessageBox.Show("Desea eliminar el registro", "Eliminar",
-        //        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        //        if (rpta == System.Windows.Forms.DialogResult.Yes)
-        //        {
-        //            int n = bLProducto.Eliminar(c.Id);
-        //            if (n > 0)
-        //            {
-        //                MessageBox.Show("Registro eliminado", "Aviso",
-        //                MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //                lista = bLProducto.Listar();
-        //                CargarDatos();
-        //            }
-        //            else
-        //            {
-        //                MessageBox.Show("Error al eliminar", "Aviso",
-        //                MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //            }
-        //        }
-        //    }
-        //}
-
         private void chckEstado_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -307,6 +279,11 @@ namespace TallerMecanico
         }
 
         private void txtCodProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodP_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -9,8 +9,8 @@ namespace TallerMecanico.Entidades
     public class Productos
     {
         int _id;
+        String _nombreP; 
         String _codigo;
-        int _codP;
         String _modelo;
         String _nombre;
         String _detalles;
@@ -21,14 +21,15 @@ namespace TallerMecanico.Entidades
             get { return _id; }
             set { _id = value; }
         }
-        public String Codigo {
+        public String NombreP
+        {
+            get { return _nombreP; }
+            set { _nombreP = value; }
+        }
+        public String Codigo
+        {
             get { return _codigo; }
             set { _codigo = value; }
-        }
-        public int CodP
-        {
-            get { return _codP; }
-            set { _codP = value; }
         }
         public String Modelo {
             get { return _modelo; }
@@ -51,27 +52,18 @@ namespace TallerMecanico.Entidades
             get { return _estado; }
             set { _estado = value; }
         }
-        public Productos(int Id, string Codigo, int CodP, string Modelo, string Nombre,string Detalles,int Precio, bool Estado)
+        public Productos(int Id, string NombreP,string Codigo, string Modelo, string Nombre,string Detalles,int Precio, bool Estado)
         {
             this._id = Id;
+            this._nombreP = NombreP;
             this._codigo = Codigo;
-            this._codP = CodP;
             this._modelo = Modelo;
             this._nombre = Nombre;
             this._detalles = Detalles;
             this._precio = Precio;
             this._estado = Estado;
         }
-        //public Productos(int Id, string Codigo, int Modelo, string Nombre, int Precio) : this(Id, Codigo, Modelo, Nombre,"",Precio)
-        //{
-        //}
-        //public Productos(int Id,int Modelo, string Nombre, int Precio) : this(Id, "",Modelo, Nombre, "",Precio)
-        //{
-        //}
-       // public Productos(int Id, int Modelo, int Precio) : this(Id, "", Modelo, "", Precio)
-        //{
-        //}
-        public Productos() : this(0,"", 0,"", "", "",0,false)
+        public Productos() : this(0,"","","", "","",0,true)
         {
         }
 

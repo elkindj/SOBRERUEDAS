@@ -37,10 +37,5 @@ namespace TallerMecanico.Negocios
 			DAOProductos daProducto = new DAOProductos();
 			return daProducto.Actualizar(Productos);
 		}
-		//public int Eliminar(int id)
-		//{
-		//	DAOProductos daProducto = new DAOProductos();
-		//	return daProducto.Eliminar(id);
-		//}
 	}
 }
