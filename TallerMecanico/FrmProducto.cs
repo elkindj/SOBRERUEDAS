@@ -62,7 +62,15 @@ namespace TallerMecanico
                 dataGridView1.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    dataGridView1.Rows.Add(lista[i].Id,lista[i].Codigo, lista[i].NombreP, lista[i].Nombre, lista[i].Modelo, lista[i].Precio, lista[i].Detalles,lista[i].Estado);
+                    dataGridView1.Rows.Add(
+                        lista[i].Id,
+                        lista[i].Nombre,
+                        lista[i].NombreP,
+                        lista[i].Modelo,
+                        lista[i].Codigo,
+                        lista[i].Detalles,
+                        lista[i].Precio,
+                        lista[i].Estado);
                 }
             }
             if (categorias == null)

@@ -202,6 +202,8 @@ namespace TallerMecanico
             // chckEstado
             // 
             this.chckEstado.AutoSize = true;
+            this.chckEstado.Checked = true;
+            this.chckEstado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chckEstado.Location = new System.Drawing.Point(117, 317);
             this.chckEstado.Name = "chckEstado";
             this.chckEstado.Size = new System.Drawing.Size(59, 17);
