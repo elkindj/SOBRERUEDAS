@@ -12,6 +12,7 @@ namespace TallerMecanico.Entidades
         string _codigo;
         string _nombre;
         string _observacion;
+        bool _estado;
         public int Id
         {
             get { return _id; }
@@ -32,20 +33,27 @@ namespace TallerMecanico.Entidades
             get { return _observacion; }
             set { _observacion = value; }
         }
-        public Categoria(int Id, string Codigo, string Nombre, string Observacion)
+
+        public bool Estado
+        {
+            get { return _estado; }
+            set { _estado = value; }
+        }
+        public Categoria(int Id, string Codigo, string Nombre, string Observacion,bool Estado)
         {
             this._id = Id;
             this._codigo = Codigo;
             this._nombre = Nombre;
             this._observacion = Observacion;
+            this._estado = Estado;
         }
-        public Categoria(int Id, string Codigo, string Nombre) : this(Id, Codigo, Nombre, "")
+        public Categoria(int Id, string Codigo, string Nombre, bool Estado) : this(Id, Codigo, Nombre, "", Estado)
         {
         }
-        public Categoria(int Id, string Nombre) : this(Id, "", Nombre, "")
+        public Categoria(int Id, string Nombre,bool Estado) : this(Id, "", Nombre, "", Estado)
         {
         }
-        public Categoria() : this(0, "", "", "")
+        public Categoria() : this(0, "", "", "",true)
         {
         }
     }
