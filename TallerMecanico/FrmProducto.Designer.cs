@@ -30,18 +30,26 @@ namespace TallerMecanico
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PdcCodProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CtgNombreCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PdcMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PdcNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PdcDetalles = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PdcPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PdcEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDetalle = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtCodP = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.chckEstado = new System.Windows.Forms.CheckBox();
-            this.txtCodigo = new System.Windows.Forms.ComboBox();
             this.Cantidad = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -52,14 +60,6 @@ namespace TallerMecanico
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PdcCodProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CtgNombreCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PdcMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PdcNombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PdcDetalles = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PdcPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PdcEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -83,6 +83,47 @@ namespace TallerMecanico
             this.dataGridView1.Size = new System.Drawing.Size(741, 331);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // IdProducto
+            // 
+            this.IdProducto.HeaderText = "Id";
+            this.IdProducto.Name = "IdProducto";
+            this.IdProducto.Visible = false;
+            // 
+            // PdcCodProducto
+            // 
+            this.PdcCodProducto.HeaderText = "Código Producto";
+            this.PdcCodProducto.Name = "PdcCodProducto";
+            // 
+            // CtgNombreCategoria
+            // 
+            this.CtgNombreCategoria.HeaderText = "Nombre Categoría";
+            this.CtgNombreCategoria.Name = "CtgNombreCategoria";
+            // 
+            // PdcMarca
+            // 
+            this.PdcMarca.HeaderText = "Marca";
+            this.PdcMarca.Name = "PdcMarca";
+            // 
+            // PdcNombreProducto
+            // 
+            this.PdcNombreProducto.HeaderText = "Nombre";
+            this.PdcNombreProducto.Name = "PdcNombreProducto";
+            // 
+            // PdcDetalles
+            // 
+            this.PdcDetalles.HeaderText = "Detalles";
+            this.PdcDetalles.Name = "PdcDetalles";
+            // 
+            // PdcPrecio
+            // 
+            this.PdcPrecio.HeaderText = "Precio";
+            this.PdcPrecio.Name = "PdcPrecio";
+            // 
+            // PdcEstado
+            // 
+            this.PdcEstado.HeaderText = "Estado";
+            this.PdcEstado.Name = "PdcEstado";
             // 
             // txtDetalle
             // 
@@ -133,13 +174,13 @@ namespace TallerMecanico
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.txtCodP);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtProducto);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtMarca);
             this.groupBox1.Controls.Add(this.chckEstado);
-            this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.Cantidad);
             this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Controls.Add(this.txtPrecio);
@@ -155,12 +196,23 @@ namespace TallerMecanico
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(116, 59);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(319, 21);
+            this.comboBox1.TabIndex = 27;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            // 
             // txtCodP
             // 
+            this.txtCodP.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.txtCodP.Location = new System.Drawing.Point(117, 19);
             this.txtCodP.Name = "txtCodP";
             this.txtCodP.Size = new System.Drawing.Size(319, 20);
             this.txtCodP.TabIndex = 26;
+            this.txtCodP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCodP.TextChanged += new System.EventHandler(this.txtCodP_TextChanged);
             // 
             // label8
@@ -211,15 +263,6 @@ namespace TallerMecanico
             this.chckEstado.Text = "Estado";
             this.chckEstado.UseVisualStyleBackColor = true;
             this.chckEstado.CheckedChanged += new System.EventHandler(this.chckEstado_CheckedChanged);
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.FormattingEnabled = true;
-            this.txtCodigo.Location = new System.Drawing.Point(117, 55);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(319, 21);
-            this.txtCodigo.TabIndex = 20;
-            this.txtCodigo.SelectedIndexChanged += new System.EventHandler(this.txtCodigo_SelectedIndexChanged);
             // 
             // Cantidad
             // 
@@ -330,47 +373,6 @@ namespace TallerMecanico
             this.label6.Text = "PRODUCTOS";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // IdProducto
-            // 
-            this.IdProducto.HeaderText = "Id";
-            this.IdProducto.Name = "IdProducto";
-            this.IdProducto.Visible = false;
-            // 
-            // PdcCodProducto
-            // 
-            this.PdcCodProducto.HeaderText = "Código Producto";
-            this.PdcCodProducto.Name = "PdcCodProducto";
-            // 
-            // CtgNombreCategoria
-            // 
-            this.CtgNombreCategoria.HeaderText = "Nombre Categoría";
-            this.CtgNombreCategoria.Name = "CtgNombreCategoria";
-            // 
-            // PdcMarca
-            // 
-            this.PdcMarca.HeaderText = "Marca";
-            this.PdcMarca.Name = "PdcMarca";
-            // 
-            // PdcNombreProducto
-            // 
-            this.PdcNombreProducto.HeaderText = "Nombre";
-            this.PdcNombreProducto.Name = "PdcNombreProducto";
-            // 
-            // PdcDetalles
-            // 
-            this.PdcDetalles.HeaderText = "Detalles";
-            this.PdcDetalles.Name = "PdcDetalles";
-            // 
-            // PdcPrecio
-            // 
-            this.PdcPrecio.HeaderText = "Precio";
-            this.PdcPrecio.Name = "PdcPrecio";
-            // 
-            // PdcEstado
-            // 
-            this.PdcEstado.HeaderText = "Estado";
-            this.PdcEstado.Name = "PdcEstado";
-            // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,7 +418,6 @@ namespace TallerMecanico
         private System.Windows.Forms.Label Cantidad;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.CheckBox chckEstado;
-        private System.Windows.Forms.ComboBox txtCodigo;
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMarca;
@@ -430,5 +431,6 @@ namespace TallerMecanico
         private System.Windows.Forms.DataGridViewTextBoxColumn PdcDetalles;
         private System.Windows.Forms.DataGridViewTextBoxColumn PdcPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn PdcEstado;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

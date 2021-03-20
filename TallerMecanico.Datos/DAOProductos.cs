@@ -10,21 +10,25 @@ namespace TallerMecanico.Datos
     public class DAOProductos
     {
         DatabaseConexion databaseConexion = new DatabaseConexion();
-        public List<Parametros> Listado()
+        public List<Parametros> Listado(string Modulo)
         {
             List<Parametros> lista = new List<Parametros>();
             using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
-                con.Open(); SqlCommand cmd = new SqlCommand("up_gen_consecutivo", con);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("up_gen_consecutivo", con);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Modulo", Modulo);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr != null && dr.HasRows)
                 {
-                    while (dr.Read())
-                    {
-                        Parametros c = new Parametros((int)dr["Id"], (string)dr["Nombre"]);
+                    dr.Read();
+                    Parametros c = new Parametros(
+                            (int)dr["ConsecutivoId"],
+                            (string)dr["Modulo"],
+                            (string)dr["Prefijo"],
+                            (string)dr["Consecutivo"]);
                         lista.Add(c);
-                    }
                 }
             }
             return lista;
@@ -45,12 +49,17 @@ namespace TallerMecanico.Datos
                         Productos c = new Productos(
                             (int)dr["Id"],
                             (string)dr["CodProducto"],
+                            (int)dr["IdCategoria"],
                             (string)dr["NombreCategoria"],
                             (string)dr["Modelo"],
                             (string)dr["Nombre"],
                             (string)dr["Detalles"],
                             (int)dr["Precio"],
-                            (bool)dr["Estado"]);
+                            (bool)dr["Estado"],
+                            (string)dr["Usuario"],
+                            (DateTime)dr["FechaReg"],
+                            (string)dr["UsuarioEdita"],
+                            (DateTime)dr["FechaEdita"]);
                         lista.Add(c);
                     }
                 }
@@ -74,12 +83,17 @@ namespace TallerMecanico.Datos
                     Productos = new Productos(
                             (int)dr["Id"],
                             (string)dr["CodProducto"],
+                            (int)dr["IdCategoria"],
                             (string)dr["NombreCategoria"],
                             (string)dr["Modelo"],
                             (string)dr["Nombre"],
                             (string)dr["Detalles"],
                             (int)dr["Precio"],
-                            (bool)dr["Estado"]);
+                            (bool)dr["Estado"],
+                            (string)dr["Usuario"],
+                            (DateTime)dr["FechaReg"],
+                            (string)dr["UsuarioEdita"],
+                            (DateTime)dr["FechaEdita"]);
                 }
             }
             return Productos;
@@ -100,6 +114,8 @@ namespace TallerMecanico.Datos
                 cmd.Parameters.AddWithValue("@DETALLES", Productos.Detalles);
                 cmd.Parameters.AddWithValue("@PRECIO", Productos.Precio);
                 cmd.Parameters.AddWithValue("@ESTADO", Productos.Estado);
+                cmd.Parameters.AddWithValue("@USUARIOEDITA", Productos.UsuarioEdita);
+                cmd.Parameters.AddWithValue("@FECHAEDITA", Productos.FechaEdita);
                 n = cmd.ExecuteNonQuery();
             }
             return n;
@@ -121,6 +137,8 @@ namespace TallerMecanico.Datos
                 cmd.Parameters.AddWithValue("@DETALLES", Productos.Detalles);
                 cmd.Parameters.AddWithValue("@PRECIO", Productos.Precio);
                 cmd.Parameters.AddWithValue("@ESTADO", Productos.Estado);
+                cmd.Parameters.AddWithValue("@USUARIO", Productos.UsuarioReg);
+                cmd.Parameters.AddWithValue("@FECHAREG", Productos.FechaReg);
                 n = cmd.ExecuteNonQuery();
             }
             return n;
