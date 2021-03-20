@@ -17,7 +17,6 @@ namespace TallerMecanico
         List<Categoria> lista = null;
         BLCategoria blCategoria = new BLCategoria();
         Categoria c;
-        int itemIndex;
         bool _nuevo = false;
 
         public FrmCategoria()
@@ -47,7 +46,7 @@ namespace TallerMecanico
         {
             btnNuevo.Enabled = Estado;
             btnGrabar.Enabled = Estado;
-            btnEliminar.Enabled = Estado;
+            //btnEliminar.Enabled = Estado;
             btnSalir.Enabled = Estado;
         }
 
@@ -124,7 +123,7 @@ namespace TallerMecanico
             if (_nuevo)
             {
                 c = new Categoria(0, txtCodigo.Text,
-                txtNombre.Text, txtObservacion.Text);
+                txtNombre.Text, txtObservacion.Text,checkBoxEstado.Checked);
                 n = blCategoria.Insertar(c);
             }
             else
@@ -132,6 +131,7 @@ namespace TallerMecanico
                 c.Codigo = txtCodigo.Text;
                 c.Nombre = txtNombre.Text;
                 c.Observacion = txtObservacion.Text;
+                c.Estado = checkBoxEstado.Checked;
                 n = blCategoria.Actualizar(c);
             }
             if (n > 0)
@@ -183,7 +183,7 @@ namespace TallerMecanico
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        /*private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dgvDatos.RowCount > 0)
             {
@@ -209,7 +209,7 @@ namespace TallerMecanico
                     }
                 }
             }
-        }
+        }*/
 
         private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
@@ -237,6 +237,16 @@ namespace TallerMecanico
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
