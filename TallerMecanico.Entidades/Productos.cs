@@ -9,21 +9,40 @@ namespace TallerMecanico.Entidades
     public class Productos
     {
         int _id;
+        int _nombreP; 
+        String _nombreCategoria;
         String _codigo;
-        int _modelo;
+        String _modelo;
         String _nombre;
         String _detalles;
         int _precio;
+        bool _estado;
+        String _usuarioReg;
+        DateTime _fechaReg;
+        String _usuarioEdita;
+        DateTime _fechaEdita;
 
+      
         public int Id {
             get { return _id; }
             set { _id = value; }
         }
-        public String Codigo {
+        public int NombreP
+        {
+            get { return _nombreP; }
+            set { _nombreP = value; }
+        }
+        public String NombreCategoria
+        {
+            get { return _nombreCategoria; }
+            set { _nombreCategoria = value; }
+        }
+        public String Codigo
+        {
             get { return _codigo; }
             set { _codigo = value; }
         }
-        public int Modelo {
+        public String Modelo {
             get { return _modelo; }
             set { _modelo = value; }
         }
@@ -39,25 +58,49 @@ namespace TallerMecanico.Entidades
             get { return _precio; }
             set { _precio = value; }
         }
-        public Productos(int Id, string Codigo, int Modelo, string Nombre,string Detalles,int Precio)
+        public bool Estado
+        {
+            get { return _estado; }
+            set { _estado = value; }
+        }
+        public String UsuarioReg
+        {
+            get { return _usuarioReg; }
+            set { _usuarioReg = value; }
+        }
+        public DateTime FechaReg
+        {
+            get { return _fechaReg; }
+            set { _fechaReg = value; }
+        }
+        public String UsuarioEdita
+        {
+            get { return _usuarioEdita; }
+            set { _usuarioEdita = value; }
+        }
+        public DateTime FechaEdita
+        {
+            get { return _fechaEdita; }
+            set { _fechaEdita = value; }
+        }
+        public Productos(int Id, string Codigo, int NombreP,string NombreCategoria, string Modelo, string Nombre,string Detalles,int Precio, bool Estado,
+            string UsuarioReg, DateTime FechaReg, string UsuarioEdita,DateTime FechaEdita)
         {
             this._id = Id;
             this._codigo = Codigo;
+            this._nombreP = NombreP;
+            this._nombreCategoria = NombreCategoria;
             this._modelo = Modelo;
             this._nombre = Nombre;
             this._detalles = Detalles;
             this._precio = Precio;
+            this._estado = Estado;
+            this._usuarioReg = UsuarioReg;
+            this._fechaReg = FechaReg;
+            this._usuarioEdita = UsuarioEdita;
+            this._fechaEdita = FechaEdita;
         }
-        //public Productos(int Id, string Codigo, int Modelo, string Nombre, int Precio) : this(Id, Codigo, Modelo, Nombre,"",Precio)
-        //{
-        //}
-        //public Productos(int Id,int Modelo, string Nombre, int Precio) : this(Id, "",Modelo, Nombre, "",Precio)
-        //{
-        //}
-       // public Productos(int Id, int Modelo, int Precio) : this(Id, "", Modelo, "", Precio)
-        //{
-        //}
-        public Productos() : this(0, "",0, "", "",0)
+        public Productos() : this(0,"",0,"","", "","",0,true,"", DateTime.Now, "",DateTime.Now)
         {
         }
 

@@ -15,7 +15,8 @@ namespace TallerMecanico
     public partial class FrmProducto : Form
     {
         List<Productos> lista = null;
-        List<Parametros> autocomplete = null;
+        List<Categoria> categorias = null;
+        BLCategoria bLCategoria = new BLCategoria();
         BLProducto bLProducto = new BLProducto();
         Productos c;
         bool _nuevo = false;
@@ -46,7 +47,6 @@ namespace TallerMecanico
         {
             btnNuevo.Enabled = Estado;
             btnGrabar.Enabled = Estado;
-            btnEliminar.Enabled = Estado;
             btnSalir.Enabled = Estado;
         }
 
@@ -61,20 +61,41 @@ namespace TallerMecanico
                 dataGridView1.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    dataGridView1.Rows.Add(lista[i].Id, lista[i].Codigo, lista[i].Modelo, lista[i].Nombre, lista[i].Detalles, lista[i].Precio);
+                    dataGridView1.Rows.Add(
+                        lista[i].Id,
+                        lista[i].Codigo,
+                        lista[i].NombreP,
+                        lista[i].Modelo,
+                        lista[i].Nombre,
+                        lista[i].Detalles,
+                        lista[i].Precio,
+                        lista[i].Estado);
                 }
             }
-            if (autocomplete == null)
+            if (lista == null)
             {
-                autocomplete = bLProducto.Listado();
+                //c = bLProducto.ProductoTraerPorId((int)dataGridView1[0, dataGridView1.CurrentRow.Index].Value);
+                //string valor= "Producto";
+                //txtCodP.Text=valor;
+                //lista = bLProducto.Listado();
+                //txtCodP.Text = bLProducto.Listado();
+
             }
-            if (autocomplete.Count > 0)
+            if (categorias == null)
             {
-                comboBox1.Items.Clear();
-                for (int i = 0; i < autocomplete.Count; i++)
-                {
-                    comboBox1.Items.Add(autocomplete[i].Nombre.ToString());
-                }
+                categorias = bLCategoria.Listar();
+            }
+            if (categorias.Count > 0)
+            {
+                //comboBox1.Items.Clear();
+                //for (int i = 0; i < categorias.Count; i++)
+                //{
+                //    //comboBox1.Items.Add(categorias[i].Nombre);
+
+                //}
+                comboBox1.DataSource = categorias;
+                comboBox1.DisplayMember = "Nombre";
+                comboBox1.ValueMember = "Id";
             }
         }
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -122,16 +143,21 @@ namespace TallerMecanico
             int n = -1;
             if (_nuevo)
             {
-                c = new Productos(0, txtCodigo.Text, comboBox1.SelectedIndex, txtProducto.Text, txtDetalle.Text, Convert.ToInt32(txtPrecio.Text));
+                c = new Productos(0, txtCodP.Text, Convert.ToInt32(comboBox1.SelectedValue),"", txtMarca.Text, txtProducto.Text, txtDetalle.Text, Convert.ToInt32(txtPrecio.Text), Convert.ToBoolean(chckEstado.Checked),"katherine", DateTime.Now, "katherine", DateTime.Now);
                 n = bLProducto.Insertar(c);
+
             }
             else
             {
-                c.Codigo = txtCodigo.Text;
-                c.Modelo = comboBox1.SelectedIndex;
+                c.Codigo = txtCodP.Text;
+                c.NombreP = Convert.ToInt32(comboBox1.SelectedValue);
+                c.Modelo = txtMarca.Text;
                 c.Nombre = txtProducto.Text;
                 c.Detalles = txtDetalle.Text;
                 c.Precio = Convert.ToInt32(txtPrecio.Text);
+                c.Estado = Convert.ToBoolean(chckEstado.Checked);
+                c.UsuarioEdita = "katherine";
+                c.UsuarioReg = "katherine";
                 n = bLProducto.Actualizar(c);
             }
             if (n > 0)
@@ -160,7 +186,7 @@ namespace TallerMecanico
             btnEditar.Text = "Cancelar";
             ActivarButton(true);
             LimpiarControl(groupBox1);
-            txtCodigo.Focus();
+            comboBox1.Focus();
 
         }
 
@@ -239,13 +265,16 @@ namespace TallerMecanico
             {
                 if (dataGridView1.RowCount > 0)
                 {
-                    c = bLProducto.ProductoTraerPorId((int)dataGridView1[0, dataGridView1.
-                    CurrentRow.Index].Value);
-                    txtCodigo.Text = c.Codigo;
+                    c = bLProducto.ProductoTraerPorId((int)dataGridView1[0, dataGridView1.CurrentRow.Index].Value);
+                    txtCodP.Text = c.Codigo;
+                    comboBox1.SelectedItem=c.NombreP;
+                    txtMarca.Text=c.Modelo;
+                    txtProducto.Text= c.Nombre;
                     txtDetalle.Text = c.Detalles;
                     int precio = c.Precio;
                     txtPrecio.Text = precio.ToString();
-                    txtProducto.Text = c.Nombre;
+                    txtPrecio.Text = c.Precio.ToString();
+                    chckEstado.Checked = c.Estado;
                     ActivarControlDatos(groupBox1, true);
                     ActivarButton(true);
                     dataGridView1.Enabled = false;
@@ -254,32 +283,44 @@ namespace TallerMecanico
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void chckEstado_CheckedChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.RowCount > 0)
-            {
-                c = bLProducto.ProductoTraerPorId((int)dataGridView1[0, dataGridView1.
-                CurrentRow.Index].Value);
-                DialogResult rpta =
-                MessageBox.Show("Desea eliminar el registro", "Eliminar",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (rpta == System.Windows.Forms.DialogResult.Yes)
-                {
-                    int n = bLProducto.Eliminar(c.Id);
-                    if (n > 0)
-                    {
-                        MessageBox.Show("Registro eliminado", "Aviso",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        lista = bLProducto.Listar();
-                        CargarDatos();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error al eliminar", "Aviso",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
+
+        }
+
+        private void txtCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMarca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     }

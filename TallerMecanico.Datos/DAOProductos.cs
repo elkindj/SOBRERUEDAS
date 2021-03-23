@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
@@ -13,27 +10,30 @@ namespace TallerMecanico.Datos
     public class DAOProductos
     {
         DatabaseConexion databaseConexion = new DatabaseConexion();
-        public List<Parametros> Listado()
+        public List<Parametros> Listado(string Modulo)
         {
             List<Parametros> lista = new List<Parametros>();
             using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
-                con.Open(); SqlCommand cmd = new SqlCommand("ListarModelo", con);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("up_gen_consecutivo", con);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Modulo", Modulo);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr != null && dr.HasRows)
                 {
-                    while (dr.Read())
-                    {
-                        Parametros c = new Parametros((int)dr["Id"],(string)dr["Nombre"]);
+                    dr.Read();
+                    Parametros c = new Parametros(
+                            (int)dr["ConsecutivoId"],
+                            (string)dr["Modulo"],
+                            (string)dr["Prefijo"],
+                            (string)dr["Consecutivo"]);
                         lista.Add(c);
-                    }
                 }
             }
             return lista;
         }
 
-        //metodo para traer la lista de todas las categorías de la tabla
         public List<Productos> Listar()
         {
             List<Productos> lista = new List<Productos>();
@@ -46,24 +46,58 @@ namespace TallerMecanico.Datos
                 {
                     while (dr.Read())
                     {
-                        Productos c = new Productos((int)dr["Id"], (string)dr["Codigo"], (int)dr["Modelo"], (string)dr["Nombre"], (string)dr["Detalles"],(int)dr["Precio"]);
+                        Productos c = new Productos(
+                            (int)dr["Id"],
+                            (string)dr["CodProducto"],
+                            (int)dr["IdCategoria"],
+                            (string)dr["NombreCategoria"],
+                            (string)dr["Modelo"],
+                            (string)dr["Nombre"],
+                            (string)dr["Detalles"],
+                            (int)dr["Precio"],
+                            (bool)dr["Estado"],
+                            (string)dr["Usuario"],
+                            (DateTime)dr["FechaReg"],
+                            (string)dr["UsuarioEdita"],
+                            (DateTime)dr["FechaEdita"]);
                         lista.Add(c);
                     }
                 }
             }
             return lista;
         }
-        //metodo para traer una categoría segun su identificación
+
         public Productos TraerPorId(int Id)
         {
             Productos Productos = new Productos();
             using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open();
-                return Productos;
+                SqlCommand cmd = new SqlCommand("TraerProductosPorId", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ID", Id);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    dr.Read();
+                    Productos = new Productos(
+                            (int)dr["Id"],
+                            (string)dr["CodProducto"],
+                            (int)dr["IdCategoria"],
+                            (string)dr["NombreCategoria"],
+                            (string)dr["Modelo"],
+                            (string)dr["Nombre"],
+                            (string)dr["Detalles"],
+                            (int)dr["Precio"],
+                            (bool)dr["Estado"],
+                            (string)dr["Usuario"],
+                            (DateTime)dr["FechaReg"],
+                            (string)dr["UsuarioEdita"],
+                            (DateTime)dr["FechaEdita"]);
+                }
             }
-        }
-        // metodo para actualizar una Productos puntual 
+            return Productos;
+        } 
 
         public int Actualizar(Productos Productos)
         {
@@ -72,46 +106,19 @@ namespace TallerMecanico.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("ActualizarProductos", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id", Productos.Id);
-                cmd.Parameters.AddWithValue("@Codigo", Productos.Codigo);
-                cmd.Parameters.AddWithValue("@Modelo", Productos.Modelo);
-                cmd.Parameters.AddWithValue("@Nombre", Productos.Nombre);
-                cmd.Parameters.AddWithValue("@Detalles", Productos.Detalles);
-                cmd.Parameters.AddWithValue("@Precio", Productos.Precio);
+                cmd.Parameters.AddWithValue("@ID", Productos.Id);
+                cmd.Parameters.AddWithValue("@CODPRODUCTO",Productos.Codigo);
+                cmd.Parameters.AddWithValue("@NOMBRECATEGORIA", Productos.NombreP);
+                cmd.Parameters.AddWithValue("@MODELO", Productos.Modelo);
+                cmd.Parameters.AddWithValue("@NOMBRE", Productos.Nombre);
+                cmd.Parameters.AddWithValue("@DETALLES", Productos.Detalles);
+                cmd.Parameters.AddWithValue("@PRECIO", Productos.Precio);
+                cmd.Parameters.AddWithValue("@ESTADO", Productos.Estado);
+                cmd.Parameters.AddWithValue("@USUARIOEDITA", Productos.UsuarioEdita);
+                cmd.Parameters.AddWithValue("@FECHAEDITA", Productos.FechaEdita);
                 n = cmd.ExecuteNonQuery();
             }
             return n;
-        }
-        //metodo para eliminar una categoría puntual 
-
-        public int Eliminar(int Id)
-        {
-            int n = -1;
-            Productos Productos = null;
-            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
-            {
-                SqlCommand cmd;
-
-                con.Open(); cmd = new SqlCommand("EliminarProductos", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ID", Id);
-                n = cmd.ExecuteNonQuery(); cmd = new SqlCommand("TraerProductosPorId", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ID", Id);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr != null && dr.HasRows)
-                {
-                    dr.Read();
-                    Productos = new Productos(
-                    (int)dr["Id"],
-                    (string)dr["Codigo"],
-                    (int)dr["Modelo"],
-                    (string)dr["Nombre"],
-                    (string)dr["Detalles"],
-                    (int)dr["Precio"]);
-                }
-            }
-            return Productos.Id;
         }
         public int Insertar(Productos Productos)
         {
@@ -123,11 +130,15 @@ namespace TallerMecanico.Datos
                 SqlCommand cmd = new SqlCommand("InsertarProductos", con);
                 cmd.CommandType =
                CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Codigo", Productos.Codigo);
-                cmd.Parameters.AddWithValue("@Modelo", Productos.Modelo);
-                cmd.Parameters.AddWithValue("@Nombre", Productos.Nombre);
-                cmd.Parameters.AddWithValue("@Detalles", Productos.Detalles);
-                cmd.Parameters.AddWithValue("@Precio", Productos.Precio);
+                cmd.Parameters.AddWithValue("@CODPRODUCTO", Productos.Codigo);
+                cmd.Parameters.AddWithValue("@NOMBRECATEGORIA", Productos.NombreP);
+                cmd.Parameters.AddWithValue("@MODELO", Productos.Modelo);
+                cmd.Parameters.AddWithValue("@NOMBRE", Productos.Nombre);
+                cmd.Parameters.AddWithValue("@DETALLES", Productos.Detalles);
+                cmd.Parameters.AddWithValue("@PRECIO", Productos.Precio);
+                cmd.Parameters.AddWithValue("@ESTADO", Productos.Estado);
+                cmd.Parameters.AddWithValue("@USUARIO", Productos.UsuarioReg);
+                cmd.Parameters.AddWithValue("@FECHAREG", Productos.FechaReg);
                 n = cmd.ExecuteNonQuery();
             }
             return n;

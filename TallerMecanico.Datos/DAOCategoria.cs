@@ -27,7 +27,7 @@ namespace TallerMecanico.Datos
                 {
                     while (dr.Read())
                     {
-                        Categoria c = new Categoria((int)dr["Id"], (string)dr["Codigo"], (string)dr["Nombre"], (string)dr["Observacion"]);
+                        Categoria c = new Categoria((int)dr["Id"], (string)dr["Codigo"], (string)dr["Nombre"], (string)dr["Observacion"],(bool)dr["Estado"]);
                         lista.Add(c);
                     }
                 }
@@ -51,7 +51,8 @@ namespace TallerMecanico.Datos
                     dr.Read();
                     Categoria = new Categoria((int)dr["Id"],
                         (string)dr["Codigo"], (string)dr["Nombre"],
-                        (string)dr["Observacion"]);
+                        (string)dr["Observacion"],
+                        (bool)dr["Estado"]);
                 }
             }
             return Categoria;
@@ -70,6 +71,7 @@ namespace TallerMecanico.Datos
                 cmd.Parameters.AddWithValue("@CODIGO", categoria.Codigo);
                 cmd.Parameters.AddWithValue("@Nombre", categoria.Nombre);
                 cmd.Parameters.AddWithValue("@Observacion", categoria.Observacion);
+                cmd.Parameters.AddWithValue("@Estado", categoria.Estado);
                 n = cmd.ExecuteNonQuery();
             }
             return n;
@@ -103,6 +105,7 @@ namespace TallerMecanico.Datos
                 cmd.Parameters.AddWithValue("@Codigo", Categoria.Codigo);
                 cmd.Parameters.AddWithValue("@Nombre", Categoria.Nombre);
                 cmd.Parameters.AddWithValue("@Observacion", Categoria.Observacion);
+                cmd.Parameters.AddWithValue("@Estado", Categoria.Estado);
                 n = cmd.ExecuteNonQuery();
             }
             return n;

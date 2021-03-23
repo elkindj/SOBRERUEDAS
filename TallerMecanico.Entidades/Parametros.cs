@@ -9,23 +9,44 @@ namespace TallerMecanico.Entidades
     public class Parametros
     {
 
-         int _modelo;
-         String _nombre;
-            public int Modelo {
-            get { return _modelo; }
-            set { _modelo = value; }
-             }
-
-        public String Nombre
+        int _consecutivoId;
+        String _modulo;
+        String _prefijo;
+        String _consecutivo;
+        DateTime _fecha;
+        public int ConsecutivoId
         {
-            get { return _nombre; }
-            set { _nombre = value; }
+            get { return _consecutivoId; }
+            set { _consecutivoId = value; }
         }
-        public Parametros(int Modelo, string Nombre) {
-            this._modelo = Modelo;
-            this._nombre = Nombre;
+
+        public String Modulo
+        {
+            get { return _modulo; }
+            set { _modulo = value; }
         }
-        public Parametros() : this(0, "") { }
+        public String Prefijo
+        {
+            get { return _prefijo; }
+            set { _prefijo = value; }
+        }
+        public String Consecutivo
+        {
+            get { return _consecutivo; }
+            set { _consecutivo = value; }
+        }
+        //public DateTime Fecha {
+        //    get { return _fecha; }
+        //    set { _fecha = value; }
+        //}
+        public Parametros(int ConsecutivoId, string Modulo, string Prefijo, string Consecutivo /*DateTime Fecha*/){
+            this._consecutivoId = ConsecutivoId;
+            this._modulo = Modulo;
+            this._prefijo = Prefijo;
+            this._consecutivo= Consecutivo;
+            //this._fecha= Fecha;
+    }
+        public Parametros() : this(0,"","","") { }
 
     }
 }

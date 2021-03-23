@@ -30,6 +30,9 @@ namespace TallerMecanico
         private void InitializeComponent()
         {
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,7 +41,6 @@ namespace TallerMecanico
             this.gbControl = new System.Windows.Forms.GroupBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
@@ -46,8 +48,8 @@ namespace TallerMecanico
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtObservacion = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.checkBoxEstado = new System.Windows.Forms.CheckBox();
             this.gbDatos.SuspendLayout();
             this.gbControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -55,6 +57,8 @@ namespace TallerMecanico
             // 
             // gbDatos
             // 
+            this.gbDatos.Controls.Add(this.checkBoxEstado);
+            this.gbDatos.Controls.Add(this.label5);
             this.gbDatos.Controls.Add(this.label4);
             this.gbDatos.Controls.Add(this.txtObservacion);
             this.gbDatos.Controls.Add(this.txtNombre);
@@ -64,10 +68,42 @@ namespace TallerMecanico
             this.gbDatos.Controls.Add(this.label1);
             this.gbDatos.Location = new System.Drawing.Point(29, 31);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(323, 201);
+            this.gbDatos.Size = new System.Drawing.Size(323, 221);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             this.gbDatos.Enter += new System.EventHandler(this.gbDatos_Enter);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 186);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 15);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Estado";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label4.Location = new System.Drawing.Point(-5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(333, 28);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "CATEGORIA DE PRODUCTOS";
+            // 
+            // txtObservacion
+            // 
+            this.txtObservacion.Location = new System.Drawing.Point(91, 127);
+            this.txtObservacion.MaximumSize = new System.Drawing.Size(4, 100);
+            this.txtObservacion.MinimumSize = new System.Drawing.Size(228, 50);
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.Size = new System.Drawing.Size(228, 50);
+            this.txtObservacion.TabIndex = 9;
             // 
             // txtNombre
             // 
@@ -120,7 +156,6 @@ namespace TallerMecanico
             // 
             this.gbControl.Controls.Add(this.btnSalir);
             this.gbControl.Controls.Add(this.btnEditar);
-            this.gbControl.Controls.Add(this.btnEliminar);
             this.gbControl.Controls.Add(this.btnGrabar);
             this.gbControl.Controls.Add(this.btnNuevo);
             this.gbControl.Location = new System.Drawing.Point(358, 31);
@@ -134,7 +169,7 @@ namespace TallerMecanico
             // 
             this.btnSalir.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(27, 153);
+            this.btnSalir.Location = new System.Drawing.Point(27, 114);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 23);
             this.btnSalir.TabIndex = 4;
@@ -152,17 +187,6 @@ namespace TallerMecanico
             this.btnEditar.Text = "editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(27, 114);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 23);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnGrabar
             // 
@@ -193,10 +217,11 @@ namespace TallerMecanico
             this.Id,
             this.Codigo,
             this.Nombre,
-            this.Observacion});
-            this.dgvDatos.Location = new System.Drawing.Point(90, 238);
+            this.Observacion,
+            this.estado});
+            this.dgvDatos.Location = new System.Drawing.Point(68, 258);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(344, 247);
+            this.dgvDatos.Size = new System.Drawing.Size(442, 247);
             this.dgvDatos.TabIndex = 2;
             this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
             // 
@@ -221,26 +246,21 @@ namespace TallerMecanico
             this.Observacion.HeaderText = "observacion";
             this.Observacion.Name = "Observacion";
             // 
-            // txtObservacion
+            // estado
             // 
-            this.txtObservacion.Location = new System.Drawing.Point(91, 127);
-            this.txtObservacion.MaximumSize = new System.Drawing.Size(4, 100);
-            this.txtObservacion.MinimumSize = new System.Drawing.Size(228, 50);
-            this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(228, 50);
-            this.txtObservacion.TabIndex = 9;
+            this.estado.HeaderText = "estado";
+            this.estado.Name = "estado";
+            this.estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // label4
+            // checkBoxEstado
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label4.Location = new System.Drawing.Point(-5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(333, 28);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "CATEGORIA DE PRODUCTOS";
+            this.checkBoxEstado.AutoSize = true;
+            this.checkBoxEstado.Location = new System.Drawing.Point(91, 186);
+            this.checkBoxEstado.Name = "checkBoxEstado";
+            this.checkBoxEstado.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxEstado.TabIndex = 12;
+            this.checkBoxEstado.UseVisualStyleBackColor = true;
             // 
             // FrmCategoria
             // 
@@ -271,16 +291,18 @@ namespace TallerMecanico
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtObservacion;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
-        private System.Windows.Forms.TextBox txtObservacion;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn estado;
+        private System.Windows.Forms.CheckBox checkBoxEstado;
     }
 }
