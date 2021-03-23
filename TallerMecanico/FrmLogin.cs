@@ -15,6 +15,7 @@ namespace TallerMecanico
     public partial class FrmLogin : Form
     {
         BLUsuario blUsuario = new BLUsuario();
+        List<Usuario> usu = new List<Usuario>();
         public FrmLogin()
         {
             InitializeComponent();
@@ -23,15 +24,17 @@ namespace TallerMecanico
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
             lblErroPws.Visible = false;
-
-            if (blUsuario.ValidarUsuario(txtUsuario.Text, txtContrasena.Text))
+            usu = blUsuario.ValidarUsuario(txtUsuario.Text, txtContrasena.Text);
+            if (usu != null && usu.Count() > 0)
             {
                 this.Visible = false;
                 FrmPrincipal frmPrincipal = new FrmPrincipal();
+                frmPrincipal.IdPerfil = usu[0].IdPerfil;
                 frmPrincipal.ShowDialog();
                 this.Close();
             }
-            else {
+            else
+            {
                 lblErroPws.Text = "Usuario o contraseña incorrecta";
                 lblErroPws.Visible = true;
             }

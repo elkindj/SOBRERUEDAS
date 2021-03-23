@@ -13,13 +13,13 @@ namespace TallerMecanico.Negocios
     {
         DAOUsuario daoUsuario = new DAOUsuario();
 
-        public bool ValidarUsuario(string pUsuario, string pContrsena)
+        public List<Usuario> ValidarUsuario(string pUsuario, string pContrsena)
         {
             bool _ingreso = false;
+            List<Usuario> usu = new List<Usuario>();
 
             if (pUsuario != "" || pContrsena != "")
             {
-                List<Usuario> usu = new List<Usuario>();
                 usu = daoUsuario.ValidarUsuario(pUsuario, pContrsena);
                 usu.ForEach(x =>
                 {
@@ -29,7 +29,7 @@ namespace TallerMecanico.Negocios
                 });
             }
 
-            return _ingreso;
+            return usu;
         }
 
         public List<Usuario> ListarUsuarios()
@@ -38,6 +38,12 @@ namespace TallerMecanico.Negocios
             usu = daoUsuario.ListarUsuarios();
 
             return usu;
+        }
+
+        public bool GrabarUsuario(Usuario pUsuario) {
+            //Se realizan la validacoines necesarias
+            daoUsuario.GrabarUsuario(pUsuario);
+            return true;
         }
     }
 }

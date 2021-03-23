@@ -16,6 +16,11 @@ namespace TallerMecanico.Negocios
 			return daProducto.Listar();
 		}
 
+		public List<Parametros> Listado() {
+			DAOProductos daProducto = new DAOProductos();
+			return daProducto.Listado();
+		}
+
 		public Productos ProductoTraerPorId(int Id)
 		{
 			DAOProductos daProducto = new DAOProductos();

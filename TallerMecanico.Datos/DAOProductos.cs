@@ -12,26 +12,32 @@ namespace TallerMecanico.Datos
 {
     public class DAOProductos
     {
-        string _cadenaConexion;
-        public string CadenaConexion
+        DatabaseConexion databaseConexion = new DatabaseConexion();
+        public List<Parametros> Listado()
         {
-            get
+            List<Parametros> lista = new List<Parametros>();
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
-                if (_cadenaConexion == null)
+                con.Open(); SqlCommand cmd = new SqlCommand("ListarModelo", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
                 {
-                    _cadenaConexion = ConfigurationManager.
-                    ConnectionStrings["Conex"].ConnectionString;
+                    while (dr.Read())
+                    {
+                        Parametros c = new Parametros((int)dr["Id"],(string)dr["Nombre"]);
+                        lista.Add(c);
+                    }
                 }
-                return _cadenaConexion;
             }
-            set { _cadenaConexion = value; }
+            return lista;
         }
 
         //metodo para traer la lista de todas las categorías de la tabla
         public List<Productos> Listar()
         {
             List<Productos> lista = new List<Productos>();
-            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open(); SqlCommand cmd = new SqlCommand("ListarProductos", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -51,17 +57,17 @@ namespace TallerMecanico.Datos
         public Productos TraerPorId(int Id)
         {
             Productos Productos = new Productos();
-            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open();
                 return Productos;
             }
         }
-        // metodo para actualizar una Productos puentual 
+        // metodo para actualizar una Productos puntual 
 
         public int Actualizar(Productos Productos)
         {
-            int n = -1; using (SqlConnection con = new SqlConnection(CadenaConexion))
+            int n = -1; using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("ActualizarProductos", con);
@@ -82,15 +88,14 @@ namespace TallerMecanico.Datos
         {
             int n = -1;
             Productos Productos = null;
-            using (SqlConnection con = new SqlConnection(CadenaConexion))
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
             {
                 SqlCommand cmd;
 
                 con.Open(); cmd = new SqlCommand("EliminarProductos", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id", Id);
-                n = cmd.ExecuteNonQuery();
-                cmd = new SqlCommand("TraerProductosPorId", con);
+                cmd.Parameters.AddWithValue("@ID", Id);
+                n = cmd.ExecuteNonQuery(); cmd = new SqlCommand("TraerProductosPorId", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ID", Id);
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -112,7 +117,7 @@ namespace TallerMecanico.Datos
         {
             int n = -1;
             using (SqlConnection con = new
-           SqlConnection(CadenaConexion))
+           SqlConnection(databaseConexion.CadenaConexion))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("InsertarProductos", con);

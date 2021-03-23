@@ -61,5 +61,7 @@ namespace TallerMecanico.Entidades
         {
         }
 
+        Categoria categoria = new Categoria();
+
     }
 }

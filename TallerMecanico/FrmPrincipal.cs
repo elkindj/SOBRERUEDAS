@@ -12,9 +12,15 @@ namespace TallerMecanico
 {
     public partial class FrmPrincipal : Form
     {
+        public int IdPerfil { get; set; }
         public FrmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            validarMenu(IdPerfil);
         }
 
         private void tSMCategoria_Click(object sender, EventArgs e)
@@ -48,6 +54,17 @@ namespace TallerMecanico
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
             this.Close();
+        }
+
+        private void validarMenu(int pidPerfil)
+        {
+            tSMAdministracion.Visible = true;
+            tSmInventario.Visible = true;
+
+            if (pidPerfil != 1)
+            {
+                tSMAdministracion.Visible = false;
+            }
         }
     }
 }
