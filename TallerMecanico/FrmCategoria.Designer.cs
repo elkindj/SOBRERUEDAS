@@ -30,6 +30,7 @@ namespace TallerMecanico
         private void InitializeComponent()
         {
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.checkBoxEstado = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtObservacion = new System.Windows.Forms.TextBox();
@@ -49,7 +50,7 @@ namespace TallerMecanico
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.checkBoxEstado = new System.Windows.Forms.CheckBox();
+            this.UserText = new System.Windows.Forms.Label();
             this.gbDatos.SuspendLayout();
             this.gbControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -72,6 +73,15 @@ namespace TallerMecanico
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             this.gbDatos.Enter += new System.EventHandler(this.gbDatos_Enter);
+            // 
+            // checkBoxEstado
+            // 
+            this.checkBoxEstado.AutoSize = true;
+            this.checkBoxEstado.Location = new System.Drawing.Point(91, 186);
+            this.checkBoxEstado.Name = "checkBoxEstado";
+            this.checkBoxEstado.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxEstado.TabIndex = 12;
+            this.checkBoxEstado.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -253,20 +263,21 @@ namespace TallerMecanico
             this.estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // checkBoxEstado
+            // UserText
             // 
-            this.checkBoxEstado.AutoSize = true;
-            this.checkBoxEstado.Location = new System.Drawing.Point(91, 186);
-            this.checkBoxEstado.Name = "checkBoxEstado";
-            this.checkBoxEstado.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxEstado.TabIndex = 12;
-            this.checkBoxEstado.UseVisualStyleBackColor = true;
+            this.UserText.AutoSize = true;
+            this.UserText.Location = new System.Drawing.Point(35, 15);
+            this.UserText.Name = "UserText";
+            this.UserText.Size = new System.Drawing.Size(35, 13);
+            this.UserText.TabIndex = 3;
+            this.UserText.Text = "label6";
             // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 517);
+            this.Controls.Add(this.UserText);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.gbControl);
             this.Controls.Add(this.gbDatos);
@@ -278,6 +289,7 @@ namespace TallerMecanico
             this.gbControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -304,5 +316,6 @@ namespace TallerMecanico
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estado;
         private System.Windows.Forms.CheckBox checkBoxEstado;
+        private System.Windows.Forms.Label UserText;
     }
 }
