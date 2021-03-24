@@ -13,7 +13,7 @@ namespace TallerMecanico.Entidades
         String _modulo;
         String _prefijo;
         String _consecutivo;
-        DateTime _fecha;
+        //DateTime _fecha;
         public int ConsecutivoId
         {
             get { return _consecutivoId; }

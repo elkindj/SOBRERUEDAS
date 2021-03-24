@@ -15,7 +15,7 @@ namespace TallerMecanico.Negocios
         DAOUsuario daoUsuario = new DAOUsuario();
 
         public ObjectCache cacheName = System.Runtime.Caching.MemoryCache.Default;
-        public bool ListarUsuario(string pUsuario, string pContrsena)
+       // public bool ListarUsuario(string pUsuario, string pContrsena);
         public List<Usuario> ValidarUsuario(string pUsuario, string pContrsena)
 
         {
@@ -39,7 +39,7 @@ namespace TallerMecanico.Negocios
             return usu;
         }
 
-        public List<Usuario> ListarUsuarios()
+        public  List<Usuario> ListarUsuarios()
         {
             List<Usuario> usu = new List<Usuario>();
             usu = daoUsuario.ListarUsuarios();
