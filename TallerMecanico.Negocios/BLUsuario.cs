@@ -13,15 +13,18 @@ namespace TallerMecanico.Negocios
     public class BLUsuario
     {
         DAOUsuario daoUsuario = new DAOUsuario();
+
         public ObjectCache cacheName = System.Runtime.Caching.MemoryCache.Default;
         public bool ListarUsuario(string pUsuario, string pContrsena)
+        public List<Usuario> ValidarUsuario(string pUsuario, string pContrsena)
+
         {
             bool _ingreso = false;
+            List<Usuario> usu = new List<Usuario>();
 
             if (pUsuario != "" || pContrsena != "")
             {
-                List<Usuario> usu = new List<Usuario>();
-                usu = daoUsuario.ListarUsuario(pUsuario, pContrsena);
+                usu = daoUsuario.ValidarUsuario(pUsuario, pContrsena);
                 usu.ForEach(x =>
                 {
                     if (x.Usu_Usuario == pUsuario && x.Usu_Contrasena == pContrsena)
@@ -33,7 +36,21 @@ namespace TallerMecanico.Negocios
                 });
             }
 
-            return _ingreso;
+            return usu;
+        }
+
+        public List<Usuario> ListarUsuarios()
+        {
+            List<Usuario> usu = new List<Usuario>();
+            usu = daoUsuario.ListarUsuarios();
+
+            return usu;
+        }
+
+        public bool GrabarUsuario(Usuario pUsuario) {
+            //Se realizan la validacoines necesarias
+            daoUsuario.GrabarUsuario(pUsuario);
+            return true;
         }
     }
 }

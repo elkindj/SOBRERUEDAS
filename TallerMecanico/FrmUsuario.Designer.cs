@@ -30,13 +30,13 @@ namespace TallerMecanico
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtApellidoPa = new System.Windows.Forms.TextBox();
+            this.txtPallidoMa = new System.Windows.Forms.TextBox();
+            this.txtNumDocumento = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,61 +45,67 @@ namespace TallerMecanico
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbPerfil = new System.Windows.Forms.ComboBox();
+            this.cbTipDocumento = new System.Windows.Forms.ComboBox();
+            this.btnGrabar = new System.Windows.Forms.Button();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.gridUsuarios = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.gridUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtNombre.Location = new System.Drawing.Point(152, 43);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(228, 20);
+            this.txtNombre.TabIndex = 0;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // textBox2
+            // txtApellidoPa
             // 
-            this.textBox2.Location = new System.Drawing.Point(152, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(228, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtApellidoPa.Location = new System.Drawing.Point(152, 69);
+            this.txtApellidoPa.Name = "txtApellidoPa";
+            this.txtApellidoPa.Size = new System.Drawing.Size(228, 20);
+            this.txtApellidoPa.TabIndex = 2;
             // 
-            // textBox3
+            // txtPallidoMa
             // 
-            this.textBox3.Location = new System.Drawing.Point(152, 95);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(228, 20);
-            this.textBox3.TabIndex = 3;
+            this.txtPallidoMa.Location = new System.Drawing.Point(152, 95);
+            this.txtPallidoMa.Name = "txtPallidoMa";
+            this.txtPallidoMa.Size = new System.Drawing.Size(228, 20);
+            this.txtPallidoMa.TabIndex = 3;
             // 
-            // textBox5
+            // txtNumDocumento
             // 
-            this.textBox5.Location = new System.Drawing.Point(152, 147);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(228, 20);
-            this.textBox5.TabIndex = 5;
+            this.txtNumDocumento.Location = new System.Drawing.Point(152, 147);
+            this.txtNumDocumento.Name = "txtNumDocumento";
+            this.txtNumDocumento.Size = new System.Drawing.Size(228, 20);
+            this.txtNumDocumento.TabIndex = 5;
             // 
-            // textBox6
+            // txtUsuario
             // 
-            this.textBox6.Location = new System.Drawing.Point(152, 173);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(228, 20);
-            this.textBox6.TabIndex = 6;
+            this.txtUsuario.Location = new System.Drawing.Point(152, 173);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(228, 20);
+            this.txtUsuario.TabIndex = 6;
             // 
-            // textBox7
+            // txtContraseña
             // 
-            this.textBox7.Location = new System.Drawing.Point(152, 199);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(228, 20);
-            this.textBox7.TabIndex = 7;
+            this.txtContraseña.Location = new System.Drawing.Point(152, 199);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(228, 20);
+            this.txtContraseña.TabIndex = 7;
             // 
             // label1
             // 
@@ -173,47 +179,39 @@ namespace TallerMecanico
             this.label8.TabIndex = 17;
             this.label8.Text = "Perfil";
             // 
-            // comboBox1
+            // cbPerfil
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(152, 225);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 21);
-            this.comboBox1.TabIndex = 18;
+            this.cbPerfil.FormattingEnabled = true;
+            this.cbPerfil.Location = new System.Drawing.Point(152, 225);
+            this.cbPerfil.Name = "cbPerfil";
+            this.cbPerfil.Size = new System.Drawing.Size(228, 21);
+            this.cbPerfil.TabIndex = 18;
             // 
-            // comboBox2
+            // cbTipDocumento
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(152, 120);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(228, 21);
-            this.comboBox2.TabIndex = 19;
+            this.cbTipDocumento.FormattingEnabled = true;
+            this.cbTipDocumento.Location = new System.Drawing.Point(152, 120);
+            this.cbTipDocumento.Name = "cbTipDocumento";
+            this.cbTipDocumento.Size = new System.Drawing.Size(228, 21);
+            this.cbTipDocumento.TabIndex = 19;
             // 
-            // button1
+            // btnGrabar
             // 
-            this.button1.Location = new System.Drawing.Point(12, 292);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Grabar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGrabar.Location = new System.Drawing.Point(12, 292);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(239, 23);
+            this.btnGrabar.TabIndex = 20;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
-            // button2
+            // cbEstado
             // 
-            this.button2.Location = new System.Drawing.Point(152, 292);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 23);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(152, 252);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(228, 21);
-            this.comboBox3.TabIndex = 23;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(152, 252);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(228, 21);
+            this.cbEstado.TabIndex = 23;
             // 
             // label9
             // 
@@ -226,27 +224,78 @@ namespace TallerMecanico
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(297, 292);
+            this.btnSalir.Location = new System.Drawing.Point(257, 292);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(138, 23);
+            this.btnSalir.Size = new System.Drawing.Size(257, 23);
             this.btnSalir.TabIndex = 24;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // gridUsuarios
+            // 
+            this.gridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Apellido1,
+            this.Documento,
+            this.Usuario});
+            this.gridUsuarios.Location = new System.Drawing.Point(12, 339);
+            this.gridUsuarios.Name = "gridUsuarios";
+            this.gridUsuarios.Size = new System.Drawing.Size(502, 222);
+            this.gridUsuarios.TabIndex = 25;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Usu_Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Apellido1
+            // 
+            this.Apellido1.DataPropertyName = "Usu_ApellidoPat";
+            this.Apellido1.HeaderText = "Apellido Paterno";
+            this.Apellido1.Name = "Apellido1";
+            this.Apellido1.ReadOnly = true;
+            // 
+            // Documento
+            // 
+            this.Documento.DataPropertyName = "Usu_Documento";
+            this.Documento.HeaderText = "Documento";
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
+            // 
+            // Usuario
+            // 
+            this.Usuario.DataPropertyName = "Usu_Usuario";
+            this.Usuario.HeaderText = "Usuario";
+            this.Usuario.Name = "Usuario";
+            this.Usuario.ReadOnly = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(80, 3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(365, 31);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Administración de usuarios";
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 450);
+            this.ClientSize = new System.Drawing.Size(526, 573);
             this.ControlBox = false;
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.gridUsuarios);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnGrabar);
+            this.Controls.Add(this.cbTipDocumento);
+            this.Controls.Add(this.cbPerfil);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -255,14 +304,16 @@ namespace TallerMecanico
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtNumDocumento);
+            this.Controls.Add(this.txtPallidoMa);
+            this.Controls.Add(this.txtApellidoPa);
+            this.Controls.Add(this.txtNombre);
             this.Name = "FrmUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FrmUsuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,13 +321,13 @@ namespace TallerMecanico
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtApellidoPa;
+        private System.Windows.Forms.TextBox txtPallidoMa;
+        private System.Windows.Forms.TextBox txtNumDocumento;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -285,12 +336,17 @@ namespace TallerMecanico
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbPerfil;
+        private System.Windows.Forms.ComboBox cbTipDocumento;
+        private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.DataGridView gridUsuarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
+        private System.Windows.Forms.Label label10;
     }
 }

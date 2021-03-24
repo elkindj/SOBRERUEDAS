@@ -9,6 +9,7 @@ namespace TallerMecanico.Entidades
     public class Usuario
     {
         int _idUsuario;
+        int _idPerfil;
         string _usu_Nombre;
         string _usu_ApellidoPat;
         string _usu_ApellidoMat;
@@ -22,6 +23,12 @@ namespace TallerMecanico.Entidades
         {
             get { return _idUsuario; }
             set { _idUsuario = value; }
+        }
+
+        public int IdPerfil
+        {
+            get { return _idPerfil; }
+            set { _idPerfil = value; }
         }
 
         public string Usu_Nombre
@@ -66,9 +73,10 @@ namespace TallerMecanico.Entidades
             set { _usu_Contrasena = value; }
         }
 
-        public Usuario(int IdUsuario, string Usu_Nombre, string Usu_ApellidoPat, string Usu_ApellidoMat, int Usu_IdTipoDoumento, int Usu_Documento, string Usu_Usuario, string Usu_Contrasena)
+        public Usuario(int IdUsuario,int IdPerfil, string Usu_Nombre, string Usu_ApellidoPat, string Usu_ApellidoMat, int Usu_IdTipoDoumento, int Usu_Documento, string Usu_Usuario, string Usu_Contrasena)
         {
             this._idUsuario = IdUsuario;
+            this._idPerfil = IdPerfil;
             this._usu_Nombre = Usu_Nombre;
             this._usu_ApellidoPat = Usu_ApellidoPat;
             this._usu_ApellidoMat = Usu_ApellidoMat;
@@ -78,7 +86,7 @@ namespace TallerMecanico.Entidades
             this._usu_Contrasena = Usu_Contrasena;
         }
 
-        public Usuario(int IdUsuario, string Usu_Nombre, string Usu_ApellidoPat, string Usu_ApellidoMat, int Usu_IdTipoDoumento, int Usu_Documento, string Usu_Usuario) : this(IdUsuario, Usu_Nombre, Usu_ApellidoPat, Usu_ApellidoMat, Usu_IdTipoDoumento, Usu_Documento, Usu_Usuario, "")
+        public Usuario(int IdUsuario,int IdPerfil, string Usu_Nombre, string Usu_ApellidoPat, string Usu_ApellidoMat, int Usu_IdTipoDoumento, int Usu_Documento, string Usu_Usuario) : this(IdUsuario, IdPerfil, Usu_Nombre, Usu_ApellidoPat, Usu_ApellidoMat, Usu_IdTipoDoumento, Usu_Documento, Usu_Usuario, "")
         {
         }
 

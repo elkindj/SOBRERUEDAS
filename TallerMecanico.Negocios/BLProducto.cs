@@ -26,6 +26,7 @@ namespace TallerMecanico.Negocios
 			DAOProductos daProducto = new DAOProductos();
 			return daProducto.TraerPorId(Id);
 		}
+
 		public int Insertar(Productos Productos)
 		{
 			DAOProductos daProducto = new DAOProductos();
@@ -36,6 +37,12 @@ namespace TallerMecanico.Negocios
 		{
 			DAOProductos daProducto = new DAOProductos();
 			return daProducto.Actualizar(Productos);
+		}
+
+		public string ObtenerConsecutivo() {
+			DAOGeneral daoGeneral = new DAOGeneral();
+			string Consecutivo = daoGeneral.ObeterConsecutivo("Producto");
+			return Consecutivo;
 		}
 	}
 }

@@ -12,9 +12,31 @@ namespace TallerMecanico
 {
     public partial class FrmPrincipal : Form
     {
+        public int IdPerfil { get; set; }
         public FrmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            validarMenu(IdPerfil);
+        }
+
+        private void tSMCategoria_Click(object sender, EventArgs e)
+        {
+            FrmCategoria frmCategoria = new FrmCategoria();
+            frmCategoria.MdiParent = this;
+            frmCategoria.WindowState = FormWindowState.Maximized;
+            frmCategoria.Show();
+        }
+
+        private void tSMProducto_Click(object sender, EventArgs e)
+        {
+            FrmProducto frmProducto = new FrmProducto();
+            frmProducto.MdiParent = this;
+            frmProducto.WindowState = FormWindowState.Maximized;
+            frmProducto.Show();
         }
 
         private void tSMUsuarios_Click(object sender, EventArgs e)
@@ -34,12 +56,15 @@ namespace TallerMecanico
             this.Close();
         }
 
-        private void tSMCategoria_Click(object sender, EventArgs e)
+        private void validarMenu(int pidPerfil)
         {
-            FrmCategoria frmCategoria = new FrmCategoria();
-            frmCategoria.MdiParent = this;
-            frmCategoria.WindowState = FormWindowState.Maximized;
-            frmCategoria.Show();
+            tSMAdministracion.Visible = true;
+            tSmInventario.Visible = true;
+
+            if (pidPerfil != 1)
+            {
+                tSMAdministracion.Visible = false;
+            }
         }
     }
 }
