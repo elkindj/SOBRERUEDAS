@@ -42,7 +42,9 @@ namespace TallerMecanico
             {
             }
         }
+
         private void LimpiarControl(Control Contenedor) { foreach (var item in Contenedor.Controls) { if (item.GetType() == typeof(TextBox)) { ((TextBox)item).Clear(); } } }
+
         private void ActivarButton(bool Estado)
         {
             btnNuevo.Enabled = Estado;
@@ -81,6 +83,7 @@ namespace TallerMecanico
                 //txtCodP.Text = bLProducto.Listado();
 
             }
+
             if (categorias == null)
             {
                 categorias = bLCategoria.Listar();
@@ -98,6 +101,7 @@ namespace TallerMecanico
                 comboBox1.ValueMember = "Id";
             }
         }
+
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
@@ -143,7 +147,7 @@ namespace TallerMecanico
             int n = -1;
             if (_nuevo)
             {
-                c = new Productos(0, txtCodP.Text, Convert.ToInt32(comboBox1.SelectedValue),"", txtMarca.Text, txtProducto.Text, txtDetalle.Text, Convert.ToInt32(txtPrecio.Text), Convert.ToBoolean(chckEstado.Checked),"katherine", DateTime.Now, "katherine", DateTime.Now);
+                c = new Productos(0, txtCodP.Text, Convert.ToInt32(comboBox1.SelectedValue), "", txtMarca.Text, txtProducto.Text, txtDetalle.Text, Convert.ToInt32(txtPrecio.Text), Convert.ToBoolean(chckEstado.Checked), "katherine", DateTime.Now, "katherine", DateTime.Now);
                 n = bLProducto.Insertar(c);
 
             }
@@ -187,6 +191,9 @@ namespace TallerMecanico
             ActivarButton(true);
             LimpiarControl(groupBox1);
             comboBox1.Focus();
+
+            txtCodP.Enabled = false;
+            txtCodP.Text = bLProducto.ObtenerConsecutivo();
 
         }
 
@@ -267,9 +274,9 @@ namespace TallerMecanico
                 {
                     c = bLProducto.ProductoTraerPorId((int)dataGridView1[0, dataGridView1.CurrentRow.Index].Value);
                     txtCodP.Text = c.Codigo;
-                    comboBox1.SelectedItem=c.NombreP;
-                    txtMarca.Text=c.Modelo;
-                    txtProducto.Text= c.Nombre;
+                    comboBox1.SelectedItem = c.NombreP;
+                    txtMarca.Text = c.Modelo;
+                    txtProducto.Text = c.Nombre;
                     txtDetalle.Text = c.Detalles;
                     int precio = c.Precio;
                     txtPrecio.Text = precio.ToString();
@@ -279,6 +286,7 @@ namespace TallerMecanico
                     ActivarButton(true);
                     dataGridView1.Enabled = false;
                     btnEditar.Text = "Cancelar";
+                    txtCodP.Enabled = false;
                 }
             }
         }
@@ -323,5 +331,5 @@ namespace TallerMecanico
 
         }
     }
-    }
+}
 

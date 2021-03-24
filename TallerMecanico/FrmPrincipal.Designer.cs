@@ -35,13 +35,13 @@ namespace TallerMecanico
             this.tSmInventario = new System.Windows.Forms.ToolStripMenuItem();
             this.tSMCategoria = new System.Windows.Forms.ToolStripMenuItem();
             this.tSMProducto = new System.Windows.Forms.ToolStripMenuItem();
-            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tSmSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tSmSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@ namespace TallerMecanico
             this.mnuPrincipal.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.mnuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnuPrincipal.Name = "mnuPrincipal";
-            this.mnuPrincipal.Size = new System.Drawing.Size(172, 521);
+            this.mnuPrincipal.Size = new System.Drawing.Size(172, 628);
             this.mnuPrincipal.TabIndex = 0;
             // 
             // tSMAdministracion
@@ -77,7 +77,7 @@ namespace TallerMecanico
             // tSMUsuarios
             // 
             this.tSMUsuarios.Name = "tSMUsuarios";
-            this.tSMUsuarios.Size = new System.Drawing.Size(224, 28);
+            this.tSMUsuarios.Size = new System.Drawing.Size(161, 28);
             this.tSMUsuarios.Text = "Usuarios";
             this.tSMUsuarios.Click += new System.EventHandler(this.tSMUsuarios_Click);
             // 
@@ -99,16 +99,28 @@ namespace TallerMecanico
             // tSMCategoria
             // 
             this.tSMCategoria.Name = "tSMCategoria";
-            this.tSMCategoria.Size = new System.Drawing.Size(224, 28);
+            this.tSMCategoria.Size = new System.Drawing.Size(179, 28);
             this.tSMCategoria.Text = "Categorias";
             this.tSMCategoria.Click += new System.EventHandler(this.tSMCategoria_Click);
             // 
             // tSMProducto
             // 
             this.tSMProducto.Name = "tSMProducto";
-            this.tSMProducto.Size = new System.Drawing.Size(224, 28);
+            this.tSMProducto.Size = new System.Drawing.Size(179, 28);
             this.tSMProducto.Text = "Productos";
             this.tSMProducto.Click += new System.EventHandler(this.tSMProducto_Click);
+            // 
+            // comprasToolStripMenuItem
+            // 
+            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(179, 28);
+            this.comprasToolStripMenuItem.Text = "Compras";
+            // 
+            // ventasToolStripMenuItem
+            // 
+            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(179, 28);
+            this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // mantenimientoToolStripMenuItem
             // 
@@ -123,6 +135,24 @@ namespace TallerMecanico
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
             this.mantenimientoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(217, 28);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // vehiculosToolStripMenuItem
+            // 
+            this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
+            this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(217, 28);
+            this.vehiculosToolStripMenuItem.Text = "Vehiculos";
+            // 
+            // mantenimientoToolStripMenuItem1
+            // 
+            this.mantenimientoToolStripMenuItem1.Name = "mantenimientoToolStripMenuItem1";
+            this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(217, 28);
+            this.mantenimientoToolStripMenuItem1.Text = "Mantenimiento";
+            // 
             // tSmSalir
             // 
             this.tSmSalir.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
@@ -135,42 +165,12 @@ namespace TallerMecanico
             this.tSmSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tSmSalir.Click += new System.EventHandler(this.tSmSalir_Click);
             // 
-            // comprasToolStripMenuItem
-            // 
-            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.comprasToolStripMenuItem.Text = "Compras";
-            // 
-            // ventasToolStripMenuItem
-            // 
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.ventasToolStripMenuItem.Text = "Ventas";
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            // 
-            // vehiculosToolStripMenuItem
-            // 
-            this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
-            this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.vehiculosToolStripMenuItem.Text = "Vehiculos";
-            // 
-            // mantenimientoToolStripMenuItem1
-            // 
-            this.mantenimientoToolStripMenuItem1.Name = "mantenimientoToolStripMenuItem1";
-            this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
-            this.mantenimientoToolStripMenuItem1.Text = "Mantenimiento";
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(974, 521);
+            this.ClientSize = new System.Drawing.Size(1186, 628);
             this.ControlBox = false;
             this.Controls.Add(this.mnuPrincipal);
             this.IsMdiContainer = true;
