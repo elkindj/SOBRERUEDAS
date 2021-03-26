@@ -103,7 +103,7 @@ namespace TallerMecanico
 
         private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            btnEditar.Enabled = true;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
