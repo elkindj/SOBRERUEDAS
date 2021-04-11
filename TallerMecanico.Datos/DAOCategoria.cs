@@ -33,7 +33,8 @@ namespace TallerMecanico.Datos
                         (string)dr["Observacion"],
                         (bool)dr["Estado"],
                         (string)dr["Usuario"],
-                        (string)dr["UsuarioEdita"]);
+                        (string)dr["UsuarioEdita"],
+                        (DateTime)dr["FechaReg"]);
                         lista.Add(c);
                     }
                 }
@@ -60,7 +61,8 @@ namespace TallerMecanico.Datos
                         (string)dr["Observacion"],
                         (bool)dr["Estado"],
                         (string)dr["Usuario"],
-                        (string)dr["UsuarioEdita"]);
+                        (string)dr["UsuarioEdita"],
+                        (DateTime)dr["FechaReg"]);
                 }
             }
             return Categoria;
@@ -116,6 +118,7 @@ namespace TallerMecanico.Datos
                 cmd.Parameters.AddWithValue("@Estado", Categoria.Estado);
                 cmd.Parameters.AddWithValue("@UsuarioReg", Categoria.UsuarioReg);
                 cmd.Parameters.AddWithValue("@UsuarioEdita", Categoria.UsuarioEdita);
+                cmd.Parameters.AddWithValue("@FechaReg", Categoria.FechaReg);
                 n = cmd.ExecuteNonQuery();
             }
             return n;

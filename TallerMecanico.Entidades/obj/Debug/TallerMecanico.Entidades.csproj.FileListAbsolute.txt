@@ -32,3 +32,4 @@ C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Enti
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.dll
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.pdb
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csprojAssemblyReference.cache

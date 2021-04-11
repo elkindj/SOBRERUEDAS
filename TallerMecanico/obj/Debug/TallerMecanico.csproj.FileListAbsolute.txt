@@ -116,3 +116,5 @@ C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.csproj.CopyComplete
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.exe
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.pdb
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmVentas.resources
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\Debug\TallerMecanico.FrmListaProductos.resources

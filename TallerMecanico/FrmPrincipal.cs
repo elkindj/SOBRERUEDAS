@@ -66,5 +66,14 @@ namespace TallerMecanico
                 tSMAdministracion.Visible = false;
             }
         }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            FrmVentas frmVentas = new FrmVentas();
+            frmVentas.MdiParent = this;
+            frmVentas.WindowState = FormWindowState.Maximized;
+            frmVentas.Show();
+        }
     }
 }

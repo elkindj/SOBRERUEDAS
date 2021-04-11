@@ -63,7 +63,7 @@ namespace TallerMecanico.Entidades
             get { return _fechaEdita; }
             set { _fechaEdita = value; }
         }
-        public Categoria(int Id, string Codigo, string Nombre, string Observacion,bool Estado, string UsuarioReg, string UsuarioEdita)
+        public Categoria(int Id, string Codigo, string Nombre, string Observacion,bool Estado, string UsuarioReg, string UsuarioEdita,DateTime FechaReg)
         {
             this._id = Id;
             this._codigo = Codigo;
@@ -72,9 +72,10 @@ namespace TallerMecanico.Entidades
             this._estado = Estado;
             this._usuarioReg = UsuarioReg;
             this._usuarioEdita = UsuarioEdita;
+            this._fechaReg = FechaReg;
         }
 
-        public Categoria() : this(0, "", "", "",true,"","")
+        public Categoria() : this(0, "", "", "",true,"","",DateTime.UtcNow)
         {
         }
     }

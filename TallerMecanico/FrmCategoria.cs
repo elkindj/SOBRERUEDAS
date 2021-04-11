@@ -75,7 +75,6 @@ namespace TallerMecanico
 
         private void CargarDatos()
         {
-            UserText.Text = LoadUser();
             btnGrabar.Enabled = false;
             btnEditar.Enabled = false;
             if (lista == null)
@@ -155,7 +154,8 @@ namespace TallerMecanico
                 txtObservacion.Text,
                 checkBoxEstado.Checked,
                 user,
-                user
+                user,
+                DateTime.Now
                 );
                 n = blCategoria.Insertar(c);
             }
@@ -168,7 +168,7 @@ namespace TallerMecanico
                 c.UsuarioReg = user;
                 c.UsuarioEdita = user;
                 //c.FechaEdita = DateTime.Now;
-                //c.FechaReg = DateTime.Now;
+                c.FechaReg = DateTime.Now;
                 n = blCategoria.Actualizar(c);
             }
             if (n > 0)
