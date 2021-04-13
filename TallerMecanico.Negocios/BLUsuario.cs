@@ -15,18 +15,11 @@ namespace TallerMecanico.Negocios
 
         public List<Usuario> ValidarUsuario(string pUsuario, string pContrsena)
         {
-            bool _ingreso = false;
             List<Usuario> usu = new List<Usuario>();
 
             if (pUsuario != "" || pContrsena != "")
             {
                 usu = daoUsuario.ValidarUsuario(pUsuario, pContrsena);
-                usu.ForEach(x =>
-                {
-                    if (x.Usu_Usuario == pUsuario && x.Usu_Contrasena == pContrsena)
-                        _ingreso = true;
-
-                });
             }
 
             return usu;

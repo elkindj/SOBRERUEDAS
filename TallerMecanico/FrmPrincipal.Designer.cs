@@ -29,6 +29,7 @@ namespace TallerMecanico
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.mnuPrincipal = new System.Windows.Forms.MenuStrip();
             this.tSMAdministracion = new System.Windows.Forms.ToolStripMenuItem();
             this.tSMUsuarios = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +43,9 @@ namespace TallerMecanico
             this.vehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tSmSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblUsuarioActual = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.mnuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +81,7 @@ namespace TallerMecanico
             // tSMUsuarios
             // 
             this.tSMUsuarios.Name = "tSMUsuarios";
-            this.tSMUsuarios.Size = new System.Drawing.Size(161, 28);
+            this.tSMUsuarios.Size = new System.Drawing.Size(224, 28);
             this.tSMUsuarios.Text = "Usuarios";
             this.tSMUsuarios.Click += new System.EventHandler(this.tSMUsuarios_Click);
             // 
@@ -115,6 +119,7 @@ namespace TallerMecanico
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(179, 28);
             this.comprasToolStripMenuItem.Text = "Compras";
+            this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem
             // 
@@ -165,6 +170,24 @@ namespace TallerMecanico
             this.tSmSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tSmSalir.Click += new System.EventHandler(this.tSmSalir_Click);
             // 
+            // lblUsuarioActual
+            // 
+            this.lblUsuarioActual.AutoSize = true;
+            this.lblUsuarioActual.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblUsuarioActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioActual.ForeColor = System.Drawing.Color.White;
+            this.lblUsuarioActual.Location = new System.Drawing.Point(12, 566);
+            this.lblUsuarioActual.Name = "lblUsuarioActual";
+            this.lblUsuarioActual.Size = new System.Drawing.Size(67, 18);
+            this.lblUsuarioActual.TabIndex = 2;
+            this.lblUsuarioActual.Text = "Usuario";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +195,7 @@ namespace TallerMecanico
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1186, 628);
             this.ControlBox = false;
+            this.Controls.Add(this.lblUsuarioActual);
             this.Controls.Add(this.mnuPrincipal);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuPrincipal;
@@ -200,5 +224,8 @@ namespace TallerMecanico
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vehiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem1;
+        private System.Windows.Forms.Label lblUsuarioActual;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

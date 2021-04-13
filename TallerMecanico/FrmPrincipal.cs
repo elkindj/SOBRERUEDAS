@@ -20,7 +20,30 @@ namespace TallerMecanico
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            validarMenu(IdPerfil);
+            lblUsuarioActual.Text = UsuarioLogeado.Nombre;
+            validarMenu(UsuarioLogeado.Id);
+        }
+
+        private void validarMenu(int pidPerfil)
+        {
+            if (UsuarioLogeado.IdPerfil == 2) {
+                tSMAdministracion.Visible = false;
+            }
+
+            if (UsuarioLogeado.IdPerfil == 3)
+            {
+                tSMAdministracion.Visible = false;
+                tSmInventario.Visible = false;
+            }
+
+        }
+
+        private void tSMUsuarios_Click(object sender, EventArgs e)
+        {
+            FrmUsuario frmUsuario = new FrmUsuario();
+            frmUsuario.MdiParent = this;
+            frmUsuario.WindowState = FormWindowState.Maximized;
+            frmUsuario.Show();
         }
 
         private void tSMCategoria_Click(object sender, EventArgs e)
@@ -39,13 +62,12 @@ namespace TallerMecanico
             frmProducto.Show();
         }
 
-        private void tSMUsuarios_Click(object sender, EventArgs e)
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmUsuario frmUsuario = new FrmUsuario();
-            //frmUsuario.MdiParent = this;
-            //frmUsuario.WindowState = FormWindowState.Maximized;
-            //frmUsuario.Show();
-            frmUsuario.ShowDialog();
+            FrmCompra frmCompra = new FrmCompra();
+            frmCompra.MdiParent = this;
+            frmCompra.WindowState = FormWindowState.Maximized;
+            frmCompra.Show();
         }
 
         private void tSmSalir_Click(object sender, EventArgs e)
@@ -54,17 +76,6 @@ namespace TallerMecanico
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
             this.Close();
-        }
-
-        private void validarMenu(int pidPerfil)
-        {
-            tSMAdministracion.Visible = true;
-            tSmInventario.Visible = true;
-
-            if (pidPerfil != 1)
-            {
-                tSMAdministracion.Visible = false;
-            }
         }
     }
 }

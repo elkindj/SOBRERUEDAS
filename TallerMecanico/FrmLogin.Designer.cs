@@ -139,7 +139,7 @@ namespace TallerMecanico
             this.BtnCancelar.Size = new System.Drawing.Size(259, 39);
             this.BtnCancelar.TabIndex = 4;
             this.BtnCancelar.Tag = "3";
-            this.BtnCancelar.Text = "CANCELAR";
+            this.BtnCancelar.Text = "SALIR";
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 

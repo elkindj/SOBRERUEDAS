@@ -27,9 +27,11 @@ namespace TallerMecanico
             usu = blUsuario.ValidarUsuario(txtUsuario.Text, txtContrasena.Text);
             if (usu != null && usu.Count() > 0)
             {
+                UsuarioLogeado.Id = usu[0].IdUsuario;
+                UsuarioLogeado.Nombre = usu[0].Usu_Nombre;
+                UsuarioLogeado.IdPerfil = usu[0].IdPerfil;
                 this.Visible = false;
                 FrmPrincipal frmPrincipal = new FrmPrincipal();
-                frmPrincipal.IdPerfil = usu[0].IdPerfil;
                 frmPrincipal.ShowDialog();
                 this.Close();
             }
