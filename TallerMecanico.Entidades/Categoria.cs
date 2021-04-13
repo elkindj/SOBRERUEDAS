@@ -13,6 +13,10 @@ namespace TallerMecanico.Entidades
         string _nombre;
         string _observacion;
         bool _estado;
+        String _usuarioReg;
+        DateTime _fechaReg;
+        String _usuarioEdita;
+        DateTime _fechaEdita;
         public int Id
         {
             get { return _id; }
@@ -39,21 +43,39 @@ namespace TallerMecanico.Entidades
             get { return _estado; }
             set { _estado = value; }
         }
-        public Categoria(int Id, string Codigo, string Nombre, string Observacion,bool Estado)
+        public String UsuarioReg
+        {
+            get { return _usuarioReg; }
+            set { _usuarioReg = value; }
+        }
+        public DateTime FechaReg
+        {
+            get { return _fechaReg; }
+            set { _fechaReg = value; }
+        }
+        public String UsuarioEdita
+        {
+            get { return _usuarioEdita; }
+            set { _usuarioEdita = value; }
+        }
+        public DateTime FechaEdita
+        {
+            get { return _fechaEdita; }
+            set { _fechaEdita = value; }
+        }
+        public Categoria(int Id, string Codigo, string Nombre, string Observacion,bool Estado, string UsuarioReg, string UsuarioEdita,DateTime FechaReg)
         {
             this._id = Id;
             this._codigo = Codigo;
             this._nombre = Nombre;
             this._observacion = Observacion;
             this._estado = Estado;
+            this._usuarioReg = UsuarioReg;
+            this._usuarioEdita = UsuarioEdita;
+            this._fechaReg = FechaReg;
         }
-        public Categoria(int Id, string Codigo, string Nombre, bool Estado) : this(Id, Codigo, Nombre, "", Estado)
-        {
-        }
-        public Categoria(int Id, string Nombre,bool Estado) : this(Id, "", Nombre, "", Estado)
-        {
-        }
-        public Categoria() : this(0, "", "", "",true)
+
+        public Categoria() : this(0, "", "", "",true,"","",DateTime.UtcNow)
         {
         }
     }

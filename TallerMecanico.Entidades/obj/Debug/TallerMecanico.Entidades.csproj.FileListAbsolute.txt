@@ -22,15 +22,18 @@ C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Ent
 C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csproj.CoreCompileInputs.cache
 C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.dll
 C:\gitProyecto\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.pdb
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.dll
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.pdb
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csprojAssemblyReference.cache
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csproj.CoreCompileInputs.cache
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.dll
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.pdb
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.dll
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.pdb
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csproj.CoreCompileInputs.cache
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.dll
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.pdb
+<<<<<<< HEAD
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csprojAssemblyReference.cache
+=======
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.dll
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\bin\Debug\TallerMecanico.Entidades.pdb
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.dll
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.pdb
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Entidades\obj\Debug\TallerMecanico.Entidades.csprojAssemblyReference.cache
+>>>>>>> 77a6aa87592b9049674df08e685ab1e4e381d53d

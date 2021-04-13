@@ -77,5 +77,28 @@ namespace TallerMecanico
             frmLogin.ShowDialog();
             this.Close();
         }
+<<<<<<< HEAD
+=======
+
+        private void validarMenu(int pidPerfil)
+        {
+            tSMAdministracion.Visible = true;
+            tSmInventario.Visible = true;
+
+            if (pidPerfil != 1)
+            {
+                tSMAdministracion.Visible = false;
+            }
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            FrmVentas frmVentas = new FrmVentas();
+            frmVentas.MdiParent = this;
+            frmVentas.WindowState = FormWindowState.Maximized;
+            frmVentas.Show();
+        }
+>>>>>>> 77a6aa87592b9049674df08e685ab1e4e381d53d
     }
 }

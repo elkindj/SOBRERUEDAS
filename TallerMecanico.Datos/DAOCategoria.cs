@@ -27,7 +27,14 @@ namespace TallerMecanico.Datos
                 {
                     while (dr.Read())
                     {
-                        Categoria c = new Categoria((int)dr["Id"], (string)dr["Codigo"], (string)dr["Nombre"], (string)dr["Observacion"],(bool)dr["Estado"]);
+                        Categoria c = new Categoria((int)dr["Id"],
+                        (string)dr["Codigo"], 
+                        (string)dr["Nombre"], 
+                        (string)dr["Observacion"],
+                        (bool)dr["Estado"],
+                        (string)dr["Usuario"],
+                        (string)dr["UsuarioEdita"],
+                        (DateTime)dr["FechaReg"]);
                         lista.Add(c);
                     }
                 }
@@ -52,7 +59,10 @@ namespace TallerMecanico.Datos
                     Categoria = new Categoria((int)dr["Id"],
                         (string)dr["Codigo"], (string)dr["Nombre"],
                         (string)dr["Observacion"],
-                        (bool)dr["Estado"]);
+                        (bool)dr["Estado"],
+                        (string)dr["Usuario"],
+                        (string)dr["UsuarioEdita"],
+                        (DateTime)dr["FechaReg"]);
                 }
             }
             return Categoria;
@@ -106,6 +116,9 @@ namespace TallerMecanico.Datos
                 cmd.Parameters.AddWithValue("@Nombre", Categoria.Nombre);
                 cmd.Parameters.AddWithValue("@Observacion", Categoria.Observacion);
                 cmd.Parameters.AddWithValue("@Estado", Categoria.Estado);
+                cmd.Parameters.AddWithValue("@UsuarioReg", Categoria.UsuarioReg);
+                cmd.Parameters.AddWithValue("@UsuarioEdita", Categoria.UsuarioEdita);
+                cmd.Parameters.AddWithValue("@FechaReg", Categoria.FechaReg);
                 n = cmd.ExecuteNonQuery();
             }
             return n;

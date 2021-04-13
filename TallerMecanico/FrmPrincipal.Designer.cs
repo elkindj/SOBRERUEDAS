@@ -63,7 +63,7 @@ namespace TallerMecanico
             this.mnuPrincipal.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.mnuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnuPrincipal.Name = "mnuPrincipal";
-            this.mnuPrincipal.Size = new System.Drawing.Size(172, 628);
+            this.mnuPrincipal.Size = new System.Drawing.Size(148, 624);
             this.mnuPrincipal.TabIndex = 0;
             // 
             // tSMAdministracion
@@ -74,14 +74,18 @@ namespace TallerMecanico
             this.tSMAdministracion.ForeColor = System.Drawing.Color.White;
             this.tSMAdministracion.Image = global::TallerMecanico.Properties.Resources.user;
             this.tSMAdministracion.Name = "tSMAdministracion";
-            this.tSMAdministracion.Size = new System.Drawing.Size(159, 27);
+            this.tSMAdministracion.Size = new System.Drawing.Size(135, 24);
             this.tSMAdministracion.Text = "Administración";
             this.tSMAdministracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tSMUsuarios
             // 
             this.tSMUsuarios.Name = "tSMUsuarios";
+<<<<<<< HEAD
             this.tSMUsuarios.Size = new System.Drawing.Size(224, 28);
+=======
+            this.tSMUsuarios.Size = new System.Drawing.Size(135, 24);
+>>>>>>> 77a6aa87592b9049674df08e685ab1e4e381d53d
             this.tSMUsuarios.Text = "Usuarios";
             this.tSMUsuarios.Click += new System.EventHandler(this.tSMUsuarios_Click);
             // 
@@ -96,36 +100,37 @@ namespace TallerMecanico
             this.tSmInventario.Image = global::TallerMecanico.Properties.Resources.inventario;
             this.tSmInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tSmInventario.Name = "tSmInventario";
-            this.tSmInventario.Size = new System.Drawing.Size(159, 27);
+            this.tSmInventario.Size = new System.Drawing.Size(135, 24);
             this.tSmInventario.Text = "Inventario";
             this.tSmInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tSMCategoria
             // 
             this.tSMCategoria.Name = "tSMCategoria";
-            this.tSMCategoria.Size = new System.Drawing.Size(179, 28);
+            this.tSMCategoria.Size = new System.Drawing.Size(150, 24);
             this.tSMCategoria.Text = "Categorias";
             this.tSMCategoria.Click += new System.EventHandler(this.tSMCategoria_Click);
             // 
             // tSMProducto
             // 
             this.tSMProducto.Name = "tSMProducto";
-            this.tSMProducto.Size = new System.Drawing.Size(179, 28);
+            this.tSMProducto.Size = new System.Drawing.Size(150, 24);
             this.tSMProducto.Text = "Productos";
             this.tSMProducto.Click += new System.EventHandler(this.tSMProducto_Click);
             // 
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(179, 28);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
             this.comprasToolStripMenuItem.Text = "Compras";
             this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(179, 28);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
             this.ventasToolStripMenuItem.Text = "Ventas";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // mantenimientoToolStripMenuItem
             // 
@@ -136,26 +141,26 @@ namespace TallerMecanico
             this.mantenimientoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.mantenimientoToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(159, 27);
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(135, 23);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
             this.mantenimientoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(217, 28);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // vehiculosToolStripMenuItem
             // 
             this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
-            this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(217, 28);
+            this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(179, 24);
             this.vehiculosToolStripMenuItem.Text = "Vehiculos";
             // 
             // mantenimientoToolStripMenuItem1
             // 
             this.mantenimientoToolStripMenuItem1.Name = "mantenimientoToolStripMenuItem1";
-            this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(217, 28);
+            this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(179, 24);
             this.mantenimientoToolStripMenuItem1.Text = "Mantenimiento";
             // 
             // tSmSalir
@@ -165,7 +170,7 @@ namespace TallerMecanico
             this.tSmSalir.Image = global::TallerMecanico.Properties.Resources.Salir;
             this.tSmSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tSmSalir.Name = "tSmSalir";
-            this.tSmSalir.Size = new System.Drawing.Size(159, 27);
+            this.tSmSalir.Size = new System.Drawing.Size(135, 24);
             this.tSmSalir.Text = "Salir";
             this.tSmSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tSmSalir.Click += new System.EventHandler(this.tSmSalir_Click);
@@ -193,7 +198,7 @@ namespace TallerMecanico
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1186, 628);
+            this.ClientSize = new System.Drawing.Size(1184, 624);
             this.ControlBox = false;
             this.Controls.Add(this.lblUsuarioActual);
             this.Controls.Add(this.mnuPrincipal);

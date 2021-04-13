@@ -16,6 +16,7 @@ namespace TallerMecanico
     {
         List<Categoria> lista = null;
         BLCategoria blCategoria = new BLCategoria();
+        BLUsuario bLUsuario = new BLUsuario();
         Categoria c;
         bool _nuevo = false;
 
@@ -35,13 +36,30 @@ namespace TallerMecanico
                     {
                         ((TextBox)item).Enabled = Estado;
                     }
+                    if (item.GetType() == typeof(CheckBox))
+                    {
+                        ((CheckBox)item).Enabled = Estado;
+                    }
                 }
             }
             catch (Exception)
             {
             }
         }
-        private void LimpiarControl(Control Contenedor) { foreach (var item in Contenedor.Controls) { if (item.GetType() == typeof(TextBox)) { ((TextBox)item).Clear(); } } }
+        private void LimpiarControl(Control Contenedor) {
+            foreach (var item in Contenedor.Controls) 
+            
+            { 
+            if (item.GetType() == typeof(TextBox)) 
+                { 
+                    ((TextBox)item).Clear(); 
+                }
+            if (item.GetType() == typeof(CheckBox))
+            {
+                ((CheckBox)item).Checked = false;
+            }
+            } 
+        }
         private void ActivarButton(bool Estado)
         {
             btnNuevo.Enabled = Estado;
@@ -50,8 +68,15 @@ namespace TallerMecanico
             btnSalir.Enabled = Estado;
         }
 
+        private string LoadUser()
+        {
+            return bLUsuario.cacheName["user"] as string;
+        }
+
         private void CargarDatos()
         {
+            btnGrabar.Enabled = false;
+            btnEditar.Enabled = false;
             if (lista == null)
             {
                 lista = blCategoria.Listar();
@@ -77,7 +102,7 @@ namespace TallerMecanico
 
         private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            btnEditar.Enabled = true;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -110,20 +135,28 @@ namespace TallerMecanico
             _nuevo = true;
             ActivarControlDatos(gbDatos, true);
             btnEditar.Text = "Cancelar";
+            btnEditar.Enabled = true;
             ActivarButton(true);
             LimpiarControl(gbDatos);
-            txtCodigo.Focus();
+            //txtCodigo.Focus();
             // textBox1.Focus();
 
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
+            string user = LoadUser();
             int n = -1;
             if (_nuevo)
             {
                 c = new Categoria(0, txtCodigo.Text,
-                txtNombre.Text, txtObservacion.Text,checkBoxEstado.Checked);
+                txtNombre.Text,
+                txtObservacion.Text,
+                checkBoxEstado.Checked,
+                user,
+                user,
+                DateTime.Now
+                );
                 n = blCategoria.Insertar(c);
             }
             else
@@ -132,6 +165,10 @@ namespace TallerMecanico
                 c.Nombre = txtNombre.Text;
                 c.Observacion = txtObservacion.Text;
                 c.Estado = checkBoxEstado.Checked;
+                c.UsuarioReg = user;
+                c.UsuarioEdita = user;
+                //c.FechaEdita = DateTime.Now;
+                c.FechaReg = DateTime.Now;
                 n = blCategoria.Actualizar(c);
             }
             if (n > 0)
