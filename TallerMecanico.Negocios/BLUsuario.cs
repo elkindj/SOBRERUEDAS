@@ -15,33 +15,21 @@ namespace TallerMecanico.Negocios
         DAOUsuario daoUsuario = new DAOUsuario();
 
         public ObjectCache cacheName = System.Runtime.Caching.MemoryCache.Default;
-       // public bool ListarUsuario(string pUsuario, string pContrsena);
+        // public bool ListarUsuario(string pUsuario, string pContrsena);
         public List<Usuario> ValidarUsuario(string pUsuario, string pContrsena)
-
         {
             List<Usuario> usu = new List<Usuario>();
+            string contraseñTem = Encriptar(pContrsena);
 
             if (pUsuario != "" || pContrsena != "")
             {
-                usu = daoUsuario.ValidarUsuario(pUsuario, pContrsena);
-<<<<<<< HEAD
-=======
-                usu.ForEach(x =>
-                {
-                    if (x.Usu_Usuario == pUsuario && x.Usu_Contrasena == pContrsena)
-                        _ingreso = true;
-                    string name = pUsuario;
-                    CacheItemPolicy policy = new CacheItemPolicy();
-                    policy.Priority = System.Runtime.Caching.CacheItemPriority.Default;
-                    cacheName.Set("user", name, policy);
-                });
->>>>>>> 77a6aa87592b9049674df08e685ab1e4e381d53d
+                usu = daoUsuario.ValidarUsuario(pUsuario, contraseñTem);
             }
 
             return usu;
         }
 
-        public  List<Usuario> ListarUsuarios()
+        public List<Usuario> ListarUsuarios()
         {
             List<Usuario> usu = new List<Usuario>();
             usu = daoUsuario.ListarUsuarios();
@@ -49,10 +37,32 @@ namespace TallerMecanico.Negocios
             return usu;
         }
 
-        public bool GrabarUsuario(Usuario pUsuario) {
-            //Se realizan la validacoines necesarias
+        public bool GrabarUsuario(Usuario pUsuario)
+        {
+
+            //TODO:Crear metodo para realizar las validaciones de ingreso
+            //Encriptar la contraseña
+            pUsuario.Usu_Contrasena = Encriptar(pUsuario.Usu_Contrasena);
             daoUsuario.GrabarUsuario(pUsuario);
             return true;
+        }
+
+        private string Encriptar(string pCadenaAencriptar)
+        {
+            string result = string.Empty;
+            byte[] encryted = System.Text.Encoding.Unicode.GetBytes(pCadenaAencriptar);
+            result = Convert.ToBase64String(encryted);
+            return result;
+        }
+
+        /// Esta función desencripta la cadena que le envíamos en el parámentro de entrada.
+        private string DesEncriptar(string pCadenaAdesencriptar)
+        {
+            string result = string.Empty;
+            byte[] decryted = Convert.FromBase64String(pCadenaAdesencriptar);
+            //result = System.Text.Encoding.Unicode.GetString(decryted, 0, decryted.ToArray().Length);
+            result = System.Text.Encoding.Unicode.GetString(decryted);
+            return result;
         }
     }
 }

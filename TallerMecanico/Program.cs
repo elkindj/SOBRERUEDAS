@@ -16,11 +16,8 @@ namespace TallerMecanico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmProducto());
             Application.Run(new FrmLogin());
             //Application.Run(new FrmUsuario());
-            //Application.Run(new FrmCompra());
-            //Application.Run(new FrmPrincipal());
         }
     }
 }

@@ -14,6 +14,7 @@ namespace TallerMecanico
 {
     public partial class FrmUsuario : Form
     {
+        //TODO: Limipiar los campos cuando se ingrese nuevo o se modifique un usuario
         BLUsuario bLUsuario = new BLUsuario();
         public FrmUsuario()
         {
@@ -24,6 +25,8 @@ namespace TallerMecanico
 
         private void CargarDatos()
         {
+            //TODO: Ajustar listas para que lleguen desde la base de datos
+            //TODO: Cambiar el formato para que la contraseña este oculta
             var Valores = new List<Valor>();
             Valores.Add(new Valor() { Index = "1", Value = "Tarjeta de identidad" });
             Valores.Add(new Valor() { Index = "2", Value = "Cedula de Ciudadania" });
@@ -60,13 +63,12 @@ namespace TallerMecanico
         {
             Usuario nUsuario = new Usuario(
                 0, Convert.ToInt32(cbPerfil.SelectedValue), txtNombre.Text,txtApellidoPa.Text,txtPallidoMa.Text
-                , Convert.ToInt32(cbTipDocumento.SelectedValue), Convert.ToInt32(txtNumDocumento.Text), txtUsuario.Text);
+                , Convert.ToInt32(cbTipDocumento.SelectedValue), Convert.ToInt32(txtNumDocumento.Text), txtUsuario.Text,txtContraseña.Text);
 
             bLUsuario.GrabarUsuario(nUsuario);
 
             MessageBox.Show("Usuario creado");
             CargarDatos();
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -78,6 +80,23 @@ namespace TallerMecanico
         {
             public string Value { get; set; }
             public string Index { get; set; }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "" && txtApellidoPa.Text != "")
+            {
+                string usuario = txtNombre.Text.Substring(0, 1) + txtApellidoPa.Text;
+                txtUsuario.Text = usuario.ToLower();
+            }
+        }
+
+        private void txtApellidoPa_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "" && txtApellidoPa.Text != "") {
+                string usuario = txtNombre.Text.Substring(0, 1) + txtApellidoPa.Text;
+                txtUsuario.Text = usuario.ToLower();
+            }
         }
     }
 }

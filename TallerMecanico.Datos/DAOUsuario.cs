@@ -62,7 +62,7 @@ namespace TallerMecanico.Datos
                 {
                     while (dr.Read())
                     {
-                        Usuario usu = new Usuario((int)dr["IdUsuario"], (int)dr["IdPerfil"], (string)dr["Usu_Nombre"], (string)dr["Usu_ApellidoPat"], (string)dr["Usu_ApellidoMat"], (int)dr["Usu_IdTipoDocumento"], (int)dr["Usu_Documento"], (string)dr["Usu_Usuario"]);
+                        Usuario usu = new Usuario((int)dr["IdUsuario"], (int)dr["IdPerfil"], (string)dr["Usu_Nombre"], (string)dr["Usu_ApellidoPat"], (string)dr["Usu_ApellidoMat"], (int)dr["Usu_IdTipoDocumento"], (int)dr["Usu_Documento"], (string)dr["Usu_Usuario"],"");
                         lista.Add(usu);
                     }
                 }
@@ -86,7 +86,7 @@ namespace TallerMecanico.Datos
                 cmd.Parameters.AddWithValue("@IdTipoDocumento", pUsuario.Usu_IdTipoDoumento);
                 cmd.Parameters.AddWithValue("@Documento", pUsuario.Usu_Documento);
                 cmd.Parameters.AddWithValue("@Usuario", pUsuario.Usu_Usuario);
-                cmd.Parameters.AddWithValue("@Contrasena", pUsuario.Usu_Contrasena);
+                cmd.Parameters.AddWithValue("@Contrasena",pUsuario.Usu_Contrasena);
                 n = cmd.ExecuteNonQuery();
             }
 

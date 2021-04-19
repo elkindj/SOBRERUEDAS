@@ -12,93 +12,132 @@ namespace TallerMecanico
 {
     public partial class FrmPrincipal : Form
     {
-        public int IdPerfil { get; set; }
+        private Form activeForm = null;
         public FrmPrincipal()
         {
             InitializeComponent();
+            customizeDesing();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
+        #region evenMenuPrincipal
+
+        private void customizeDesing()
         {
-            lblUsuarioActual.Text = UsuarioLogeado.Nombre;
-            validarMenu(UsuarioLogeado.Id);
+            pnAdministrar.Visible = false;
+            pnInventario.Visible = false;
+            pnMantenimiento.Visible = false;
         }
 
-        private void validarMenu(int pidPerfil)
+        private void hideSubMenu()
         {
-            if (UsuarioLogeado.IdPerfil == 2) {
-                tSMAdministracion.Visible = false;
-            }
+            if (pnAdministrar.Visible == true)
+                pnAdministrar.Visible = false;
+            if (pnInventario.Visible == true)
+                pnInventario.Visible = false;
+            if (pnMantenimiento.Visible == true)
+                pnMantenimiento.Visible = false;
+        }
 
-            if (UsuarioLogeado.IdPerfil == 3)
+        private void showSubMenu(Panel pSubMenu)
+        {
+            if (pSubMenu.Visible == false)
             {
-                tSMAdministracion.Visible = false;
-                tSmInventario.Visible = false;
+                hideSubMenu();
+                pSubMenu.Visible = true;
             }
-
+            else
+                pSubMenu.Visible = false;
         }
 
-        private void tSMUsuarios_Click(object sender, EventArgs e)
+        private void openChidForm(Form pChildForm) {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = pChildForm;
+            pChildForm.TopLevel = false;
+            pChildForm.FormBorderStyle = FormBorderStyle.None;
+            pChildForm.Dock = DockStyle.Fill;
+            pnFrmPrincipal.Controls.Add(pChildForm);
+            pnFrmPrincipal.Tag = pChildForm;
+            pChildForm.BringToFront();
+            pChildForm.Show();
+        }
+
+        private void btnAdministrar_Click(object sender, EventArgs e)
         {
-            FrmUsuario frmUsuario = new FrmUsuario();
-            frmUsuario.MdiParent = this;
-            frmUsuario.WindowState = FormWindowState.Maximized;
-            frmUsuario.Show();
+            showSubMenu(pnAdministrar);
         }
 
-        private void tSMCategoria_Click(object sender, EventArgs e)
+        private void btnInventario_Click(object sender, EventArgs e)
         {
-            FrmCategoria frmCategoria = new FrmCategoria();
-            frmCategoria.MdiParent = this;
-            frmCategoria.WindowState = FormWindowState.Maximized;
-            frmCategoria.Show();
+            showSubMenu(pnInventario);
         }
 
-        private void tSMProducto_Click(object sender, EventArgs e)
+        private void btnMantenimiento_Click(object sender, EventArgs e)
         {
-            FrmProducto frmProducto = new FrmProducto();
-            frmProducto.MdiParent = this;
-            frmProducto.WindowState = FormWindowState.Maximized;
-            frmProducto.Show();
+            showSubMenu(pnMantenimiento);
         }
 
-        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        #endregion
+
+        #region SubMenuAdministrar
+
+        private void btnUsuario_Click(object sender, EventArgs e)
         {
-            FrmCompra frmCompra = new FrmCompra();
-            frmCompra.MdiParent = this;
-            frmCompra.WindowState = FormWindowState.Maximized;
-            frmCompra.Show();
+            openChidForm(new FrmUsuario());
         }
 
-        private void tSmSalir_Click(object sender, EventArgs e)
+        #endregion
+
+        #region SubMenuInventario
+
+        private void brnCategoria_Click(object sender, EventArgs e)
+        {
+            openChidForm(new FrmCategoria());
+        }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+            openChidForm(new FrmProducto());
+        }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            openChidForm(new FrmCompra());
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            openChidForm(new FrmVentas());
+        }
+
+        #endregion
+
+        #region SubMenuMantenimiento
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            //openChidForm(new FrmVentas());
+        }
+
+        private void btnVehiculo_Click(object sender, EventArgs e)
+        {
+            //openChidForm(new FrmVentas());
+        }
+
+        private void btnMantenimientoIn_Click(object sender, EventArgs e)
+        {
+            //openChidForm(new FrmVentas());
+        }
+
+        #endregion
+
+        private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
             this.Close();
         }
-<<<<<<< HEAD
-=======
-
-        private void validarMenu(int pidPerfil)
-        {
-            tSMAdministracion.Visible = true;
-            tSmInventario.Visible = true;
-
-            if (pidPerfil != 1)
-            {
-                tSMAdministracion.Visible = false;
-            }
-        }
-
-        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            FrmVentas frmVentas = new FrmVentas();
-            frmVentas.MdiParent = this;
-            frmVentas.WindowState = FormWindowState.Maximized;
-            frmVentas.Show();
-        }
->>>>>>> 77a6aa87592b9049674df08e685ab1e4e381d53d
     }
 }

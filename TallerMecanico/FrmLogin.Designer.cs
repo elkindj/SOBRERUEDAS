@@ -116,6 +116,7 @@ namespace TallerMecanico
             this.txtContrasena.TabIndex = 2;
             this.txtContrasena.Tag = "";
             this.txtContrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             // 
             // lblErroPws
             // 
@@ -147,7 +148,7 @@ namespace TallerMecanico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(106)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(359, 369);
             this.ControlBox = false;
             this.Controls.Add(this.BtnCancelar);
@@ -159,6 +160,7 @@ namespace TallerMecanico
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnIngresar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";

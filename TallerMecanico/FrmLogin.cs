@@ -47,5 +47,13 @@ namespace TallerMecanico
         {
             this.Close();
         }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                BtnIngresar.PerformClick();
+            }
+        }
     }
 }

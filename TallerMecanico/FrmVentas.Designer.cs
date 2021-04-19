@@ -30,6 +30,8 @@ namespace TallerMecanico
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNueva = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -47,8 +49,6 @@ namespace TallerMecanico
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
-            this.btnQuitar = new System.Windows.Forms.Button();
-            this.btnNueva = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdProductos)).BeginInit();
             this.SuspendLayout();
@@ -62,17 +62,37 @@ namespace TallerMecanico
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtCantidad);
             this.panel1.Location = new System.Drawing.Point(12, 46);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1098, 150);
+            this.panel1.Size = new System.Drawing.Size(847, 150);
             this.panel1.TabIndex = 2;
+            // 
+            // btnNueva
+            // 
+            this.btnNueva.Location = new System.Drawing.Point(346, 47);
+            this.btnNueva.Name = "btnNueva";
+            this.btnNueva.Size = new System.Drawing.Size(75, 23);
+            this.btnNueva.TabIndex = 21;
+            this.btnNueva.Text = "nuevo";
+            this.btnNueva.UseVisualStyleBackColor = true;
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Location = new System.Drawing.Point(265, 46);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(75, 23);
+            this.btnQuitar.TabIndex = 20;
+            this.btnQuitar.Text = "quitar";
+            this.btnQuitar.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(25, 81);
+            this.label7.Location = new System.Drawing.Point(16, 47);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 19);
             this.label7.TabIndex = 19;
@@ -80,7 +100,7 @@ namespace TallerMecanico
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(117, 83);
+            this.txtUsuario.Location = new System.Drawing.Point(117, 46);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 17;
@@ -88,7 +108,7 @@ namespace TallerMecanico
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(799, 21);
+            this.textBox3.Location = new System.Drawing.Point(616, 19);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(214, 20);
             this.textBox3.TabIndex = 15;
@@ -110,7 +130,7 @@ namespace TallerMecanico
             this.grdProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdProductos.Location = new System.Drawing.Point(12, 221);
             this.grdProductos.Name = "grdProductos";
-            this.grdProductos.Size = new System.Drawing.Size(1098, 382);
+            this.grdProductos.Size = new System.Drawing.Size(847, 205);
             this.grdProductos.TabIndex = 10;
             // 
             // cbProducto
@@ -136,7 +156,7 @@ namespace TallerMecanico
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(575, 65);
+            this.txtCantidad.Location = new System.Drawing.Point(510, 19);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 13;
@@ -147,7 +167,7 @@ namespace TallerMecanico
             this.label4.BackColor = System.Drawing.Color.Lavender;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(486, 67);
+            this.label4.Location = new System.Drawing.Point(421, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 19);
             this.label4.TabIndex = 14;
@@ -158,7 +178,7 @@ namespace TallerMecanico
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(28, 659);
+            this.label5.Location = new System.Drawing.Point(12, 447);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 19);
             this.label5.TabIndex = 16;
@@ -175,7 +195,7 @@ namespace TallerMecanico
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 659);
+            this.textBox1.Location = new System.Drawing.Point(103, 447);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(271, 20);
             this.textBox1.TabIndex = 21;
@@ -185,7 +205,7 @@ namespace TallerMecanico
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(28, 693);
+            this.label1.Location = new System.Drawing.Point(12, 481);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 22;
@@ -193,14 +213,14 @@ namespace TallerMecanico
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(119, 693);
+            this.textBox5.Location = new System.Drawing.Point(103, 481);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(271, 20);
             this.textBox5.TabIndex = 23;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(490, 671);
+            this.button1.Location = new System.Drawing.Point(447, 459);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 23);
             this.button1.TabIndex = 24;
@@ -209,7 +229,7 @@ namespace TallerMecanico
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(640, 671);
+            this.button2.Location = new System.Drawing.Point(597, 459);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 23);
             this.button2.TabIndex = 25;
@@ -218,37 +238,19 @@ namespace TallerMecanico
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(785, 671);
+            this.btnGrabar.Location = new System.Drawing.Point(742, 459);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(117, 23);
             this.btnGrabar.TabIndex = 26;
             this.btnGrabar.Text = "Cobrar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Location = new System.Drawing.Point(386, 85);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(75, 23);
-            this.btnQuitar.TabIndex = 20;
-            this.btnQuitar.Text = "quitar";
-            this.btnQuitar.UseVisualStyleBackColor = true;
-            // 
-            // btnNueva
-            // 
-            this.btnNueva.Location = new System.Drawing.Point(591, 72);
-            this.btnNueva.Name = "btnNueva";
-            this.btnNueva.Size = new System.Drawing.Size(75, 23);
-            this.btnNueva.TabIndex = 21;
-            this.btnNueva.Text = "nuevo";
-            this.btnNueva.UseVisualStyleBackColor = true;
-            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1118, 753);
+            this.ClientSize = new System.Drawing.Size(878, 587);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -257,12 +259,11 @@ namespace TallerMecanico
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbProducto);
             this.Controls.Add(this.grdProductos);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmVentas";
             this.Text = " ";
             this.panel1.ResumeLayout(false);

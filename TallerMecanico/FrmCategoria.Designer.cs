@@ -32,13 +32,13 @@ namespace TallerMecanico
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.checkBoxEstado = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtObservacion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.gbControl = new System.Windows.Forms.GroupBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -65,9 +65,9 @@ namespace TallerMecanico
             this.gbDatos.Controls.Add(this.label3);
             this.gbDatos.Controls.Add(this.label2);
             this.gbDatos.Controls.Add(this.label1);
-            this.gbDatos.Location = new System.Drawing.Point(12, 378);
+            this.gbDatos.Location = new System.Drawing.Point(233, 98);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(340, 221);
+            this.gbDatos.Size = new System.Drawing.Size(341, 221);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             this.gbDatos.Enter += new System.EventHandler(this.gbDatos_Enter);
@@ -91,18 +91,6 @@ namespace TallerMecanico
             this.label5.TabIndex = 11;
             this.label5.Text = "Estado";
             this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(18, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(333, 28);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "CATEGORIA DE PRODUCTOS";
             // 
             // txtObservacion
             // 
@@ -160,6 +148,18 @@ namespace TallerMecanico
             this.label1.Text = "Codigo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label4.Location = new System.Drawing.Point(18, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(333, 28);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "CATEGORIA DE PRODUCTOS";
+            // 
             // gbControl
             // 
             this.gbControl.BackColor = System.Drawing.Color.DarkSlateBlue;
@@ -170,9 +170,9 @@ namespace TallerMecanico
             this.gbControl.Controls.Add(this.btnNuevo);
             this.gbControl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbControl.ForeColor = System.Drawing.Color.Turquoise;
-            this.gbControl.Location = new System.Drawing.Point(17, 146);
+            this.gbControl.Location = new System.Drawing.Point(16, 93);
             this.gbControl.Name = "gbControl";
-            this.gbControl.Size = new System.Drawing.Size(335, 226);
+            this.gbControl.Size = new System.Drawing.Size(211, 226);
             this.gbControl.TabIndex = 1;
             this.gbControl.TabStop = false;
             this.gbControl.Text = "Acciones";
@@ -182,7 +182,7 @@ namespace TallerMecanico
             // 
             this.btnSalir.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(47, 154);
+            this.btnSalir.Location = new System.Drawing.Point(7, 152);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 23);
             this.btnSalir.TabIndex = 4;
@@ -194,7 +194,7 @@ namespace TallerMecanico
             // 
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.btnEditar.Location = new System.Drawing.Point(47, 116);
+            this.btnEditar.Location = new System.Drawing.Point(7, 114);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 23);
             this.btnEditar.TabIndex = 2;
@@ -206,9 +206,9 @@ namespace TallerMecanico
             // 
             this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGrabar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(47, 56);
+            this.btnGrabar.Location = new System.Drawing.Point(7, 67);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(240, 30);
+            this.btnGrabar.Size = new System.Drawing.Size(191, 30);
             this.btnGrabar.TabIndex = 1;
             this.btnGrabar.Text = "Guardar Catgoria";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -219,9 +219,9 @@ namespace TallerMecanico
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.Turquoise;
-            this.btnNuevo.Location = new System.Drawing.Point(47, 19);
+            this.btnNuevo.Location = new System.Drawing.Point(7, 30);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(240, 30);
+            this.btnNuevo.Size = new System.Drawing.Size(191, 30);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nueva Categoria";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -236,9 +236,9 @@ namespace TallerMecanico
             this.Nombre,
             this.Observacion,
             this.estado});
-            this.dgvDatos.Location = new System.Drawing.Point(358, 4);
+            this.dgvDatos.Location = new System.Drawing.Point(16, 340);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(594, 595);
+            this.dgvDatos.Size = new System.Drawing.Size(558, 186);
             this.dgvDatos.TabIndex = 2;
             this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
             // 
@@ -275,7 +275,7 @@ namespace TallerMecanico
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(964, 611);
+            this.ClientSize = new System.Drawing.Size(586, 540);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.gbControl);
             this.Controls.Add(this.label4);

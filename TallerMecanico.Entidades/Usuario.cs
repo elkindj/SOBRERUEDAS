@@ -86,9 +86,9 @@ namespace TallerMecanico.Entidades
             this._usu_Contrasena = Usu_Contrasena;
         }
 
-        public Usuario(int IdUsuario,int IdPerfil, string Usu_Nombre, string Usu_ApellidoPat, string Usu_ApellidoMat, int Usu_IdTipoDoumento, int Usu_Documento, string Usu_Usuario) : this(IdUsuario, IdPerfil, Usu_Nombre, Usu_ApellidoPat, Usu_ApellidoMat, Usu_IdTipoDoumento, Usu_Documento, Usu_Usuario, "")
-        {
-        }
+        //public Usuario(int IdUsuario,int IdPerfil, string Usu_Nombre, string Usu_ApellidoPat, string Usu_ApellidoMat, int Usu_IdTipoDoumento, int Usu_Documento, string Usu_Usuario) : this(IdUsuario, IdPerfil, Usu_Nombre, Usu_ApellidoPat, Usu_ApellidoMat, Usu_IdTipoDoumento, Usu_Documento, Usu_Usuario, "")
+        //{
+        //}
 
         //public Categoria(int Id, string Codigo, string Nombre) : this(Id, Codigo, Nombre, "")
         //{
