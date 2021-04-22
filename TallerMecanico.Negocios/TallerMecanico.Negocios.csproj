@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLCategoria.cs" />
+    <Compile Include="BLCliente.cs" />
     <Compile Include="BLCompra.cs" />
     <Compile Include="BLProducto.cs" />
     <Compile Include="BLSeguridad.cs" />
