@@ -10,22 +10,23 @@ namespace TallerMecanico.Entidades
     {
     public int Id { get; set; }
     public int IdConductor { get; set; }
-    public String CliNombres { get; set; }
-    public String CliApellidos { get; set; }
-    public String CliCorreo { get; set; }
+    public string CliNombres { get; set; }
+    public string CliApellidos { get; set; }
+    public string CliCorreo { get; set; }
     public int CliEmpresa { get; set; }
-    public String CliCategoriaConductor { get; set; }
-    public String CliLicenciaTransito { get; set; }
-    public String CliTarjetaOperacion { get; set; }
-        public Cliente(int Id,
+    public string CliCategoriaConductor { get; set; }
+    public string CliLicenciaTransito { get; set; }
+    public string CliTarjetaOperacion { get; set; }
+        public Cliente(
+            int Id,
             int IdConductor,
-            String CliNombres,
-            String CliApellidos,
-            String CliCorreo,
+            string CliNombres,
+            string CliApellidos,
+            string CliCorreo,
             int CliEmpresa,
-            String CliCategoriaConductor,
-            String CliLicenciaTransito,
-            String CliTarjetaOperacion)
+            string CliCategoriaConductor,
+            string CliLicenciaTransito,
+            string CliTarjetaOperacion)
         {
             this.Id = Id;
             this.IdConductor = IdConductor;

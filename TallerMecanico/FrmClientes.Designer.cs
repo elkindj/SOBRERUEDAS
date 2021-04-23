@@ -79,7 +79,7 @@ namespace TallerMecanico
             this.CliTarjetaOperacion});
             this.dgvDatos.Location = new System.Drawing.Point(12, 338);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(743, 150);
+            this.dgvDatos.Size = new System.Drawing.Size(747, 150);
             this.dgvDatos.TabIndex = 2;
             // 
             // Id
