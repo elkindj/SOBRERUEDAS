@@ -16,7 +16,7 @@ namespace TallerMecanico
     {
         List<Cliente> lista = null;
         BLCliente blCliente = new BLCliente();
-        
+
         Cliente c;
         bool _nuevo = false;
         public FrmClientes()
@@ -25,6 +25,7 @@ namespace TallerMecanico
             ActivarControlDatos(gbControl, false);
             CargarDatos();
         }
+
         public void ActivarControlDatos(Control Contenedor, bool Estado)
         {
             try
@@ -45,6 +46,7 @@ namespace TallerMecanico
             {
             }
         }
+
         private void LimpiarControl(Control Contenedor)
         {
             foreach (var item in Contenedor.Controls)
@@ -60,13 +62,14 @@ namespace TallerMecanico
                 }
             }
         }
+
         private void ActivarButton(bool Estado)
         {
             btnNuevo.Enabled = Estado;
             btnGrabar.Enabled = Estado;
         }
 
-            private void CargarDatos()
+        private void CargarDatos()
         {
             btnGrabar.Enabled = false;
             btnEditar.Enabled = false;
@@ -79,10 +82,11 @@ namespace TallerMecanico
                 dgvDatos.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    dgvDatos.Rows.Add(lista[i].Id, lista[i].IdConductor, lista[i].CliNombres, lista[i].CliApellidos,lista[i].CliApellidos,lista[i].CliCorreo, lista[i].CliEmpresa, lista[i].CliCategoriaConductor, lista[i].CliLicenciaTransito,lista[i].CliTarjetaOperacion);
+                    dgvDatos.Rows.Add(lista[i].Id, lista[i].IdConductor, lista[i].CliNombres, lista[i].CliApellidos, lista[i].CliApellidos, lista[i].CliCorreo, lista[i].CliEmpresa, lista[i].CliCategoriaConductor, lista[i].CliLicenciaTransito, lista[i].CliTarjetaOperacion);
                 }
             }
         }
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             _nuevo = true;
@@ -118,7 +122,7 @@ namespace TallerMecanico
                 c.CliCategoriaConductor = txtCategoria.Text;
                 c.CliLicenciaTransito = txtLicencia.Text;
                 c.CliTarjetaOperacion = txtTarjetaOp.Text;
-                                               
+
                 n = blCliente.Actualizar(c);
             }
             if (n > 0)

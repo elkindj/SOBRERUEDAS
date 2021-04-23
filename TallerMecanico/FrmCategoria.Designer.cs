@@ -153,7 +153,7 @@ namespace TallerMecanico
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(18, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(333, 28);
@@ -162,14 +162,14 @@ namespace TallerMecanico
             // 
             // gbControl
             // 
-            this.gbControl.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.gbControl.BackColor = System.Drawing.SystemColors.Control;
             this.gbControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbControl.Controls.Add(this.btnSalir);
             this.gbControl.Controls.Add(this.btnEditar);
             this.gbControl.Controls.Add(this.btnGrabar);
             this.gbControl.Controls.Add(this.btnNuevo);
             this.gbControl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbControl.ForeColor = System.Drawing.Color.Turquoise;
+            this.gbControl.ForeColor = System.Drawing.Color.Black;
             this.gbControl.Location = new System.Drawing.Point(16, 93);
             this.gbControl.Name = "gbControl";
             this.gbControl.Size = new System.Drawing.Size(211, 226);
@@ -193,7 +193,7 @@ namespace TallerMecanico
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEditar.ForeColor = System.Drawing.Color.Black;
             this.btnEditar.Location = new System.Drawing.Point(7, 114);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 23);
@@ -218,7 +218,7 @@ namespace TallerMecanico
             // 
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.Turquoise;
+            this.btnNuevo.ForeColor = System.Drawing.Color.Black;
             this.btnNuevo.Location = new System.Drawing.Point(7, 30);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(191, 30);
@@ -274,14 +274,13 @@ namespace TallerMecanico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(586, 540);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.gbControl);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.gbDatos);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCategoria";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();

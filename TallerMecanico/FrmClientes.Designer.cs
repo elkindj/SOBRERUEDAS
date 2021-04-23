@@ -30,24 +30,6 @@ namespace TallerMecanico
         private void InitializeComponent()
         {
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnGrabar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.gbControl = new System.Windows.Forms.GroupBox();
-            this.gbDatos = new System.Windows.Forms.GroupBox();
-            this.txtTarjetaOp = new System.Windows.Forms.TextBox();
-            this.txtLicencia = new System.Windows.Forms.TextBox();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdConductor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CliNombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +39,26 @@ namespace TallerMecanico
             this.CliCategoriaConductor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CliLicenciaTransito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CliTarjetaOperacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.gbControl = new System.Windows.Forms.GroupBox();
+            this.gbDatos = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTarjetaOp = new System.Windows.Forms.TextBox();
+            this.txtLicencia = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.gbControl.SuspendLayout();
             this.gbDatos.SuspendLayout();
@@ -76,10 +77,58 @@ namespace TallerMecanico
             this.CliCategoriaConductor,
             this.CliLicenciaTransito,
             this.CliTarjetaOperacion});
-            this.dgvDatos.Location = new System.Drawing.Point(66, 288);
+            this.dgvDatos.Location = new System.Drawing.Point(12, 338);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(848, 150);
+            this.dgvDatos.Size = new System.Drawing.Size(743, 150);
             this.dgvDatos.TabIndex = 2;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // IdConductor
+            // 
+            this.IdConductor.HeaderText = "cédula";
+            this.IdConductor.Name = "IdConductor";
+            // 
+            // CliNombres
+            // 
+            this.CliNombres.HeaderText = "Nombres";
+            this.CliNombres.Name = "CliNombres";
+            // 
+            // CliApellidos
+            // 
+            this.CliApellidos.HeaderText = "Apellidos";
+            this.CliApellidos.Name = "CliApellidos";
+            // 
+            // CliCorreo
+            // 
+            this.CliCorreo.HeaderText = "Correo";
+            this.CliCorreo.Name = "CliCorreo";
+            // 
+            // CliEmpresa
+            // 
+            this.CliEmpresa.HeaderText = "Empresa";
+            this.CliEmpresa.Name = "CliEmpresa";
+            this.CliEmpresa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CliEmpresa.Visible = false;
+            // 
+            // CliCategoriaConductor
+            // 
+            this.CliCategoriaConductor.HeaderText = "Categoria Conductor";
+            this.CliCategoriaConductor.Name = "CliCategoriaConductor";
+            // 
+            // CliLicenciaTransito
+            // 
+            this.CliLicenciaTransito.HeaderText = "Licencia";
+            this.CliLicenciaTransito.Name = "CliLicenciaTransito";
+            // 
+            // CliTarjetaOperacion
+            // 
+            this.CliTarjetaOperacion.HeaderText = "Tarjeta Operación";
+            this.CliTarjetaOperacion.Name = "CliTarjetaOperacion";
             // 
             // btnNuevo
             // 
@@ -116,12 +165,11 @@ namespace TallerMecanico
             this.gbControl.Controls.Add(this.btnNuevo);
             this.gbControl.Controls.Add(this.btnEditar);
             this.gbControl.Controls.Add(this.btnGrabar);
-            this.gbControl.Location = new System.Drawing.Point(683, 62);
+            this.gbControl.Location = new System.Drawing.Point(506, 96);
             this.gbControl.Name = "gbControl";
             this.gbControl.Size = new System.Drawing.Size(181, 195);
             this.gbControl.TabIndex = 7;
             this.gbControl.TabStop = false;
-            this.gbControl.Text = "groupBox1";
             // 
             // gbDatos
             // 
@@ -139,12 +187,74 @@ namespace TallerMecanico
             this.gbDatos.Controls.Add(this.txtApellido);
             this.gbDatos.Controls.Add(this.txtNombre);
             this.gbDatos.Controls.Add(this.txtCodigo);
-            this.gbDatos.Location = new System.Drawing.Point(66, 25);
+            this.gbDatos.Location = new System.Drawing.Point(12, 75);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(522, 232);
+            this.gbDatos.Size = new System.Drawing.Size(471, 232);
             this.gbDatos.TabIndex = 8;
             this.gbDatos.TabStop = false;
-            this.gbDatos.Text = "groupBox2";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(18, 185);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Tarjeta de Operación";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 160);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Licencia";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Categoria";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Correo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Apellidos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Nombres";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Cédula";
             // 
             // txtTarjetaOp
             // 
@@ -202,125 +312,26 @@ namespace TallerMecanico
             this.txtCodigo.TabIndex = 0;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
-            // label1
+            // label10
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Cédula";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Nombres";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Apellidos";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 106);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Correo";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 133);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Categoria";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 160);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Licencia";
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // IdConductor
-            // 
-            this.IdConductor.HeaderText = "cédula";
-            this.IdConductor.Name = "IdConductor";
-            // 
-            // CliNombres
-            // 
-            this.CliNombres.HeaderText = "Nombres";
-            this.CliNombres.Name = "CliNombres";
-            // 
-            // CliApellidos
-            // 
-            this.CliApellidos.HeaderText = "Apellidos";
-            this.CliApellidos.Name = "CliApellidos";
-            // 
-            // CliCorreo
-            // 
-            this.CliCorreo.HeaderText = "Correo";
-            this.CliCorreo.Name = "CliCorreo";
-            // 
-            // CliEmpresa
-            // 
-            this.CliEmpresa.HeaderText = "Empresa";
-            this.CliEmpresa.Name = "CliEmpresa";
-            this.CliEmpresa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CliEmpresa.Visible = false;
-            // 
-            // CliCategoriaConductor
-            // 
-            this.CliCategoriaConductor.HeaderText = "Categoria Conductor";
-            this.CliCategoriaConductor.Name = "CliCategoriaConductor";
-            // 
-            // CliLicenciaTransito
-            // 
-            this.CliLicenciaTransito.HeaderText = "Licencia";
-            this.CliLicenciaTransito.Name = "CliLicenciaTransito";
-            // 
-            // CliTarjetaOperacion
-            // 
-            this.CliTarjetaOperacion.HeaderText = "Tarjeta Operación";
-            this.CliTarjetaOperacion.Name = "CliTarjetaOperacion";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 185);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Tarjeta de Operación";
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(12, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(760, 39);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Administración de clientes";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 450);
+            this.ClientSize = new System.Drawing.Size(784, 515);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.gbControl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmClientes";
             this.Text = "FrmClientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);
@@ -362,5 +373,6 @@ namespace TallerMecanico
         private System.Windows.Forms.DataGridViewTextBoxColumn CliLicenciaTransito;
         private System.Windows.Forms.DataGridViewTextBoxColumn CliTarjetaOperacion;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
     }
 }

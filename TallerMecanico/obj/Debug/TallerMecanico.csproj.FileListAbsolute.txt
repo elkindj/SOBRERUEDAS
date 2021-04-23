@@ -52,3 +52,4 @@ D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.csproj.CopyCo
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.exe
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.pdb
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\bin\Debug\FontAwesome.Sharp.dll
+D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.FrmClientes.resources

@@ -30,7 +30,7 @@ namespace TallerMecanico.Datos
                         (String)dr["Apellidos"],
                         (String)dr["Correo"],
                         (int)dr["Empresa"],
-                        (String)dr["ClienteConductor"],
+                        (String)dr["CategoriaConductor"],
                         (String)dr["LicenciaTran"],
                         (String)dr["TarjetaOp"]);
                         lista.Add(c);
