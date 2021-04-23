@@ -79,7 +79,17 @@ namespace TallerMecanico
                 dgvDatos.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    dgvDatos.Rows.Add(lista[i].Id, lista[i].IdConductor, lista[i].CliNombres, lista[i].CliApellidos,lista[i].CliApellidos,lista[i].CliCorreo, lista[i].CliEmpresa, lista[i].CliCategoriaConductor, lista[i].CliLicenciaTransito,lista[i].CliTarjetaOperacion);
+                    dgvDatos.Rows.Add(
+                        lista[i].Id,
+                        lista[i].IdConductor,
+                        lista[i].CliNombres,
+                        lista[i].CliApellidos,
+                        lista[i].CliApellidos,
+                        lista[i].CliCorreo,
+                        lista[i].CliEmpresa, 
+                        lista[i].CliCategoriaConductor,
+                        lista[i].CliLicenciaTransito,
+                        lista[i].CliTarjetaOperacion);
                 }
             }
         }
@@ -95,11 +105,12 @@ namespace TallerMecanico
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            //string user = LoadUser();
             int n = -1;
             if (_nuevo)
             {
-                c = new Cliente(0, 0,
+                c = new Cliente(
+                0, 
+                Convert.ToInt32(txtCodigo),
                 txtNombre.Text,
                 txtApellido.Text,
                 txtCorreo.Text,
@@ -112,6 +123,7 @@ namespace TallerMecanico
             }
             else
             {
+                c.IdConductor = Convert.ToInt32(txtCodigo);
                 c.CliNombres = txtNombre.Text;
                 c.CliApellidos = txtApellido.Text;
                 c.CliCorreo = txtCorreo.Text;
@@ -156,6 +168,8 @@ namespace TallerMecanico
                 if (dgvDatos.RowCount > 0)
                 {
                     c = blCliente.ClienteTraerPorId((int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value);
+                    int codigo = c.IdConductor;
+                    txtCodigo.Text = c.IdConductor.ToString();
                     txtNombre.Text = c.CliNombres;
                     txtApellido.Text = c.CliApellidos;
                     txtCorreo.Text = c.CliCorreo;

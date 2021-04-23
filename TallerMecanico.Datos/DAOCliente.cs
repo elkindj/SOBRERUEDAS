@@ -30,7 +30,7 @@ namespace TallerMecanico.Datos
                         (String)dr["Apellidos"],
                         (String)dr["Correo"],
                         (int)dr["Empresa"],
-                        (String)dr["ClienteConductor"],
+                        (String)dr["CategoriaConductor"],
                         (String)dr["LicenciaTran"],
                         (String)dr["TarjetaOp"]);
                         lista.Add(c);
@@ -40,8 +40,7 @@ namespace TallerMecanico.Datos
             return lista;
         }
 
-        //metodo para traer una categoría segun su identificación
-        public Cliente TraerPorId(int Id)
+            public Cliente TraerPorId(int Id)
         {
             Cliente Cliente = new Cliente();
             using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
@@ -61,7 +60,7 @@ namespace TallerMecanico.Datos
                         (String)dr["Apellidos"],
                         (String)dr["Correo"],
                         (int)dr["Empresa"],
-                        (String)dr["ClienteConductor"],
+                        (String)dr["CategoriaConductor"],
                         (String)dr["LicenciaTran"],
                         (String)dr["TarjetaOp"]);
                 }
