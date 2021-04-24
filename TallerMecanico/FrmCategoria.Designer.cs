@@ -282,6 +282,7 @@ namespace TallerMecanico
             this.Controls.Add(this.gbDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCategoria";
+            this.Load += new System.EventHandler(this.FrmCategoria_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             this.gbControl.ResumeLayout(false);

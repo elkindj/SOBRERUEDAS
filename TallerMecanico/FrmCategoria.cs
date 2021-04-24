@@ -287,5 +287,10 @@ namespace TallerMecanico
         {
 
         }
+
+        private void FrmCategoria_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -152,6 +152,7 @@ namespace TallerMecanico
             this.label10.TabIndex = 26;
             this.label10.Text = "Administración de compras";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // cbProducto
             // 
