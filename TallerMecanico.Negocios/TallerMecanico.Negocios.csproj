@@ -83,6 +83,7 @@
     <Compile Include="BLCompra.cs" />
     <Compile Include="BLProducto.cs" />
     <Compile Include="BLSeguridad.cs" />
+    <Compile Include="BLVehiculo.cs" />
     <Compile Include="BLVentas.cs" />
     <Compile Include="program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
