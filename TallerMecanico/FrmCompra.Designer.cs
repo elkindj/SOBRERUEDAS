@@ -148,10 +148,11 @@ namespace TallerMecanico
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(4, 44);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(924, 39);
+            this.label10.Size = new System.Drawing.Size(862, 39);
             this.label10.TabIndex = 26;
             this.label10.Text = "Administración de compras";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // cbProducto
             // 

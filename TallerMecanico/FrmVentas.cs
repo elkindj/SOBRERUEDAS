@@ -16,12 +16,14 @@ namespace TallerMecanico
     {
         BLProducto bLProductos = new BLProducto();
         BLCompra bLCompra = new BLCompra();
+
         public FrmVentas()
         {
             InitializeComponent();
             CargarDatos();
             ActivarControlDatos(false);
         }
+
         private void CargarDatos()
         {
             txtUsuario.Text = UsuarioLogeado.Nombre;
@@ -34,18 +36,18 @@ namespace TallerMecanico
         {
             cbProducto.Enabled = Estado;
             txtCantidad.Enabled = Estado;
-            //txtValor.Enabled = Estado;
-            //txtDescripcion.Enabled = Estado;
+            txtValor.Enabled = Estado;
+            txtDescripcion.Enabled = Estado;
             btnGrabar.Enabled = Estado;
             btnNueva.Enabled = !Estado;
             btnAgregar.Enabled = Estado;
             btnQuitar.Enabled = Estado;
-            //btnCancelar.Enabled = Estado;
+            btnCancelar.Enabled = Estado;
 
             cbProducto.SelectedIndex = 1;
             txtCantidad.Text = "0";
-           // txtValor.Text = "0";
-            //txtDescripcion.Text = "";
+            txtValor.Text = "0";
+            txtDescripcion.Text = "";
             //txtSubTotal.Text = "0";
             //txtIva.Text = "0";
             //txtTotal.Text = "0";
@@ -56,35 +58,57 @@ namespace TallerMecanico
             grdProductos.AllowUserToAddRows = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
-            FrmListaProductos frmListaProductos = new FrmListaProductos();
-            frmListaProductos.ShowDialog();
+            ActivarControlDatos(true);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void timFechaHora_Tick(object sender, EventArgs e)
         {
-
+            lblFecha.Text = "Fecha: " + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToLongTimeString();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (Convert.ToInt32(txtCantidad.Text) != 0 && Convert.ToInt32(txtValor.Text) != 0)
+            {
+                DataGridViewRow fila = new DataGridViewRow();
 
-        }
+                bool exist = grdProductos.Rows.Cast<DataGridViewRow>().Any(row => Convert.ToString(row.Cells["IdDetCompra"].Value) == cbProducto.SelectedValue.ToString());
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+                if (!exist)
+                {
+                    fila.CreateCells(grdProductos);
+                    fila.Cells[0].Value = cbProducto.SelectedValue;
+                    fila.Cells[1].Value = cbProducto.Text;
+                    fila.Cells[2].Value = txtCantidad.Text;
+                    fila.Cells[3].Value = txtValor.Text;
+                    int totalValorPro = Convert.ToInt32(txtCantidad.Text) * Convert.ToInt32(txtValor.Text);
+                    fila.Cells[4].Value = totalValorPro.ToString();
 
-        }
+                    grdProductos.Rows.Add(fila);
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
+                    txtCantidad.Text = "0";
+                    txtValor.Text = "0";
+                }
+                else
+                {
+                }
 
-        }
+                //CalcularTotales();
+            }
+            else
+            {
+                string Mensaje = "";
 
-        private void cbProducto_SelectedIndexChanged(object sender, EventArgs e)
-        {
+                if (Convert.ToInt32(txtCantidad.Text) == 0)
+                    Mensaje = "\n - Cantidad";
 
+                if (Convert.ToInt32(txtValor.Text) == 0)
+                    Mensaje = Mensaje + "\n - Valor";
+
+                MessageBox.Show("Por favor verificar los siguientes datos" + Mensaje);
+            }
         }
     }
 }

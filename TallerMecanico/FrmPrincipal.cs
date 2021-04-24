@@ -117,7 +117,7 @@ namespace TallerMecanico
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            //openChidForm(new FrmVehiculo());
+            openChidForm(new FrmClientes());
         }
 
         private void btnVehiculo_Click(object sender, EventArgs e)
