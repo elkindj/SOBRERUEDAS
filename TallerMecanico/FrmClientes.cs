@@ -41,6 +41,29 @@ namespace TallerMecanico
             {
             }
         }
+        private void CargarDatos()
+        {
+            if (lista == null)
+            {
+                lista = blCliente.Listar();
+            }
+            if (lista.Count > 0)
+            {
+                dgvDatos.Rows.Clear();
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    dgvDatos.Rows.Add(
+                        lista[i].Id,
+                        lista[i].IdConductor,
+                        lista[i].CliNombres,
+                        lista[i].CliApellidos,
+                        lista[i].CliLicenciaTransito,
+                        lista[i].CliCorreo,
+                        lista[i].CliCelular,
+                        lista[i].CliDireccion);
+                }
+            }
+        }
 
         private void LimpiarControl(Control Contenedor)
         {
@@ -62,30 +85,7 @@ namespace TallerMecanico
             btnSalir.Enabled = Estado;
         }
  
-        private void CargarDatos()
-        {
-            if (lista == null)
-            {
-                lista = blCliente.Listar();
-            }
-                if (lista.Count > 0)
-            {
-                dgvDatos.Rows.Clear();
-                for (int i = 0; i < lista.Count; i++)
-                {
-                    dgvDatos.Rows.Add(
-                        lista[i].Id,
-                        lista[i].IdConductor,
-                        lista[i].CliNombres,
-                        lista[i].CliApellidos,
-                        lista[i].CliLicenciaTransito,
-                        lista[i].CliCorreo,
-                        lista[i].CliCelular,
-                        lista[i].CliDireccion);
-                }
-            }
-        }
-
+       
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             _nuevo = true;
@@ -104,7 +104,7 @@ namespace TallerMecanico
             {
                 c = new Cliente(
                     0,
-                    Convert.ToInt32(txtCodigo.Text), 
+                    Int32.Parse(txtCodigo.Text), 
                     txtNombre.Text, 
                     txtApellido.Text,
                     comboBox.SelectedItem.ToString(),
@@ -120,7 +120,7 @@ namespace TallerMecanico
             else  
             {
                 //c.Id = 0;
-                c.IdConductor = Convert.ToInt32(txtCodigo.Text);
+                c.IdConductor = Int32.Parse(txtCodigo.Text);
                 c.CliNombres = txtNombre.Text;
                 c.CliApellidos = txtApellido.Text;
                 c.CliLicenciaTransito = comboBox.SelectedItem.ToString();
