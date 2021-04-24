@@ -55,5 +55,10 @@ namespace TallerMecanico
                 BtnIngresar.PerformClick();
             }
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
