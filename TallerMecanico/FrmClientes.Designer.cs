@@ -124,7 +124,7 @@ namespace TallerMecanico
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(47, 70);
+            this.btnNuevo.Location = new System.Drawing.Point(42, 70);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -136,7 +136,7 @@ namespace TallerMecanico
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(47, 99);
+            this.btnGrabar.Location = new System.Drawing.Point(42, 99);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(102, 23);
             this.btnGrabar.TabIndex = 5;
@@ -146,7 +146,7 @@ namespace TallerMecanico
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(47, 128);
+            this.btnEditar.Location = new System.Drawing.Point(42, 128);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(102, 23);
             this.btnEditar.TabIndex = 6;
@@ -168,7 +168,7 @@ namespace TallerMecanico
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(47, 158);
+            this.btnSalir.Location = new System.Drawing.Point(42, 158);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(102, 23);
             this.btnSalir.TabIndex = 7;

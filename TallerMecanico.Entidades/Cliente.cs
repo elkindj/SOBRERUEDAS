@@ -24,8 +24,8 @@ namespace TallerMecanico.Entidades
         }
         public int IdConductor
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return _idConductor; }
+            set { _idConductor = value; }
         }
         public string CliNombres
         {

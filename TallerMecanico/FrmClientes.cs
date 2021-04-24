@@ -16,13 +16,12 @@ namespace TallerMecanico
     {
         List<Cliente> lista = null;
         BLCliente blCliente = new BLCliente();
-        BLUsuario bLUsuario = new BLUsuario();
         Cliente c;
         bool _nuevo = false;
         public FrmClientes()
         {
             InitializeComponent();
-            ActivarControlDatos(gbControl, false);
+            ActivarControlDatos(gbDatos, false);
             CargarDatos();
         }
 
@@ -35,10 +34,6 @@ namespace TallerMecanico
                     if (item.GetType() == typeof(TextBox))
                     {
                         ((TextBox)item).Enabled = Estado;
-                    }
-                    if (item.GetType() == typeof(CheckBox))
-                    {
-                        ((CheckBox)item).Enabled = Estado;
                     }
                 }
             }
@@ -63,21 +58,17 @@ namespace TallerMecanico
         private void ActivarButton(bool Estado)
         {
             btnNuevo.Enabled = Estado;
-            btnGrabar.Enabled = Estado;
+            btnGrabar.Enabled = !Estado;
+            btnSalir.Enabled = Estado;
         }
-        private string LoadUser()
-        {
-            return bLUsuario.cacheName["user"] as string;
-        }
+ 
         private void CargarDatos()
         {
-            btnGrabar.Enabled = false;
-            btnEditar.Enabled = false;
             if (lista == null)
             {
                 lista = blCliente.Listar();
             }
-            if (lista.Count > 0)
+                if (lista.Count > 0)
             {
                 dgvDatos.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
@@ -103,32 +94,43 @@ namespace TallerMecanico
             btnEditar.Enabled = true;
             ActivarButton(true);
             LimpiarControl(gbDatos);
+            txtCodigo.Focus();
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            string user = LoadUser();
             int n = -1;
             if (_nuevo)
             {
-                c = new Cliente(0, Convert.ToInt32(txtCodigo.Text), txtNombre.Text, txtApellido.Text, comboBox.SelectedValue.ToString(), txtCorreo.Text, txtCelular.Text, txtDireccion.Text, user, DateTime.Now, "", DateTime.Now);
+                c = new Cliente(
+                    0,
+                    Convert.ToInt32(txtCodigo.Text), 
+                    txtNombre.Text, 
+                    txtApellido.Text,
+                    comboBox.SelectedItem.ToString(),
+                    txtCorreo.Text,
+                    txtCelular.Text,
+                    txtDireccion.Text,
+                    UsuarioLogeado.Nombre, 
+                    DateTime.Now,
+                    UsuarioLogeado.Nombre,
+                    DateTime.Now);
                 n = blCliente.Insertar(c);
             }
-            else
+            else  
             {
-                Cliente c = new Cliente();
-                c.Id = 0;
-                c.IdConductor = Convert.ToInt32(txtCodigo);
+                //c.Id = 0;
+                c.IdConductor = Convert.ToInt32(txtCodigo.Text);
                 c.CliNombres = txtNombre.Text;
                 c.CliApellidos = txtApellido.Text;
-                c.CliLicenciaTransito = comboBox.SelectedValue.ToString();
+                c.CliLicenciaTransito = comboBox.SelectedItem.ToString();
                 c.CliCorreo = txtCorreo.Text;
                 c.CliCelular = txtCelular.Text;
                 c.CliDireccion = txtDireccion.Text;
-                c.CliUsuario = user;
-                c.CliFechaReg = DateTime.Now;
-                c.CliUsuarioEdita = "";
-                c.CliFechaEdita = DateTime.Now;
+                //c.CliUsuario = UsuarioLogeado.Nombre;
+                //c.CliFechaReg = DateTime.Now;
+                //c.CliUsuarioEdita = UsuarioLogeado.Nombre;
+                //c.CliFechaEdita = DateTime.Now;
                 n = blCliente.Actualizar(c);
             }
             if (n > 0)
@@ -166,14 +168,17 @@ namespace TallerMecanico
                 if (dgvDatos.RowCount > 0)
                 {
                     c = blCliente.ClienteTraerPorId((int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value);
-                    int codigo = c.IdConductor;
                     txtCodigo.Text = c.IdConductor.ToString();
-                    c.CliNombres = txtNombre.Text;
-                    c.CliApellidos = txtApellido.Text;
-                    c.CliLicenciaTransito = comboBox.SelectedValue.ToString();
-                    c.CliCorreo = txtCorreo.Text;
-                    c.CliCelular = txtCelular.Text;
-                    c.CliDireccion = txtDireccion.Text;
+                    txtNombre.Text = c.CliNombres;
+                    txtApellido.Text = c.CliApellidos;
+                    comboBox.SelectedItem = c.CliLicenciaTransito;
+                    txtCorreo.Text = c.CliCorreo;
+                    txtCelular.Text = c.CliCelular;
+                    txtDireccion.Text = c.CliDireccion;
+                    UsuarioLogeado.Nombre = c.CliUsuario;
+                   // DateTime.Now = c.CliFechaReg;
+                    UsuarioLogeado.Nombre = c.CliUsuarioEdita;
+                    //DateTime.Now = c.CliFechaEdita;
                     ActivarControlDatos(gbDatos, true);
                     ActivarButton(false);
                     btnGrabar.Enabled = true;

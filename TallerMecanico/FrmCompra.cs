@@ -201,5 +201,10 @@ namespace TallerMecanico
         {
 
         }
+
+        private void FrmCompra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

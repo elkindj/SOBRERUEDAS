@@ -32,10 +32,10 @@ namespace TallerMecanico.Datos
                         (string)dr["Correo"],
                         (string)dr["Celular"],
                         (string)dr["Direccion"],
-                        (string)dr["CliUsuario"],
-                        (DateTime)dr["CliFechaReg"],
-                        (string)dr["CliUsuarioEdita"],
-                        (DateTime)dr["CliFechaEdita"]);
+                        "",
+                        DateTime.Now,
+                        "",
+                        DateTime.Now);
                         lista.Add(c);
                     }
                 }
@@ -92,8 +92,7 @@ namespace TallerMecanico.Datos
                 cmd.Parameters.AddWithValue("@CELULAR", Cliente.CliCelular);
                 cmd.Parameters.AddWithValue("@USUARIO", Cliente.CliUsuarioEdita);
                 cmd.Parameters.AddWithValue("FECHAREG", Cliente.CliFechaEdita);
-                
-                                n = cmd.ExecuteNonQuery();
+                n = cmd.ExecuteNonQuery();
             }
             return n;
         }

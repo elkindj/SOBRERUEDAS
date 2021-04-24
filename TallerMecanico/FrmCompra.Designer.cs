@@ -400,6 +400,7 @@ namespace TallerMecanico
             this.Controls.Add(this.btnGrabar);
             this.Name = "FrmCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FrmCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
