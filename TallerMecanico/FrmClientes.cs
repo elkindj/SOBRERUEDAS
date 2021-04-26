@@ -114,7 +114,7 @@ namespace TallerMecanico
             {
                 c = new Cliente(
                 0, 
-                Convert.ToInt32(txtCodigo),
+                Convert.ToInt32(txtCodigo.Text),
                 txtNombre.Text,
                 txtApellido.Text,
                 txtCorreo.Text,
