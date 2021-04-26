@@ -18,6 +18,13 @@ namespace TallerMecanico
             InitializeComponent();
             customizeDesing();
             this.FormBorderStyle = FormBorderStyle.None;
+            validarPerfil();
+        }
+
+        private void validarPerfil()
+        {
+            if (UsuarioLogeado.IdPerfil == 3)
+                btnAdministrar.Visible = false;
         }
 
         #region evenMenuPrincipal

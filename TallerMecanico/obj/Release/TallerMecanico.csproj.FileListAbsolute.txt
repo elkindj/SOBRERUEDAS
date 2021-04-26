@@ -12,6 +12,7 @@ D:\Project\SOBRERUEDAS\Cod\TallerMecanico\bin\Release\TallerMecanico.Datos.pdb
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\bin\Release\TallerMecanico.Datos.exe.config
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Release\TallerMecanico.csprojAssemblyReference.cache
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Release\TallerMecanico.FrmCategoria.resources
+D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Release\TallerMecanico.FrmClientes.resources
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Release\TallerMecanico.FrmListaProductos.resources
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Release\TallerMecanico.FrmLogin.resources
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Release\TallerMecanico.FrmPrincipal.resources
@@ -52,3 +53,4 @@ C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\Release\TallerMecanico.csproj.CopyComplete
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\Release\TallerMecanico.exe
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\Release\TallerMecanico.pdb
+D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Release\TallerMecanico.FrmVehiculo.resources
