@@ -53,3 +53,4 @@ C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\Release\TallerMecanico.csproj.CopyComplete
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\Release\TallerMecanico.exe
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico\obj\Release\TallerMecanico.pdb
+D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Release\TallerMecanico.FrmVehiculo.resources

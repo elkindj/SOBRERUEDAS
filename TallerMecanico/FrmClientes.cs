@@ -103,18 +103,6 @@ namespace TallerMecanico
             if (_nuevo)
             {
                 c = new Cliente(
-<<<<<<< HEAD
-                0, 
-                Convert.ToInt32(txtCodigo.Text),
-                txtNombre.Text,
-                txtApellido.Text,
-                txtCorreo.Text,
-                0,
-                txtCategoria.Text,
-                txtLicencia.Text,
-                txtTarjetaOp.Text
-                );
-=======
                     0,
                     Int32.Parse(txtCodigo.Text), 
                     txtNombre.Text, 
@@ -127,7 +115,6 @@ namespace TallerMecanico
                     DateTime.Now,
                     UsuarioLogeado.Nombre,
                     DateTime.Now);
->>>>>>> 57599af1ad4ac92e6cf24c15b677370e7df3e891
                 n = blCliente.Insertar(c);
             }
             else  
