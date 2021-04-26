@@ -16,13 +16,12 @@ namespace TallerMecanico
     {
         List<Cliente> lista = null;
         BLCliente blCliente = new BLCliente();
-
         Cliente c;
         bool _nuevo = false;
         public FrmClientes()
         {
             InitializeComponent();
-            ActivarControlDatos(gbControl, false);
+            ActivarControlDatos(gbDatos, false);
             CargarDatos();
         }
 
@@ -36,43 +35,14 @@ namespace TallerMecanico
                     {
                         ((TextBox)item).Enabled = Estado;
                     }
-                    if (item.GetType() == typeof(CheckBox))
-                    {
-                        ((CheckBox)item).Enabled = Estado;
-                    }
                 }
             }
             catch (Exception)
             {
             }
         }
-
-        private void LimpiarControl(Control Contenedor)
-        {
-            foreach (var item in Contenedor.Controls)
-
-            {
-                if (item.GetType() == typeof(TextBox))
-                {
-                    ((TextBox)item).Clear();
-                }
-                if (item.GetType() == typeof(CheckBox))
-                {
-                    ((CheckBox)item).Checked = false;
-                }
-            }
-        }
-
-        private void ActivarButton(bool Estado)
-        {
-            btnNuevo.Enabled = Estado;
-            btnGrabar.Enabled = Estado;
-        }
-
         private void CargarDatos()
         {
-            btnGrabar.Enabled = false;
-            btnEditar.Enabled = false;
             if (lista == null)
             {
                 lista = blCliente.Listar();
@@ -87,16 +57,35 @@ namespace TallerMecanico
                         lista[i].IdConductor,
                         lista[i].CliNombres,
                         lista[i].CliApellidos,
-                        lista[i].CliApellidos,
-                        lista[i].CliCorreo,
-                        lista[i].CliEmpresa, 
-                        lista[i].CliCategoriaConductor,
                         lista[i].CliLicenciaTransito,
-                        lista[i].CliTarjetaOperacion);
+                        lista[i].CliCorreo,
+                        lista[i].CliCelular,
+                        lista[i].CliDireccion);
                 }
             }
         }
 
+        private void LimpiarControl(Control Contenedor)
+        {
+            foreach (var item in Contenedor.Controls)
+
+            {
+                if (item.GetType() == typeof(TextBox))
+                {
+                    ((TextBox)item).Clear();
+                }
+           
+            }
+        }
+
+        private void ActivarButton(bool Estado)
+        {
+            btnNuevo.Enabled = Estado;
+            btnGrabar.Enabled = !Estado;
+            btnSalir.Enabled = Estado;
+        }
+ 
+       
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             _nuevo = true;
@@ -105,6 +94,7 @@ namespace TallerMecanico
             btnEditar.Enabled = true;
             ActivarButton(true);
             LimpiarControl(gbDatos);
+            txtCodigo.Focus();
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
@@ -113,6 +103,7 @@ namespace TallerMecanico
             if (_nuevo)
             {
                 c = new Cliente(
+<<<<<<< HEAD
                 0, 
                 Convert.ToInt32(txtCodigo.Text),
                 txtNombre.Text,
@@ -123,18 +114,36 @@ namespace TallerMecanico
                 txtLicencia.Text,
                 txtTarjetaOp.Text
                 );
+=======
+                    0,
+                    Int32.Parse(txtCodigo.Text), 
+                    txtNombre.Text, 
+                    txtApellido.Text,
+                    comboBox.SelectedItem.ToString(),
+                    txtCorreo.Text,
+                    txtCelular.Text,
+                    txtDireccion.Text,
+                    UsuarioLogeado.Nombre, 
+                    DateTime.Now,
+                    UsuarioLogeado.Nombre,
+                    DateTime.Now);
+>>>>>>> 57599af1ad4ac92e6cf24c15b677370e7df3e891
                 n = blCliente.Insertar(c);
             }
-            else
+            else  
             {
-                c.IdConductor = Convert.ToInt32(txtCodigo);
+                //c.Id = 0;
+                c.IdConductor = Int32.Parse(txtCodigo.Text);
                 c.CliNombres = txtNombre.Text;
                 c.CliApellidos = txtApellido.Text;
+                c.CliLicenciaTransito = comboBox.SelectedItem.ToString();
                 c.CliCorreo = txtCorreo.Text;
-                c.CliCategoriaConductor = txtCategoria.Text;
-                c.CliLicenciaTransito = txtLicencia.Text;
-                c.CliTarjetaOperacion = txtTarjetaOp.Text;
-
+                c.CliCelular = txtCelular.Text;
+                c.CliDireccion = txtDireccion.Text;
+                //c.CliUsuario = UsuarioLogeado.Nombre;
+                //c.CliFechaReg = DateTime.Now;
+                //c.CliUsuarioEdita = UsuarioLogeado.Nombre;
+                //c.CliFechaEdita = DateTime.Now;
                 n = blCliente.Actualizar(c);
             }
             if (n > 0)
@@ -172,14 +181,17 @@ namespace TallerMecanico
                 if (dgvDatos.RowCount > 0)
                 {
                     c = blCliente.ClienteTraerPorId((int)dgvDatos[0, dgvDatos.CurrentRow.Index].Value);
-                    int codigo = c.IdConductor;
                     txtCodigo.Text = c.IdConductor.ToString();
                     txtNombre.Text = c.CliNombres;
                     txtApellido.Text = c.CliApellidos;
+                    comboBox.SelectedItem = c.CliLicenciaTransito;
                     txtCorreo.Text = c.CliCorreo;
-                    txtCategoria.Text = c.CliCategoriaConductor;
-                    txtLicencia.Text = c.CliLicenciaTransito;
-                    txtTarjetaOp.Text = c.CliTarjetaOperacion;
+                    txtCelular.Text = c.CliCelular;
+                    txtDireccion.Text = c.CliDireccion;
+                    UsuarioLogeado.Nombre = c.CliUsuario;
+                   // DateTime.Now = c.CliFechaReg;
+                    UsuarioLogeado.Nombre = c.CliUsuarioEdita;
+                    //DateTime.Now = c.CliFechaEdita;
                     ActivarControlDatos(gbDatos, true);
                     ActivarButton(false);
                     btnGrabar.Enabled = true;
@@ -225,6 +237,21 @@ namespace TallerMecanico
         }
 
         private void txtTarjetaOp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

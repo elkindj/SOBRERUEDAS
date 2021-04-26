@@ -196,5 +196,15 @@ namespace TallerMecanico
                 e.Handled = true;
             }
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmCompra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

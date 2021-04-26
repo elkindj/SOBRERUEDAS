@@ -147,7 +147,7 @@ namespace TallerMecanico
             int n = -1;
             if (_nuevo)
             {
-                c = new Productos(0, txtCodP.Text, Convert.ToInt32(comboBox1.SelectedValue), "", txtMarca.Text, txtProducto.Text, txtDetalle.Text, Convert.ToInt32(txtPrecio.Text), Convert.ToBoolean(chckEstado.Checked), "katherine", DateTime.Now, "katherine", DateTime.Now);
+                c = new Productos(0, txtCodP.Text, Convert.ToInt32(comboBox1.SelectedValue), "", txtMarca.Text, txtProducto.Text, txtDetalle.Text, Convert.ToInt32(txtPrecio.Text), Convert.ToBoolean(chckEstado.Checked), UsuarioLogeado.Nombre, DateTime.Now, UsuarioLogeado.Nombre, DateTime.Now);
                 n = bLProducto.Insertar(c);
 
             }
@@ -160,8 +160,8 @@ namespace TallerMecanico
                 c.Detalles = txtDetalle.Text;
                 c.Precio = Convert.ToInt32(txtPrecio.Text);
                 c.Estado = Convert.ToBoolean(chckEstado.Checked);
-                c.UsuarioEdita = "katherine";
-                c.UsuarioReg = "katherine";
+                c.UsuarioEdita = UsuarioLogeado.Nombre;
+                c.UsuarioReg = UsuarioLogeado.Nombre;
                 n = bLProducto.Actualizar(c);
             }
             if (n > 0)

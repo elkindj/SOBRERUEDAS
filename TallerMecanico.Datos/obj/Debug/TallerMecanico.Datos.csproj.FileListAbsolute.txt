@@ -12,3 +12,17 @@ D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.c
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.exe
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.pdb
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csprojAssemblyReference.cache
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.exe.config
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.exe
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.pdb
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Entidades.dll
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Entidades.pdb
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.Properties.Resources.resources
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.GenerateResource.cache
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CoreCompileInputs.cache
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CopyComplete
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.exe
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.pdb
+C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csprojAssemblyReference.cache

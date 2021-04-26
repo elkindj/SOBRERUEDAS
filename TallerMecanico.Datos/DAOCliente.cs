@@ -26,13 +26,16 @@ namespace TallerMecanico.Datos
                         Cliente c = new Cliente(
                         (int)dr["Id"],
                         (int)dr["IdConductor"],
-                        (String)dr["Nombres"],
-                        (String)dr["Apellidos"],
-                        (String)dr["Correo"],
-                        (int)dr["Empresa"],
-                        (String)dr["CategoriaConductor"],
-                        (String)dr["LicenciaTran"],
-                        (String)dr["TarjetaOp"]);
+                        (string)dr["Nombres"],
+                        (string)dr["Apellidos"],
+                        (string)dr["Licencia"],
+                        (string)dr["Correo"],
+                        (string)dr["Celular"],
+                        (string)dr["Direccion"],
+                        "",
+                        DateTime.Now,
+                        "",
+                        DateTime.Now);
                         lista.Add(c);
                     }
                 }
@@ -54,15 +57,18 @@ namespace TallerMecanico.Datos
                 {
                     dr.Read();
                     Cliente = new Cliente(
-                       (int)dr["Id"],
+                        (int)dr["Id"],
                         (int)dr["IdConductor"],
-                        (String)dr["Nombres"],
-                        (String)dr["Apellidos"],
-                        (String)dr["Correo"],
-                        (int)dr["Empresa"],
-                        (String)dr["CategoriaConductor"],
-                        (String)dr["LicenciaTran"],
-                        (String)dr["TarjetaOp"]);
+                        (string)dr["Nombres"],
+                        (string)dr["Apellidos"],
+                        (string)dr["Licencia"],
+                        (string)dr["Correo"],
+                        (string)dr["Celular"],
+                        (string)dr["Direccion"],
+                        (string)dr["CliUsuario"],
+                        (DateTime)dr["CliFechaReg"],
+                        (string)dr["CliUsuarioEdita"],
+                        (DateTime)dr["CliFechaEdita"]);
                 }
             }
             return Cliente;
@@ -76,15 +82,16 @@ namespace TallerMecanico.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("ActualizarCliente", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id", Cliente.Id);
+                cmd.Parameters.AddWithValue("@ID", Cliente.Id);
                 cmd.Parameters.AddWithValue("@IDCONDUCTOR", Cliente.IdConductor);
                 cmd.Parameters.AddWithValue("@NOMBRE", Cliente.CliNombres);
                 cmd.Parameters.AddWithValue("@APELLIDO", Cliente.CliApellidos);
-                cmd.Parameters.AddWithValue("@EMPRESA", Cliente.CliEmpresa);
-                cmd.Parameters.AddWithValue("@CATEGORIA", Cliente.CliCategoriaConductor);
                 cmd.Parameters.AddWithValue("@LICENCIA", Cliente.CliLicenciaTransito);
-                cmd.Parameters.AddWithValue("@TARJETAOP", Cliente.CliTarjetaOperacion);
                 cmd.Parameters.AddWithValue("@CORREO", Cliente.CliCorreo);
+                cmd.Parameters.AddWithValue("@DIRECCION", Cliente.CliDireccion);
+                cmd.Parameters.AddWithValue("@CELULAR", Cliente.CliCelular);
+                cmd.Parameters.AddWithValue("@USUARIO", Cliente.CliUsuarioEdita);
+                cmd.Parameters.AddWithValue("FECHAREG", Cliente.CliFechaEdita);
                 n = cmd.ExecuteNonQuery();
             }
             return n;
@@ -98,17 +105,16 @@ namespace TallerMecanico.Datos
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("InsertarCliente", con);
-                cmd.CommandType =
-                CommandType.StoredProcedure;
-
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IDCONDUCTOR", Cliente.IdConductor);
                 cmd.Parameters.AddWithValue("@NOMBRE", Cliente.CliNombres);
                 cmd.Parameters.AddWithValue("@APELLIDO", Cliente.CliApellidos);
-                cmd.Parameters.AddWithValue("@CORREO", Cliente.CliCorreo);
-                cmd.Parameters.AddWithValue("@EMPRESA", Cliente.CliEmpresa);
-                cmd.Parameters.AddWithValue("@CATEGORIA", Cliente.CliCategoriaConductor);
                 cmd.Parameters.AddWithValue("@LICENCIA", Cliente.CliLicenciaTransito);
-                cmd.Parameters.AddWithValue("@TARJETAOP", Cliente.CliTarjetaOperacion);
+                cmd.Parameters.AddWithValue("@CORREO", Cliente.CliCorreo);
+                cmd.Parameters.AddWithValue("@CELULAR", Cliente.CliCelular);
+                cmd.Parameters.AddWithValue("@DIRECCION", Cliente.CliDireccion);
+                cmd.Parameters.AddWithValue("@USUARIO", Cliente.CliUsuario);
+                cmd.Parameters.AddWithValue("FECHAREG", Cliente.CliFechaReg);
                 n = cmd.ExecuteNonQuery();
             }
             return n;

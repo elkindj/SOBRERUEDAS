@@ -15,7 +15,6 @@ namespace TallerMecanico.Negocios
         DAOUsuario daoUsuario = new DAOUsuario();
 
         public ObjectCache cacheName = System.Runtime.Caching.MemoryCache.Default;
-        // public bool ListarUsuario(string pUsuario, string pContrsena);
         public List<Usuario> ValidarUsuario(string pUsuario, string pContrsena)
         {
             List<Usuario> usu = new List<Usuario>();
@@ -24,6 +23,10 @@ namespace TallerMecanico.Negocios
             if (pUsuario != "" || pContrsena != "")
             {
                 usu = daoUsuario.ValidarUsuario(pUsuario, contraseñTem);
+                string name = pUsuario;
+                CacheItemPolicy policy = new CacheItemPolicy();
+                policy.Priority = System.Runtime.Caching.CacheItemPriority.Default;
+                cacheName.Set("user", name, policy);
             }
 
             return usu;

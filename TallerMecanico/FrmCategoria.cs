@@ -62,7 +62,7 @@ namespace TallerMecanico
         }
         private void ActivarButton(bool Estado)
         {
-            btnNuevo.Enabled = Estado;
+            //btnNuevo.Enabled = Estado;
             btnGrabar.Enabled = Estado;
             //btnEliminar.Enabled = Estado;
             btnSalir.Enabled = Estado;
@@ -284,6 +284,21 @@ namespace TallerMecanico
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmCategoria_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGrabar_Click_1(object sender, EventArgs e)
         {
 
         }
