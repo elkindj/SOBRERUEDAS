@@ -34,5 +34,17 @@ namespace TallerMecanico.Properties {
                 this["User"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=databasecar.cbevx0dj1nhv.us-east-2.rds.amazonaws.com;Initial Catalog=" +
+            "BDSobreRuedas;Persist Security Info=True;User ID=admin;Password=H1c5Jcqutpv5iJB1" +
+            "wIAYD")]
+        public string BDSobreRuedasConnectionString {
+            get {
+                return ((string)(this["BDSobreRuedasConnectionString"]));
+            }
+        }
     }
 }
