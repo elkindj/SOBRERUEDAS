@@ -1,7 +1,7 @@
 ﻿
 namespace TallerMecanico
 {
-    partial class VisualizadorReporte
+    partial class ReporteProducto
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@ namespace TallerMecanico
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataSetProductos = new TallerMecanico.DataSetProductos();
             this.ProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -40,12 +41,14 @@ namespace TallerMecanico
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TallerMecanico.Reportes.FacturaVenta.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            reportDataSource1.Name = "DatasetProductos";
+            reportDataSource1.Value = this.ProductosBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TallerMecanico.Reportes.InventarioProductos.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(776, 426);
             this.reportViewer1.TabIndex = 0;
             // 
             // DataSetProductos
@@ -62,15 +65,15 @@ namespace TallerMecanico
             // 
             this.ProductosTableAdapter.ClearBeforeFill = true;
             // 
-            // VisualizadorReporte
+            // ReporteProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "VisualizadorReporte";
-            this.Text = "VisualizadorReporte";
-            this.Load += new System.EventHandler(this.VisualizadorReporte_Load);
+            this.Name = "ReporteProducto";
+            this.Text = "ReporteProducto";
+            this.Load += new System.EventHandler(this.ReporteProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataSetProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductosBindingSource)).EndInit();
             this.ResumeLayout(false);

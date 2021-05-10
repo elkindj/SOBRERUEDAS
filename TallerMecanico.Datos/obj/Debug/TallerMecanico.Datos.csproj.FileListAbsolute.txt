@@ -1,3 +1,7 @@
+D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csprojAssemblyReference.cache
+D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.Properties.Resources.resources
+D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.GenerateResource.cache
+D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CoreCompileInputs.cache
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.exe.config
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.exe
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Debug\TallerMecanico.Datos.pdb
@@ -11,8 +15,3 @@ C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Dato
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CopyComplete
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.exe
 C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.pdb
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csprojAssemblyReference.cache
-D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csprojAssemblyReference.cache
-D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.Properties.Resources.resources
-D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.GenerateResource.cache
-D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Debug\TallerMecanico.Datos.csproj.CoreCompileInputs.cache

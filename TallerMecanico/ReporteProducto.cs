@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace TallerMecanico
 {
-    public partial class VisualizadorReporte : Form
+    public partial class ReporteProducto : Form
     {
-        public VisualizadorReporte()
+        public ReporteProducto()
         {
             InitializeComponent();
         }
 
-        private void VisualizadorReporte_Load(object sender, EventArgs e)
+        private void ReporteProducto_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'DataSetProductos.Productos' Puede moverla o quitarla según sea necesario.
             this.ProductosTableAdapter.Fill(this.DataSetProductos.Productos);

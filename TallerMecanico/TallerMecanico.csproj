@@ -73,6 +73,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDSobreRuedasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetFactura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetProductos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -140,14 +145,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="UsuarioLogeado.cs" />
-    <Compile Include="VisualizadorReporte.cs">
+    <Compile Include="ReporteFacturaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VisualizadorReporte.Designer.cs">
-      <DependentUpon>VisualizadorReporte.cs</DependentUpon>
+    <Compile Include="ReporteFacturaVenta.Designer.cs">
+      <DependentUpon>ReporteFacturaVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteProducto.Designer.cs">
+      <DependentUpon>ReporteProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UsuarioLogeado.cs" />
     <EmbeddedResource Include="FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,11 +198,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReporteFacturaVenta.resx">
+      <DependentUpon>ReporteFacturaVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteProducto.resx">
+      <DependentUpon>ReporteProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FacturaVenta.rdlc" />
     <EmbeddedResource Include="Reportes\InventarioProductos.rdlc" />
-    <EmbeddedResource Include="VisualizadorReporte.resx">
-      <DependentUpon>VisualizadorReporte.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="BDSobreRuedasDataSet.xsc">
       <DependentUpon>BDSobreRuedasDataSet.xsd</DependentUpon>
     </None>
@@ -202,6 +216,17 @@
     </None>
     <None Include="BDSobreRuedasDataSet.xss">
       <DependentUpon>BDSobreRuedasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFactura.xsc">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFactura.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFactura.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFactura.xss">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
     </None>
     <None Include="DataSetProductos.xsc">
       <DependentUpon>DataSetProductos.xsd</DependentUpon>
