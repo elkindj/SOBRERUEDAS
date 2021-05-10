@@ -74,15 +74,6 @@ namespace TallerMecanico
                         lista[i].Estado);
                 }
             }
-            if (lista == null)
-            {
-                //c = bLProducto.ProductoTraerPorId((int)dataGridView1[0, dataGridView1.CurrentRow.Index].Value);
-                //string valor= "Producto";
-                //txtCodP.Text=valor;
-                //lista = bLProducto.Listado();
-                //txtCodP.Text = bLProducto.Listado();
-
-            }
 
             if (categorias == null)
             {
@@ -90,12 +81,7 @@ namespace TallerMecanico
             }
             if (categorias.Count > 0)
             {
-                //comboBox1.Items.Clear();
-                //for (int i = 0; i < categorias.Count; i++)
-                //{
-                //    //comboBox1.Items.Add(categorias[i].Nombre);
 
-                //}
                 comboBox1.DataSource = categorias;
                 comboBox1.DisplayMember = "Nombre";
                 comboBox1.ValueMember = "Id";
