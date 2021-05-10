@@ -73,6 +73,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDSobreRuedasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BDSobreRuedasDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSobreRuedasDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDSobreRuedasDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSobreRuedasDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDSobreRuedasDataSetClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSobreRuedasDataSetClientes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetProductos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,6 +134,12 @@
     </Compile>
     <Compile Include="FrmCompra.Designer.cs">
       <DependentUpon>FrmCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuario.cs">
       <SubType>Form</SubType>
@@ -169,6 +190,9 @@
     <EmbeddedResource Include="FrmCompra.resx">
       <DependentUpon>FrmCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +211,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\Clientes.rdlc" />
     <EmbeddedResource Include="Reportes\FacturaVenta.rdlc" />
     <EmbeddedResource Include="Reportes\InventarioProductos.rdlc" />
     <EmbeddedResource Include="VisualizadorReporte.resx">
@@ -202,6 +227,39 @@
     </None>
     <None Include="BDSobreRuedasDataSet.xss">
       <DependentUpon>BDSobreRuedasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDSobreRuedasDataSet1.xsc">
+      <DependentUpon>BDSobreRuedasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BDSobreRuedasDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDSobreRuedasDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDSobreRuedasDataSet1.xss">
+      <DependentUpon>BDSobreRuedasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BDSobreRuedasDataSet2.xsc">
+      <DependentUpon>BDSobreRuedasDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BDSobreRuedasDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDSobreRuedasDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDSobreRuedasDataSet2.xss">
+      <DependentUpon>BDSobreRuedasDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BDSobreRuedasDataSetClientes.xsc">
+      <DependentUpon>BDSobreRuedasDataSetClientes.xsd</DependentUpon>
+    </None>
+    <None Include="BDSobreRuedasDataSetClientes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDSobreRuedasDataSetClientes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDSobreRuedasDataSetClientes.xss">
+      <DependentUpon>BDSobreRuedasDataSetClientes.xsd</DependentUpon>
     </None>
     <None Include="DataSetProductos.xsc">
       <DependentUpon>DataSetProductos.xsd</DependentUpon>
