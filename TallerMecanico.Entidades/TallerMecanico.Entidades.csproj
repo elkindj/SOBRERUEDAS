@@ -46,6 +46,7 @@
     <Compile Include="Compra.cs" />
     <Compile Include="CompraDet.cs" />
     <Compile Include="Factura.cs" />
+    <Compile Include="FichaTecnica.cs" />
     <Compile Include="Parametros.cs" />
     <Compile Include="Productos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
