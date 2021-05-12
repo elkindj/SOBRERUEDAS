@@ -31,7 +31,9 @@ namespace TallerMecanico.Datos
                         (string)dr["Marca"],
                         (string)dr["Linea"],
                         (string)dr["Combustible"],
-                        (string)dr["Modelo"]);
+                        (string)dr["Modelo"],
+                        (string)dr["Usuario"],
+                        (DateTime)dr["FechaReg"]);
                         lista.Add(vehiculo);
                     }
                 }
@@ -57,6 +59,8 @@ namespace TallerMecanico.Datos
                 cmd.Parameters.AddWithValue("@Linea", vehiculo.Linea);
                 cmd.Parameters.AddWithValue("@Combustible", vehiculo.Combustible);
                 cmd.Parameters.AddWithValue("@Modelo", vehiculo.Modelo);
+                cmd.Parameters.AddWithValue("@Usuario", vehiculo.Usuario);
+                cmd.Parameters.AddWithValue("@Fecha", vehiculo.FechaReg);
                 n = cmd.ExecuteNonQuery();
             }
             return n;
@@ -82,7 +86,9 @@ namespace TallerMecanico.Datos
                         (string)dr["Marca"],
                         (string)dr["Linea"],
                         (string)dr["Combustible"],
-                        (string)dr["Modelo"]);
+                        (string)dr["Modelo"],
+                        (string)dr["Usuario"],
+                        (DateTime)dr["FechaReg"]);
                 }
             }
             return vehiculo;

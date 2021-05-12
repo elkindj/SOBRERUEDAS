@@ -56,6 +56,8 @@ namespace TallerMecanico
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblFecha = new System.Windows.Forms.Label();
             this.timFechaHora = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.Test = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +65,8 @@ namespace TallerMecanico
             // 
             this.grdProductos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.grdProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Test});
             this.grdProductos.Location = new System.Drawing.Point(15, 251);
             this.grdProductos.Name = "grdProductos";
             this.grdProductos.Size = new System.Drawing.Size(800, 205);
@@ -296,12 +300,27 @@ namespace TallerMecanico
             // 
             this.timFechaHora.Tick += new System.EventHandler(this.timFechaHora_Tick);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(614, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 66;
+            this.label3.Text = "label3";
+            // 
+            // Test
+            // 
+            this.Test.HeaderText = "Test";
+            this.Test.Name = "Test";
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(834, 574);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtUsuario);
@@ -363,5 +382,7 @@ namespace TallerMecanico
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Timer timFechaHora;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Test;
     }
 }

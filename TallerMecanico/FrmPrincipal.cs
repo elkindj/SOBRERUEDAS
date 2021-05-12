@@ -115,7 +115,9 @@ namespace TallerMecanico
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            openChidForm(new FrmVentas());
+            //openChidForm(new FrmVentas());
+            ReporteFacturaVenta reporteFacturaVenta = new ReporteFacturaVenta();
+            reporteFacturaVenta.ShowDialog();
         }
 
         #endregion

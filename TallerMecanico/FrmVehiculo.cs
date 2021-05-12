@@ -84,7 +84,7 @@ namespace TallerMecanico
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            //string user = LoadUser();
+            string user = LoadUser();
             int n = -1;
             if (_nuevo)
             {
@@ -94,7 +94,9 @@ namespace TallerMecanico
                 txtMarca.Text,
                 txtLinea.Text,
                 txtCombustible.Text,
-                txtModelo.Text
+                txtModelo.Text,
+                user,
+                DateTime.UtcNow
                 );
                 n = blVehiculo.Insertar(vehiculo);
             }
@@ -119,7 +121,7 @@ namespace TallerMecanico
                 ActivarControlDatos(gbDatos, true);
                 //ActivarButton(true);
                 dgvDatos.Enabled = true;
-                //LimpiarControl(gbDatos);
+                LimpiarControl(gbDatos);
                 //btnEditar.Text = "Editar";
                 lista = blVehiculo.Listar();
                 CargarDatos();
@@ -129,6 +131,11 @@ namespace TallerMecanico
                 MessageBox.Show("Error al grabar", "Aviso",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private string LoadUser()
+        {
+            return blUsuario.cacheName["user"] as string;
         }
 
         private void iconButton1_Click_1(object sender, EventArgs e)
@@ -175,6 +182,18 @@ namespace TallerMecanico
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void LimpiarControl(Control Contenedor)
+        {
+            foreach (var item in Contenedor.Controls)
+
+            {
+                if (item.GetType() == typeof(TextBox))
+                {
+                    ((TextBox)item).Clear();
+                }
+            }
         }
     }
 }

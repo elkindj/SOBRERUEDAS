@@ -53,6 +53,7 @@
     <Compile Include="DAOCategoria.cs" />
     <Compile Include="DAOCliente.cs" />
     <Compile Include="DAOCompra.cs" />
+    <Compile Include="DAOFichaTecnica.cs" />
     <Compile Include="DAOGeneral.cs" />
     <Compile Include="DAOProductos.cs" />
     <Compile Include="DAOUsuario.cs" />

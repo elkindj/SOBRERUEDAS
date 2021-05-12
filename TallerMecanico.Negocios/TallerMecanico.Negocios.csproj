@@ -81,6 +81,8 @@
     <Compile Include="BLCategoria.cs" />
     <Compile Include="BLCliente.cs" />
     <Compile Include="BLCompra.cs" />
+    <Compile Include="BLFichaTecnica.cs" />
+    <Compile Include="BLGeneral.cs" />
     <Compile Include="BLProducto.cs" />
     <Compile Include="BLSeguridad.cs" />
     <Compile Include="BLVehiculo.cs" />

@@ -79,7 +79,8 @@ namespace TallerMecanico
                 if (!exist)
                 {
                     fila.CreateCells(grdProductos);
-                    fila.Cells[0].Value = cbProducto.SelectedValue;
+                    label3.Text = cbProducto.SelectedIndex.ToString();
+                    fila.Cells[0].Value = 1;
                     fila.Cells[1].Value = cbProducto.Text;
                     fila.Cells[2].Value = txtCantidad.Text;
                     fila.Cells[3].Value = txtValor.Text;
