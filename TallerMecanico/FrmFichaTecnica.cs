@@ -76,7 +76,8 @@ namespace TallerMecanico
             ActivarControlDatos(groupBox3, true);
             ActivarControlDatos(groupBox4, true);
             ActivarControlDatos(groupBox5, true);
-            ActivarControlDatos(groupBox6, true);
+            //ActivarControlDatos(groupBox6, true);
+            txtapto.Enabled = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

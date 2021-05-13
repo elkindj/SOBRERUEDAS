@@ -12,17 +12,3 @@ D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Release\TallerMecanico.Datos
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Release\TallerMecanico.Datos.csproj.CopyComplete
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Release\TallerMecanico.Datos.exe
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Datos\obj\Release\TallerMecanico.Datos.pdb
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Release\TallerMecanico.Datos.exe.config
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Release\TallerMecanico.Datos.exe
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Release\TallerMecanico.Datos.pdb
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Release\System.Data.SqlClient.dll
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Release\TallerMecanico.Entidades.dll
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Release\TallerMecanico.Entidades.pdb
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\bin\Release\System.Data.SqlClient.xml
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Release\TallerMecanico.Datos.csprojAssemblyReference.cache
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Release\TallerMecanico.Datos.Properties.Resources.resources
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Release\TallerMecanico.Datos.csproj.GenerateResource.cache
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Release\TallerMecanico.Datos.csproj.CoreCompileInputs.cache
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Release\TallerMecanico.Datos.csproj.CopyComplete
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Release\TallerMecanico.Datos.exe
-C:\Users\Rubiela\Documents\UNINPAHU\PROGRAMACION\SOBRERUEDAS\TallerMecanico.Datos\obj\Release\TallerMecanico.Datos.pdb

@@ -72,7 +72,7 @@ namespace TallerMecanico
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(172, 587);
+            this.pnMenu.Size = new System.Drawing.Size(203, 808);
             this.pnMenu.TabIndex = 0;
             // 
             // btnSalir
@@ -81,7 +81,7 @@ namespace TallerMecanico
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.btnSalir.IconColor = System.Drawing.Color.White;
@@ -90,7 +90,7 @@ namespace TallerMecanico
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(0, 480);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(172, 35);
+            this.btnSalir.Size = new System.Drawing.Size(203, 35);
             this.btnSalir.TabIndex = 14;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -105,7 +105,7 @@ namespace TallerMecanico
             this.pnMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnMantenimiento.Location = new System.Drawing.Point(0, 380);
             this.pnMantenimiento.Name = "pnMantenimiento";
-            this.pnMantenimiento.Size = new System.Drawing.Size(172, 100);
+            this.pnMantenimiento.Size = new System.Drawing.Size(203, 100);
             this.pnMantenimiento.TabIndex = 13;
             // 
             // btnMantenimientoIn
@@ -114,7 +114,7 @@ namespace TallerMecanico
             this.btnMantenimientoIn.FlatAppearance.BorderSize = 0;
             this.btnMantenimientoIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMantenimientoIn.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnMantenimientoIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMantenimientoIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMantenimientoIn.ForeColor = System.Drawing.Color.Silver;
             this.btnMantenimientoIn.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.btnMantenimientoIn.IconColor = System.Drawing.Color.White;
@@ -124,7 +124,7 @@ namespace TallerMecanico
             this.btnMantenimientoIn.Location = new System.Drawing.Point(0, 50);
             this.btnMantenimientoIn.Name = "btnMantenimientoIn";
             this.btnMantenimientoIn.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnMantenimientoIn.Size = new System.Drawing.Size(172, 25);
+            this.btnMantenimientoIn.Size = new System.Drawing.Size(203, 25);
             this.btnMantenimientoIn.TabIndex = 16;
             this.btnMantenimientoIn.Text = "Mantenimiento";
             this.btnMantenimientoIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -137,7 +137,7 @@ namespace TallerMecanico
             this.btnVehiculo.FlatAppearance.BorderSize = 0;
             this.btnVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVehiculo.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVehiculo.ForeColor = System.Drawing.Color.Silver;
             this.btnVehiculo.IconChar = FontAwesome.Sharp.IconChar.Car;
             this.btnVehiculo.IconColor = System.Drawing.Color.White;
@@ -147,7 +147,7 @@ namespace TallerMecanico
             this.btnVehiculo.Location = new System.Drawing.Point(0, 25);
             this.btnVehiculo.Name = "btnVehiculo";
             this.btnVehiculo.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnVehiculo.Size = new System.Drawing.Size(172, 25);
+            this.btnVehiculo.Size = new System.Drawing.Size(203, 25);
             this.btnVehiculo.TabIndex = 15;
             this.btnVehiculo.Text = "Vehiculos";
             this.btnVehiculo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -159,7 +159,7 @@ namespace TallerMecanico
             this.btnCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCliente.FlatAppearance.BorderSize = 0;
             this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.ForeColor = System.Drawing.Color.Silver;
             this.btnCliente.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.btnCliente.IconColor = System.Drawing.Color.White;
@@ -169,7 +169,7 @@ namespace TallerMecanico
             this.btnCliente.Location = new System.Drawing.Point(0, 0);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnCliente.Size = new System.Drawing.Size(172, 25);
+            this.btnCliente.Size = new System.Drawing.Size(203, 25);
             this.btnCliente.TabIndex = 14;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -181,7 +181,7 @@ namespace TallerMecanico
             this.bntMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
             this.bntMantenimiento.FlatAppearance.BorderSize = 0;
             this.bntMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntMantenimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntMantenimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntMantenimiento.ForeColor = System.Drawing.Color.White;
             this.bntMantenimiento.IconChar = FontAwesome.Sharp.IconChar.Cogs;
             this.bntMantenimiento.IconColor = System.Drawing.Color.White;
@@ -190,7 +190,7 @@ namespace TallerMecanico
             this.bntMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntMantenimiento.Location = new System.Drawing.Point(0, 345);
             this.bntMantenimiento.Name = "bntMantenimiento";
-            this.bntMantenimiento.Size = new System.Drawing.Size(172, 35);
+            this.bntMantenimiento.Size = new System.Drawing.Size(203, 35);
             this.bntMantenimiento.TabIndex = 12;
             this.bntMantenimiento.Text = "Mantenimiento";
             this.bntMantenimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -206,7 +206,7 @@ namespace TallerMecanico
             this.pnInventario.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnInventario.Location = new System.Drawing.Point(0, 220);
             this.pnInventario.Name = "pnInventario";
-            this.pnInventario.Size = new System.Drawing.Size(172, 125);
+            this.pnInventario.Size = new System.Drawing.Size(203, 125);
             this.pnInventario.TabIndex = 11;
             // 
             // btnVenta
@@ -215,7 +215,7 @@ namespace TallerMecanico
             this.btnVenta.FlatAppearance.BorderSize = 0;
             this.btnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVenta.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVenta.ForeColor = System.Drawing.Color.Silver;
             this.btnVenta.IconChar = FontAwesome.Sharp.IconChar.DollyFlatbed;
             this.btnVenta.IconColor = System.Drawing.Color.White;
@@ -225,7 +225,7 @@ namespace TallerMecanico
             this.btnVenta.Location = new System.Drawing.Point(0, 75);
             this.btnVenta.Name = "btnVenta";
             this.btnVenta.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnVenta.Size = new System.Drawing.Size(172, 25);
+            this.btnVenta.Size = new System.Drawing.Size(203, 25);
             this.btnVenta.TabIndex = 13;
             this.btnVenta.Text = "Ventas";
             this.btnVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -237,7 +237,7 @@ namespace TallerMecanico
             this.btnCompra.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCompra.FlatAppearance.BorderSize = 0;
             this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompra.ForeColor = System.Drawing.Color.Silver;
             this.btnCompra.IconChar = FontAwesome.Sharp.IconChar.Dolly;
             this.btnCompra.IconColor = System.Drawing.Color.White;
@@ -247,7 +247,7 @@ namespace TallerMecanico
             this.btnCompra.Location = new System.Drawing.Point(0, 50);
             this.btnCompra.Name = "btnCompra";
             this.btnCompra.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnCompra.Size = new System.Drawing.Size(172, 25);
+            this.btnCompra.Size = new System.Drawing.Size(203, 25);
             this.btnCompra.TabIndex = 12;
             this.btnCompra.Text = "Compras";
             this.btnCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -260,7 +260,7 @@ namespace TallerMecanico
             this.btnProducto.FlatAppearance.BorderSize = 0;
             this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProducto.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducto.ForeColor = System.Drawing.Color.Silver;
             this.btnProducto.IconChar = FontAwesome.Sharp.IconChar.ShoppingBasket;
             this.btnProducto.IconColor = System.Drawing.Color.White;
@@ -270,7 +270,7 @@ namespace TallerMecanico
             this.btnProducto.Location = new System.Drawing.Point(0, 25);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnProducto.Size = new System.Drawing.Size(172, 25);
+            this.btnProducto.Size = new System.Drawing.Size(203, 25);
             this.btnProducto.TabIndex = 11;
             this.btnProducto.Text = "Productos";
             this.btnProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -283,7 +283,7 @@ namespace TallerMecanico
             this.btnCategoria.FlatAppearance.BorderSize = 0;
             this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoria.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoria.ForeColor = System.Drawing.Color.Silver;
             this.btnCategoria.IconChar = FontAwesome.Sharp.IconChar.Sitemap;
             this.btnCategoria.IconColor = System.Drawing.Color.White;
@@ -293,7 +293,7 @@ namespace TallerMecanico
             this.btnCategoria.Location = new System.Drawing.Point(0, 0);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnCategoria.Size = new System.Drawing.Size(172, 25);
+            this.btnCategoria.Size = new System.Drawing.Size(203, 25);
             this.btnCategoria.TabIndex = 10;
             this.btnCategoria.Text = "Categoria";
             this.btnCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -306,7 +306,7 @@ namespace TallerMecanico
             this.btnInventario.FlatAppearance.BorderSize = 0;
             this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventario.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.ForeColor = System.Drawing.Color.White;
             this.btnInventario.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
             this.btnInventario.IconColor = System.Drawing.Color.White;
@@ -315,7 +315,7 @@ namespace TallerMecanico
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventario.Location = new System.Drawing.Point(0, 185);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(172, 35);
+            this.btnInventario.Size = new System.Drawing.Size(203, 35);
             this.btnInventario.TabIndex = 10;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -329,7 +329,7 @@ namespace TallerMecanico
             this.pnAdministrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnAdministrar.Location = new System.Drawing.Point(0, 135);
             this.pnAdministrar.Name = "pnAdministrar";
-            this.pnAdministrar.Size = new System.Drawing.Size(172, 50);
+            this.pnAdministrar.Size = new System.Drawing.Size(203, 50);
             this.pnAdministrar.TabIndex = 9;
             // 
             // btnUsuario
@@ -339,7 +339,7 @@ namespace TallerMecanico
             this.btnUsuario.FlatAppearance.BorderSize = 0;
             this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuario.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.ForeColor = System.Drawing.Color.Silver;
             this.btnUsuario.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
             this.btnUsuario.IconColor = System.Drawing.Color.White;
@@ -349,7 +349,7 @@ namespace TallerMecanico
             this.btnUsuario.Location = new System.Drawing.Point(0, 0);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnUsuario.Size = new System.Drawing.Size(172, 25);
+            this.btnUsuario.Size = new System.Drawing.Size(203, 25);
             this.btnUsuario.TabIndex = 9;
             this.btnUsuario.Text = "Usuarios";
             this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -363,7 +363,7 @@ namespace TallerMecanico
             this.btnAdministrar.FlatAppearance.BorderSize = 0;
             this.btnAdministrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdministrar.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnAdministrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdministrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdministrar.ForeColor = System.Drawing.Color.White;
             this.btnAdministrar.IconChar = FontAwesome.Sharp.IconChar.UserShield;
             this.btnAdministrar.IconColor = System.Drawing.Color.White;
@@ -372,7 +372,7 @@ namespace TallerMecanico
             this.btnAdministrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdministrar.Location = new System.Drawing.Point(0, 100);
             this.btnAdministrar.Name = "btnAdministrar";
-            this.btnAdministrar.Size = new System.Drawing.Size(172, 35);
+            this.btnAdministrar.Size = new System.Drawing.Size(203, 35);
             this.btnAdministrar.TabIndex = 8;
             this.btnAdministrar.Text = "Administrar";
             this.btnAdministrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -385,23 +385,24 @@ namespace TallerMecanico
             this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnLogo.Location = new System.Drawing.Point(0, 0);
             this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Size = new System.Drawing.Size(172, 100);
+            this.pnLogo.Size = new System.Drawing.Size(203, 100);
             this.pnLogo.TabIndex = 0;
             // 
             // pnFrmPrincipal
             // 
+            this.pnFrmPrincipal.AutoScroll = true;
             this.pnFrmPrincipal.Controls.Add(this.pictureBox1);
             this.pnFrmPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnFrmPrincipal.Location = new System.Drawing.Point(172, 0);
+            this.pnFrmPrincipal.Location = new System.Drawing.Point(203, 0);
             this.pnFrmPrincipal.Name = "pnFrmPrincipal";
-            this.pnFrmPrincipal.Size = new System.Drawing.Size(878, 587);
+            this.pnFrmPrincipal.Size = new System.Drawing.Size(1230, 808);
             this.pnFrmPrincipal.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(338, 202);
+            this.pictureBox1.Location = new System.Drawing.Point(514, 313);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(179, 182);
             this.pictureBox1.TabIndex = 0;
@@ -411,7 +412,7 @@ namespace TallerMecanico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 587);
+            this.ClientSize = new System.Drawing.Size(1433, 808);
             this.Controls.Add(this.pnFrmPrincipal);
             this.Controls.Add(this.pnMenu);
             this.Name = "FrmPrincipal";

@@ -3,4 +3,3 @@ D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Entidades\bin\Release\TallerMecanico.E
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Entidades\obj\Release\TallerMecanico.Entidades.csproj.CoreCompileInputs.cache
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Entidades\obj\Release\TallerMecanico.Entidades.dll
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Entidades\obj\Release\TallerMecanico.Entidades.pdb
-D:\Project\SOBRERUEDAS\Cod\TallerMecanico.Entidades\obj\Release\TallerMecanico.Entidades.csprojAssemblyReference.cache
