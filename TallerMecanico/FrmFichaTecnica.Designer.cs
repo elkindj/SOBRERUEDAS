@@ -32,11 +32,11 @@ namespace TallerMecanico
             this.label6 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtapto = new System.Windows.Forms.ComboBox();
             this.label47 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.txtapto = new System.Windows.Forms.TextBox();
             this.txtInspectores = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtRevisionEnterior = new System.Windows.Forms.TextBox();
@@ -125,6 +125,8 @@ namespace TallerMecanico
             this.btnGuardar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.btnHistory = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -137,7 +139,8 @@ namespace TallerMecanico
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(200, 40);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(384, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(352, 20);
             this.label6.TabIndex = 7;
@@ -152,28 +155,40 @@ namespace TallerMecanico
             this.iconButton1.Location = new System.Drawing.Point(5, 3);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(173, 83);
+            this.iconButton1.Size = new System.Drawing.Size(173, 70);
             this.iconButton1.TabIndex = 41;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.txtapto);
             this.groupBox6.Controls.Add(this.label47);
             this.groupBox6.Controls.Add(this.label45);
             this.groupBox6.Controls.Add(this.label44);
             this.groupBox6.Controls.Add(this.label43);
-            this.groupBox6.Controls.Add(this.txtapto);
             this.groupBox6.Controls.Add(this.txtInspectores);
-            this.groupBox6.Location = new System.Drawing.Point(5, 656);
+            this.groupBox6.Location = new System.Drawing.Point(5, 661);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(684, 124);
+            this.groupBox6.Size = new System.Drawing.Size(905, 89);
             this.groupBox6.TabIndex = 47;
             this.groupBox6.TabStop = false;
+            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
+            // 
+            // txtapto
+            // 
+            this.txtapto.FormattingEnabled = true;
+            this.txtapto.Items.AddRange(new object[] {
+            "APTO",
+            "NO APTO"});
+            this.txtapto.Location = new System.Drawing.Point(74, 21);
+            this.txtapto.Name = "txtapto";
+            this.txtapto.Size = new System.Drawing.Size(121, 21);
+            this.txtapto.TabIndex = 41;
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(150, 45);
+            this.label47.Location = new System.Drawing.Point(197, 26);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(207, 13);
             this.label47.TabIndex = 6;
@@ -182,16 +197,18 @@ namespace TallerMecanico
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(8, 73);
+            this.label45.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label45.Location = new System.Drawing.Point(-1, 50);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(333, 13);
+            this.label45.Size = new System.Drawing.Size(310, 14);
             this.label45.TabIndex = 4;
-            this.label45.Text = "7.  INSPECTOR(ES)  QUE REALIZAN LA REVISION PREVENTIV A";
+            this.label45.Text = "7.  INSPECTOR(ES)  QUE REALIZAN LA REVISION PREVENTIVA";
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(26, 47);
+            this.label44.Location = new System.Drawing.Point(10, 25);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(61, 13);
             this.label44.TabIndex = 3;
@@ -200,26 +217,22 @@ namespace TallerMecanico
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(9, 19);
+            this.label43.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label43.Location = new System.Drawing.Point(0, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(280, 13);
+            this.label43.Size = new System.Drawing.Size(264, 14);
             this.label43.TabIndex = 2;
             this.label43.Text = "6.  RESULTADO DE TODA LA REVISION PREVENTIVA";
             // 
-            // txtapto
-            // 
-            this.txtapto.HideSelection = false;
-            this.txtapto.Location = new System.Drawing.Point(88, 40);
-            this.txtapto.Name = "txtapto";
-            this.txtapto.Size = new System.Drawing.Size(59, 20);
-            this.txtapto.TabIndex = 40;
-            // 
             // txtInspectores
             // 
-            this.txtInspectores.Location = new System.Drawing.Point(29, 89);
+            this.txtInspectores.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtInspectores.Location = new System.Drawing.Point(15, 67);
             this.txtInspectores.Name = "txtInspectores";
             this.txtInspectores.Size = new System.Drawing.Size(649, 20);
             this.txtInspectores.TabIndex = 36;
+            this.txtInspectores.TextChanged += new System.EventHandler(this.txtInspectores_TextChanged);
             // 
             // groupBox5
             // 
@@ -252,64 +265,64 @@ namespace TallerMecanico
             // 
             // txtRevisionEnterior
             // 
-            this.txtRevisionEnterior.Location = new System.Drawing.Point(171, 121);
+            this.txtRevisionEnterior.Location = new System.Drawing.Point(150, 126);
             this.txtRevisionEnterior.Name = "txtRevisionEnterior";
-            this.txtRevisionEnterior.Size = new System.Drawing.Size(147, 20);
+            this.txtRevisionEnterior.Size = new System.Drawing.Size(537, 20);
             this.txtRevisionEnterior.TabIndex = 35;
             // 
             // txtRevisionInterior
             // 
-            this.txtRevisionInterior.Location = new System.Drawing.Point(489, 96);
+            this.txtRevisionInterior.Location = new System.Drawing.Point(503, 98);
             this.txtRevisionInterior.Name = "txtRevisionInterior";
-            this.txtRevisionInterior.Size = new System.Drawing.Size(157, 20);
+            this.txtRevisionInterior.Size = new System.Drawing.Size(184, 20);
             this.txtRevisionInterior.TabIndex = 33;
             // 
             // txtGrupoTransmision
             // 
-            this.txtGrupoTransmision.Location = new System.Drawing.Point(171, 96);
+            this.txtGrupoTransmision.Location = new System.Drawing.Point(170, 94);
             this.txtGrupoTransmision.Name = "txtGrupoTransmision";
-            this.txtGrupoTransmision.Size = new System.Drawing.Size(147, 20);
+            this.txtGrupoTransmision.Size = new System.Drawing.Size(168, 20);
             this.txtGrupoTransmision.TabIndex = 32;
             // 
             // txtGrupoMotor
             // 
-            this.txtGrupoMotor.Location = new System.Drawing.Point(787, 97);
+            this.txtGrupoMotor.Location = new System.Drawing.Point(841, 97);
             this.txtGrupoMotor.Name = "txtGrupoMotor";
-            this.txtGrupoMotor.Size = new System.Drawing.Size(175, 20);
+            this.txtGrupoMotor.Size = new System.Drawing.Size(248, 20);
             this.txtGrupoMotor.TabIndex = 34;
             // 
             // txtGrupoVidrios
             // 
-            this.txtGrupoVidrios.Location = new System.Drawing.Point(787, 71);
+            this.txtGrupoVidrios.Location = new System.Drawing.Point(838, 67);
             this.txtGrupoVidrios.Name = "txtGrupoVidrios";
-            this.txtGrupoVidrios.Size = new System.Drawing.Size(175, 20);
+            this.txtGrupoVidrios.Size = new System.Drawing.Size(248, 20);
             this.txtGrupoVidrios.TabIndex = 31;
             // 
             // txtGrupoLuces
             // 
-            this.txtGrupoLuces.Location = new System.Drawing.Point(787, 43);
+            this.txtGrupoLuces.Location = new System.Drawing.Point(840, 34);
             this.txtGrupoLuces.Name = "txtGrupoLuces";
-            this.txtGrupoLuces.Size = new System.Drawing.Size(175, 20);
+            this.txtGrupoLuces.Size = new System.Drawing.Size(248, 20);
             this.txtGrupoLuces.TabIndex = 28;
             // 
             // txtGrupoDir
             // 
-            this.txtGrupoDir.Location = new System.Drawing.Point(489, 70);
+            this.txtGrupoDir.Location = new System.Drawing.Point(502, 66);
             this.txtGrupoDir.Name = "txtGrupoDir";
-            this.txtGrupoDir.Size = new System.Drawing.Size(157, 20);
+            this.txtGrupoDir.Size = new System.Drawing.Size(184, 20);
             this.txtGrupoDir.TabIndex = 30;
             // 
             // txtRinesyLlantas
             // 
-            this.txtRinesyLlantas.Location = new System.Drawing.Point(171, 70);
+            this.txtRinesyLlantas.Location = new System.Drawing.Point(139, 64);
             this.txtRinesyLlantas.Name = "txtRinesyLlantas";
-            this.txtRinesyLlantas.Size = new System.Drawing.Size(147, 20);
+            this.txtRinesyLlantas.Size = new System.Drawing.Size(168, 20);
             this.txtRinesyLlantas.TabIndex = 29;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(8, 124);
+            this.label42.Location = new System.Drawing.Point(1, 130);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(146, 13);
             this.label42.TabIndex = 12;
@@ -318,7 +331,7 @@ namespace TallerMecanico
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(334, 99);
+            this.label41.Location = new System.Drawing.Point(348, 101);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(158, 13);
             this.label41.TabIndex = 11;
@@ -326,22 +339,22 @@ namespace TallerMecanico
             // 
             // txtGrupoSuspension
             // 
-            this.txtGrupoSuspension.Location = new System.Drawing.Point(489, 42);
+            this.txtGrupoSuspension.Location = new System.Drawing.Point(503, 34);
             this.txtGrupoSuspension.Name = "txtGrupoSuspension";
-            this.txtGrupoSuspension.Size = new System.Drawing.Size(157, 20);
+            this.txtGrupoSuspension.Size = new System.Drawing.Size(184, 20);
             this.txtGrupoSuspension.TabIndex = 27;
             // 
             // txtGrupoFrenos
             // 
-            this.txtGrupoFrenos.Location = new System.Drawing.Point(171, 43);
+            this.txtGrupoFrenos.Location = new System.Drawing.Point(137, 35);
             this.txtGrupoFrenos.Name = "txtGrupoFrenos";
-            this.txtGrupoFrenos.Size = new System.Drawing.Size(147, 20);
+            this.txtGrupoFrenos.Size = new System.Drawing.Size(168, 20);
             this.txtGrupoFrenos.TabIndex = 26;
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(662, 100);
+            this.label40.Location = new System.Drawing.Point(719, 101);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(119, 13);
             this.label40.TabIndex = 8;
@@ -350,7 +363,7 @@ namespace TallerMecanico
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(6, 99);
+            this.label39.Location = new System.Drawing.Point(4, 98);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(163, 13);
             this.label39.TabIndex = 7;
@@ -359,7 +372,7 @@ namespace TallerMecanico
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(334, 73);
+            this.label38.Location = new System.Drawing.Point(347, 69);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(138, 13);
             this.label38.TabIndex = 6;
@@ -368,7 +381,7 @@ namespace TallerMecanico
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(662, 46);
+            this.label37.Location = new System.Drawing.Point(723, 38);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(114, 13);
             this.label37.TabIndex = 5;
@@ -377,7 +390,7 @@ namespace TallerMecanico
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(662, 73);
+            this.label36.Location = new System.Drawing.Point(724, 71);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(111, 13);
             this.label36.TabIndex = 4;
@@ -386,7 +399,7 @@ namespace TallerMecanico
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(334, 49);
+            this.label35.Location = new System.Drawing.Point(348, 38);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(149, 13);
             this.label35.TabIndex = 3;
@@ -395,7 +408,7 @@ namespace TallerMecanico
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(6, 73);
+            this.label34.Location = new System.Drawing.Point(5, 68);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(131, 13);
             this.label34.TabIndex = 2;
@@ -404,7 +417,7 @@ namespace TallerMecanico
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(6, 50);
+            this.label33.Location = new System.Drawing.Point(6, 39);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(129, 13);
             this.label33.TabIndex = 1;
@@ -413,9 +426,11 @@ namespace TallerMecanico
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(6, 16);
+            this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label32.Location = new System.Drawing.Point(0, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(402, 13);
+            this.label32.Size = new System.Drawing.Size(379, 14);
             this.label32.TabIndex = 0;
             this.label32.Text = "5.  DEFECTOS SENSORIALES ENCONTRADOS EN LA REVISIÓN PREVENTIVA";
             // 
@@ -459,7 +474,7 @@ namespace TallerMecanico
             "EJE 4 DESEQUILIBRIO LADO IZQUIERDO"});
             this.comboPFrenado.Location = new System.Drawing.Point(238, 69);
             this.comboPFrenado.Name = "comboPFrenado";
-            this.comboPFrenado.Size = new System.Drawing.Size(254, 21);
+            this.comboPFrenado.Size = new System.Drawing.Size(296, 21);
             this.comboPFrenado.TabIndex = 21;
             // 
             // comboLucesP
@@ -477,7 +492,7 @@ namespace TallerMecanico
             "LUZ BAJA IZQUIERDA QUEMADA ",
             "MALA INCLINACIÓN DE LUCES",
             "NO DA INTENSIDAD LUMÍNICA"});
-            this.comboLucesP.Location = new System.Drawing.Point(646, 38);
+            this.comboLucesP.Location = new System.Drawing.Point(730, 38);
             this.comboLucesP.Name = "comboLucesP";
             this.comboLucesP.Size = new System.Drawing.Size(358, 21);
             this.comboLucesP.TabIndex = 20;
@@ -488,7 +503,7 @@ namespace TallerMecanico
             this.comboAlineacion.Items.AddRange(new object[] {
             "CUMPLE",
             "NO CUMPLE"});
-            this.comboAlineacion.Location = new System.Drawing.Point(646, 69);
+            this.comboAlineacion.Location = new System.Drawing.Point(730, 69);
             this.comboAlineacion.Name = "comboAlineacion";
             this.comboAlineacion.Size = new System.Drawing.Size(358, 21);
             this.comboAlineacion.TabIndex = 22;
@@ -499,7 +514,7 @@ namespace TallerMecanico
             this.comboAdherencia.Items.AddRange(new object[] {
             "CUMPLE",
             "NO CUMPLE"});
-            this.comboAdherencia.Location = new System.Drawing.Point(646, 98);
+            this.comboAdherencia.Location = new System.Drawing.Point(731, 99);
             this.comboAdherencia.Name = "comboAdherencia";
             this.comboAdherencia.Size = new System.Drawing.Size(121, 21);
             this.comboAdherencia.TabIndex = 24;
@@ -517,7 +532,7 @@ namespace TallerMecanico
             "REVOLUCIONES FUERA DEL RANGO"});
             this.comboGasesDiesel.Location = new System.Drawing.Point(238, 98);
             this.comboGasesDiesel.Name = "comboGasesDiesel";
-            this.comboGasesDiesel.Size = new System.Drawing.Size(254, 21);
+            this.comboGasesDiesel.Size = new System.Drawing.Size(346, 21);
             this.comboGasesDiesel.TabIndex = 23;
             // 
             // comboGasesGasolina
@@ -536,7 +551,7 @@ namespace TallerMecanico
             "REVOLUCIONES FUERA DEL RANGO"});
             this.comboGasesGasolina.Location = new System.Drawing.Point(238, 38);
             this.comboGasesGasolina.Name = "comboGasesGasolina";
-            this.comboGasesGasolina.Size = new System.Drawing.Size(254, 21);
+            this.comboGasesGasolina.Size = new System.Drawing.Size(296, 21);
             this.comboGasesGasolina.TabIndex = 19;
             // 
             // comboRuido
@@ -545,7 +560,7 @@ namespace TallerMecanico
             this.comboRuido.Items.AddRange(new object[] {
             "CUMPLE",
             "NO CUMPLE"});
-            this.comboRuido.Location = new System.Drawing.Point(883, 98);
+            this.comboRuido.Location = new System.Drawing.Point(967, 99);
             this.comboRuido.Name = "comboRuido";
             this.comboRuido.Size = new System.Drawing.Size(121, 21);
             this.comboRuido.TabIndex = 25;
@@ -553,7 +568,7 @@ namespace TallerMecanico
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(773, 106);
+            this.label31.Location = new System.Drawing.Point(860, 103);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(104, 13);
             this.label31.TabIndex = 14;
@@ -562,7 +577,7 @@ namespace TallerMecanico
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(504, 106);
+            this.label30.Location = new System.Drawing.Point(592, 103);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(136, 13);
             this.label30.TabIndex = 13;
@@ -571,7 +586,7 @@ namespace TallerMecanico
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(504, 72);
+            this.label29.Location = new System.Drawing.Point(656, 73);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(71, 13);
             this.label29.TabIndex = 12;
@@ -589,7 +604,7 @@ namespace TallerMecanico
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(504, 41);
+            this.label27.Location = new System.Drawing.Point(611, 42);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(115, 13);
             this.label27.TabIndex = 10;
@@ -598,7 +613,7 @@ namespace TallerMecanico
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(9, 106);
+            this.label26.Location = new System.Drawing.Point(11, 101);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(211, 13);
             this.label26.TabIndex = 9;
@@ -616,9 +631,11 @@ namespace TallerMecanico
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(9, 16);
+            this.label24.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label24.Location = new System.Drawing.Point(0, 4);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(153, 13);
+            this.label24.Size = new System.Drawing.Size(147, 14);
             this.label24.TabIndex = 7;
             this.label24.Text = "4.  PRUEBAS MECANIZADAS";
             // 
@@ -642,6 +659,7 @@ namespace TallerMecanico
             this.groupBox1.Size = new System.Drawing.Size(1096, 96);
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtCodigo
             // 
@@ -655,7 +673,7 @@ namespace TallerMecanico
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(636, 39);
+            this.label23.Location = new System.Drawing.Point(700, 35);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(66, 13);
             this.label23.TabIndex = 16;
@@ -663,9 +681,9 @@ namespace TallerMecanico
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(708, 34);
+            this.txtApellido.Location = new System.Drawing.Point(769, 31);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(260, 20);
+            this.txtApellido.Size = new System.Drawing.Size(320, 20);
             this.txtApellido.TabIndex = 3;
             // 
             // comboEstado
@@ -677,7 +695,7 @@ namespace TallerMecanico
             "POR VENCER"});
             this.comboEstado.Location = new System.Drawing.Point(430, 62);
             this.comboEstado.Name = "comboEstado";
-            this.comboEstado.Size = new System.Drawing.Size(104, 21);
+            this.comboEstado.Size = new System.Drawing.Size(154, 21);
             this.comboEstado.TabIndex = 5;
             // 
             // comboCategoria
@@ -692,9 +710,9 @@ namespace TallerMecanico
             "C1",
             "C2",
             "C3"});
-            this.comboCategoria.Location = new System.Drawing.Point(639, 62);
+            this.comboCategoria.Location = new System.Drawing.Point(770, 62);
             this.comboCategoria.Name = "comboCategoria";
-            this.comboCategoria.Size = new System.Drawing.Size(96, 21);
+            this.comboCategoria.Size = new System.Drawing.Size(139, 21);
             this.comboCategoria.TabIndex = 6;
             // 
             // txtEmpresa
@@ -707,7 +725,7 @@ namespace TallerMecanico
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(550, 65);
+            this.label8.Location = new System.Drawing.Point(698, 66);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 13);
             this.label8.TabIndex = 9;
@@ -717,7 +735,7 @@ namespace TallerMecanico
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(363, 65);
+            this.label7.Location = new System.Drawing.Point(377, 66);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 13);
             this.label7.TabIndex = 8;
@@ -726,7 +744,7 @@ namespace TallerMecanico
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 65);
+            this.label5.Location = new System.Drawing.Point(84, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 6;
@@ -735,7 +753,7 @@ namespace TallerMecanico
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 39);
+            this.label4.Location = new System.Drawing.Point(12, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 13);
             this.label4.TabIndex = 5;
@@ -744,7 +762,7 @@ namespace TallerMecanico
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(363, 37);
+            this.label3.Location = new System.Drawing.Point(366, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 4;
@@ -753,9 +771,11 @@ namespace TallerMecanico
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(0, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 13);
+            this.label2.Size = new System.Drawing.Size(173, 14);
             this.label2.TabIndex = 3;
             this.label2.Text = "1. IDENTIFICACIÓN CONDUCTOR";
             // 
@@ -763,7 +783,7 @@ namespace TallerMecanico
             // 
             this.txtNombre.Location = new System.Drawing.Point(430, 34);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(199, 20);
+            this.txtNombre.Size = new System.Drawing.Size(261, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // groupBox2
@@ -789,16 +809,16 @@ namespace TallerMecanico
             // 
             // txtLicenciaT
             // 
-            this.txtLicenciaT.Location = new System.Drawing.Point(708, 62);
+            this.txtLicenciaT.Location = new System.Drawing.Point(787, 54);
             this.txtLicenciaT.Name = "txtLicenciaT";
-            this.txtLicenciaT.Size = new System.Drawing.Size(197, 20);
+            this.txtLicenciaT.Size = new System.Drawing.Size(302, 20);
             this.txtLicenciaT.TabIndex = 18;
             this.txtLicenciaT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLicenciaT_KeyPress);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(591, 65);
+            this.label22.Location = new System.Drawing.Point(671, 57);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(113, 13);
             this.label22.TabIndex = 35;
@@ -807,7 +827,7 @@ namespace TallerMecanico
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(12, 66);
+            this.label21.Location = new System.Drawing.Point(69, 59);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(70, 13);
             this.label21.TabIndex = 34;
@@ -816,7 +836,7 @@ namespace TallerMecanico
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(323, 66);
+            this.label20.Location = new System.Drawing.Point(337, 59);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(90, 13);
             this.label20.TabIndex = 33;
@@ -825,7 +845,7 @@ namespace TallerMecanico
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(591, 38);
+            this.label19.Location = new System.Drawing.Point(687, 32);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(97, 13);
             this.label19.TabIndex = 32;
@@ -834,7 +854,7 @@ namespace TallerMecanico
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(323, 38);
+            this.label18.Location = new System.Drawing.Point(355, 32);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(72, 13);
             this.label18.TabIndex = 31;
@@ -842,55 +862,57 @@ namespace TallerMecanico
             // 
             // txtNumPolizaSoat
             // 
-            this.txtNumPolizaSoat.Location = new System.Drawing.Point(708, 35);
+            this.txtNumPolizaSoat.Location = new System.Drawing.Point(787, 28);
             this.txtNumPolizaSoat.Name = "txtNumPolizaSoat";
-            this.txtNumPolizaSoat.Size = new System.Drawing.Size(197, 20);
+            this.txtNumPolizaSoat.Size = new System.Drawing.Size(302, 20);
             this.txtNumPolizaSoat.TabIndex = 15;
             this.txtNumPolizaSoat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumPolizaSoat_KeyPress);
             // 
             // txtPolizaRcc
             // 
-            this.txtPolizaRcc.Location = new System.Drawing.Point(145, 62);
+            this.txtPolizaRcc.Location = new System.Drawing.Point(142, 56);
             this.txtPolizaRcc.Name = "txtPolizaRcc";
-            this.txtPolizaRcc.Size = new System.Drawing.Size(164, 20);
+            this.txtPolizaRcc.Size = new System.Drawing.Size(185, 20);
             this.txtPolizaRcc.TabIndex = 16;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(9, 16);
+            this.label13.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label13.Location = new System.Drawing.Point(0, 3);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(177, 13);
+            this.label13.Size = new System.Drawing.Size(176, 14);
             this.label13.TabIndex = 20;
             this.label13.Text = "3.  DOCUMENTACION  VEHÍCULO";
             // 
             // txtNumPoliza
             // 
-            this.txtNumPoliza.Location = new System.Drawing.Point(419, 62);
+            this.txtNumPoliza.Location = new System.Drawing.Point(430, 55);
             this.txtNumPoliza.Name = "txtNumPoliza";
-            this.txtNumPoliza.Size = new System.Drawing.Size(166, 20);
+            this.txtNumPoliza.Size = new System.Drawing.Size(229, 20);
             this.txtNumPoliza.TabIndex = 17;
             this.txtNumPoliza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumPoliza_KeyPress);
             // 
             // txtTarjetaOperacion
             // 
-            this.txtTarjetaOperacion.Location = new System.Drawing.Point(145, 35);
+            this.txtTarjetaOperacion.Location = new System.Drawing.Point(142, 29);
             this.txtTarjetaOperacion.Name = "txtTarjetaOperacion";
-            this.txtTarjetaOperacion.Size = new System.Drawing.Size(164, 20);
+            this.txtTarjetaOperacion.Size = new System.Drawing.Size(185, 20);
             this.txtTarjetaOperacion.TabIndex = 13;
             // 
             // txtNumRTMyG
             // 
-            this.txtNumRTMyG.Location = new System.Drawing.Point(417, 35);
+            this.txtNumRTMyG.Location = new System.Drawing.Point(430, 28);
             this.txtNumRTMyG.Name = "txtNumRTMyG";
-            this.txtNumRTMyG.Size = new System.Drawing.Size(168, 20);
+            this.txtNumRTMyG.Size = new System.Drawing.Size(229, 20);
             this.txtNumRTMyG.TabIndex = 14;
             this.txtNumRTMyG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumRTMyG_KeyPress);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(9, 38);
+            this.label16.Location = new System.Drawing.Point(18, 32);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(121, 13);
             this.label16.TabIndex = 24;
@@ -919,7 +941,7 @@ namespace TallerMecanico
             // 
             // txtModelo
             // 
-            this.txtModelo.Location = new System.Drawing.Point(623, 59);
+            this.txtModelo.Location = new System.Drawing.Point(767, 59);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(235, 20);
             this.txtModelo.TabIndex = 12;
@@ -931,15 +953,15 @@ namespace TallerMecanico
             "DIÉSEL",
             "ELECTRICIDAD",
             "GASOLINA"});
-            this.comboCombustible.Location = new System.Drawing.Point(367, 59);
+            this.comboCombustible.Location = new System.Drawing.Point(430, 55);
             this.comboCombustible.Name = "comboCombustible";
-            this.comboCombustible.Size = new System.Drawing.Size(189, 21);
+            this.comboCombustible.Size = new System.Drawing.Size(261, 21);
             this.comboCombustible.TabIndex = 11;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 34);
+            this.label9.Location = new System.Drawing.Point(67, 31);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 13);
             this.label9.TabIndex = 16;
@@ -947,14 +969,14 @@ namespace TallerMecanico
             // 
             // txtPlaca
             // 
-            this.txtPlaca.Location = new System.Drawing.Point(53, 30);
+            this.txtPlaca.Location = new System.Drawing.Point(112, 28);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(218, 20);
             this.txtPlaca.TabIndex = 7;
             // 
             // txtLinea
             // 
-            this.txtLinea.Location = new System.Drawing.Point(53, 59);
+            this.txtLinea.Location = new System.Drawing.Point(112, 57);
             this.txtLinea.Name = "txtLinea";
             this.txtLinea.Size = new System.Drawing.Size(218, 20);
             this.txtLinea.TabIndex = 10;
@@ -962,7 +984,7 @@ namespace TallerMecanico
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(278, 34);
+            this.label10.Location = new System.Drawing.Point(386, 29);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 13);
             this.label10.TabIndex = 17;
@@ -971,7 +993,7 @@ namespace TallerMecanico
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 62);
+            this.label11.Location = new System.Drawing.Point(71, 60);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(38, 13);
             this.label11.TabIndex = 18;
@@ -992,7 +1014,7 @@ namespace TallerMecanico
             "MOTOCICLETA",
             "REMOLQUE",
             "TRACTOCAMION"});
-            this.comboClase.Location = new System.Drawing.Point(367, 29);
+            this.comboClase.Location = new System.Drawing.Point(430, 25);
             this.comboClase.Name = "comboClase";
             this.comboClase.Size = new System.Drawing.Size(188, 21);
             this.comboClase.TabIndex = 8;
@@ -1000,7 +1022,7 @@ namespace TallerMecanico
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(564, 62);
+            this.label14.Location = new System.Drawing.Point(708, 62);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 13);
             this.label14.TabIndex = 21;
@@ -1009,7 +1031,7 @@ namespace TallerMecanico
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(278, 62);
+            this.label15.Location = new System.Drawing.Point(344, 60);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(83, 13);
             this.label15.TabIndex = 22;
@@ -1018,15 +1040,17 @@ namespace TallerMecanico
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 10);
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(0, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 13);
+            this.label1.Size = new System.Drawing.Size(152, 14);
             this.label1.TabIndex = 7;
             this.label1.Text = "2. INFORMACIÓN VEHÍCULO";
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(623, 31);
+            this.txtMarca.Location = new System.Drawing.Point(767, 31);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(235, 20);
             this.txtMarca.TabIndex = 9;
@@ -1034,7 +1058,7 @@ namespace TallerMecanico
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(564, 33);
+            this.label12.Location = new System.Drawing.Point(708, 33);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 13);
             this.label12.TabIndex = 19;
@@ -1042,7 +1066,7 @@ namespace TallerMecanico
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(947, 668);
+            this.btnNuevo.Location = new System.Drawing.Point(928, 661);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 37;
@@ -1052,7 +1076,7 @@ namespace TallerMecanico
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(1026, 694);
+            this.btnSalir.Location = new System.Drawing.Point(1026, 718);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 51;
@@ -1063,7 +1087,7 @@ namespace TallerMecanico
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(720, 748);
+            this.label46.Location = new System.Drawing.Point(702, 730);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(203, 13);
             this.label46.TabIndex = 48;
@@ -1071,7 +1095,7 @@ namespace TallerMecanico
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(1026, 668);
+            this.btnActualizar.Location = new System.Drawing.Point(1026, 661);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 38;
@@ -1081,7 +1105,7 @@ namespace TallerMecanico
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(947, 694);
+            this.btnGuardar.Location = new System.Drawing.Point(928, 719);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 39;
@@ -1091,10 +1115,11 @@ namespace TallerMecanico
             // 
             // textBox1
             // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(900, 60);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 20);
+            this.textBox1.Size = new System.Drawing.Size(194, 13);
             this.textBox1.TabIndex = 53;
             // 
             // lblFecha
@@ -1108,6 +1133,26 @@ namespace TallerMecanico
             this.lblFecha.Text = "Fecha: ";
             this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
             // 
+            // btnHistory
+            // 
+            this.btnHistory.Location = new System.Drawing.Point(972, 689);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(75, 23);
+            this.btnHistory.TabIndex = 67;
+            this.btnHistory.Text = "Historia";
+            this.btnHistory.UseVisualStyleBackColor = true;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(1054, 689);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 68;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // FrmFichaTecnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1116,7 +1161,9 @@ namespace TallerMecanico
             this.AutoScrollMargin = new System.Drawing.Size(3, 5);
             this.AutoScrollMinSize = new System.Drawing.Size(1, 2);
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1127, 793);
+            this.ClientSize = new System.Drawing.Size(1127, 749);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnNuevo);
@@ -1160,7 +1207,6 @@ namespace TallerMecanico
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox txtapto;
         private System.Windows.Forms.TextBox txtInspectores;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox txtRevisionEnterior;
@@ -1249,5 +1295,8 @@ namespace TallerMecanico
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.ComboBox txtapto;
+        private System.Windows.Forms.Button btnHistory;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

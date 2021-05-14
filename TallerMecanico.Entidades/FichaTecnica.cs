@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TallerMecanico.Entidades
 {
     public class FichaTecnica
     {
-        //public int _idConsecutivo;
+        public int _ftId;
         public string _ftTarjetaOperacion;
         public string _ftEstado;
         public int _ftNumRtmyG;
@@ -35,7 +31,17 @@ namespace TallerMecanico.Entidades
         public string _ftApto;
         public string _empresa;
         public int _idConductor;
+        public string _ftInspectores;
+        public string _ftUsuario;
+        public string _ftUsuarioEdita;
+        public DateTime _ftFechaReg;
+        public DateTime _ftFechaEdita;
 
+        public int FtId
+        {
+            get { return _ftId; }
+            set { _ftId = value; }
+        }
         public string FtTarjetaOperacion
         {
             get { return _ftTarjetaOperacion; }
@@ -166,7 +172,34 @@ namespace TallerMecanico.Entidades
             get { return _empresa; }
             set { _empresa = value; }
         }
+        public string FtInspectores
+        {
+            get { return _ftInspectores; }
+            set { _ftInspectores = value; }
+        }
+        public string FtUsuario
+        {
+            get { return _ftUsuario; }
+            set { _ftUsuario = value; }
+        }
+        public string FtUsuarioEdita
+        {
+            get { return _ftUsuarioEdita; }
+            set { _ftUsuarioEdita = value; }
+        }
+        public DateTime FtFechaReg
+        {
+            get { return _ftFechaReg; }
+            set { _ftFechaReg = value; }
+        }
+        public DateTime FtFechaEdita
+        {
+            get { return _ftFechaEdita; }
+            set { _ftFechaEdita = value; }
+        }
+      
         public FichaTecnica(
+         int FtId,
          string FtTarjetaOperacion,
          string FtEstado,
          int FtNumRtmyG,
@@ -192,9 +225,16 @@ namespace TallerMecanico.Entidades
          string FtRevisionExterior,
          string FtApto,
          string Empresa,
-         int IdConductor
+         int IdConductor,
+         string FtInspectores,
+         string FtUsuario,
+         string FtUsuarioEdita,
+         DateTime FtFechaReg,
+         DateTime FtFechaEdita
+
          )
         {
+            this._ftId= FtId;
             this._ftTarjetaOperacion = FtTarjetaOperacion;
             this._ftEstado = FtEstado;
             this._ftNumRtmyG = FtNumRtmyG;
@@ -221,10 +261,13 @@ namespace TallerMecanico.Entidades
             this._ftApto = FtApto;
             this._empresa = Empresa;
             this._idConductor = IdConductor;
+            this._ftInspectores = FtInspectores;
+            this._ftUsuario = FtUsuario;
+            this._ftUsuarioEdita = FtUsuarioEdita;
+            this._ftFechaReg = FtFechaReg;
+            this._ftFechaEdita = FtFechaEdita;
         }
 
-        public FichaTecnica() : this("", "", 0, 0, 0, 0, "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 0) { }
-        Cliente categoria = new Cliente();
-        Vehiculo vehiculo = new Vehiculo();
+        public FichaTecnica() : this(0,"", "", 0, 0, 0, 0, "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 0,"","","",DateTime.Now,DateTime.Now) { }
     }
 }

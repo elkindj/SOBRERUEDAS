@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TallerMecanico.Entidades;
 using TallerMecanico.Negocios;
@@ -15,7 +8,6 @@ namespace TallerMecanico
     public partial class FrmFichaTecnica : Form
     {
         BLCliente blCliente = new BLCliente();
-        List<Cliente> lista = null;
         Cliente cl;
         BLCliente cliente = new BLCliente();
         FichaTecnica f;
@@ -30,6 +22,11 @@ namespace TallerMecanico
             ActivarControlDatos(groupBox4, false);
             ActivarControlDatos(groupBox5, false);
             ActivarControlDatos(groupBox6, false);
+            lblFecha.Text = "Fecha: " + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToLongTimeString();
+            txtInspectores.Text = UsuarioLogeado.Nombre;
+            btnActualizar.Enabled = false;
+            btnHistory.Enabled = false;
+
         }
         public void ActivarControlDatos(Control Contenedor, bool Estado)
         {
@@ -47,16 +44,17 @@ namespace TallerMecanico
             {
             }
         }
-        public string ValidacionesApto(string apto)
+        public int ValidarExistenciCliente(int cliente)
         {
-            if (apto == "VENCIDA" || apto == "POR VENCER") {
-                return txtapto.Text = "NO APTO";
+            cl = blCliente.ClienteTraerPorId(Convert.ToInt32(txtCodigo.Text));
+            f = bLFichaTecnica.FichaTraerPorId(Convert.ToInt32(txtCodigo.Text));
+            if (f.IdConductor != cl.IdConductor)
+            {
+                MessageBox.Show("Cliente sin existencia", "alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            if (apto != "CUMPLE CON LA NORMATIVIDAD" || apto != "CUMPLE") {
-                return txtapto.Text = "NO APTO";
-            }
-            return "NO APTO";
+            return 0;
         }
+
         private void groupBox5_Enter(object sender, EventArgs e)
         {
 
@@ -76,8 +74,12 @@ namespace TallerMecanico
             ActivarControlDatos(groupBox3, true);
             ActivarControlDatos(groupBox4, true);
             ActivarControlDatos(groupBox5, true);
-            //ActivarControlDatos(groupBox6, true);
-            txtapto.Enabled = false;
+            ActivarControlDatos(groupBox6, true);
+            textBox1.Enabled = false;
+            btnActualizar.Enabled = true;
+            btnHistory.Enabled = true;
+            textBox1.Text = bLFichaTecnica.ObtenerConsecutivo();
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -86,6 +88,7 @@ namespace TallerMecanico
             if (_nuevo)
             {
                 f = new FichaTecnica(
+                0,
                 txtTarjetaOperacion.Text,
                 comboEstado.SelectedIndex.ToString(),
                 Convert.ToInt32(txtNumRTMyG.Text),
@@ -109,9 +112,14 @@ namespace TallerMecanico
                 txtGrupoMotor.Text,
                 txtRevisionInterior.Text,
                 txtRevisionEnterior.Text,
-                txtapto.Text= ValidacionesApto(""),
+                txtapto.SelectedItem.ToString(),
                 txtEmpresa.Text,
-                Convert.ToInt32(txtCodigo.Text)
+                Convert.ToInt32(txtCodigo.Text),
+                txtInspectores.Text,
+                UsuarioLogeado.Nombre,
+                "",
+                DateTime.Now,
+                DateTime.UtcNow
                 );
                 n = bLFichaTecnica.Insertar(f);
             }
@@ -140,10 +148,15 @@ namespace TallerMecanico
                 f.FtGrupoMotor = txtGrupoMotor.Text;
                 f.FtRevisionExterior = txtRevisionEnterior.Text;
                 f.FtRevisionInterior = txtRevisionInterior.Text;
-                f.FtApto = ValidacionesApto(txtapto.Text);
+                f.FtApto = txtapto.Text;
                 f.Empresa = txtEmpresa.Text;
                 f.IdConductor = Convert.ToInt32(txtCodigo.Text);
-
+                f.FtInspectores = txtInspectores.Text;
+                f.FtUsuario = "";
+                f.FtUsuarioEdita = UsuarioLogeado.Nombre;
+                f.FtFechaReg = DateTime.Now;
+                f.FtFechaEdita = DateTime.Now;
+                
                 n = bLFichaTecnica.Actualizar(f);
             }
             if (n > 0)
@@ -222,18 +235,87 @@ namespace TallerMecanico
                 this.comboCategoria.Text = cl.CliLicenciaTransito;
                 return;
             }
-      
-            
+
+
         }
 
         private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
-          
-        }
 
+        }
         private void lblFecha_Click(object sender, EventArgs e)
         {
-            lblFecha.Text = "Fecha: " + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToLongTimeString();
+
+        }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtInspectores_TextChanged(object sender, EventArgs e)
+        {
+
+
+            // if (txtapto.Text == "APTO") {
+
+            //    lngRed = RGB(255, 0, 0)
+            //}
+            //    if (txtapto.Text == "NO APTO") {
+            //    lngYellow = RGB(255, 255, 0)
+            //}
+        }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            cl = blCliente.ClienteTraerPorId(Convert.ToInt32(txtCodigo.Text));
+            f = bLFichaTecnica.FichaTraerPorId(Convert.ToInt32(txtCodigo.Text));
+            if (f.IdConductor != cl.IdConductor)
+            {
+                MessageBox.Show("Cliente sin existencia", "alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            txtNombre.Text = cl.CliNombres;
+            txtApellido.Text = cl.CliApellidos;
+            comboCategoria.Text = cl.CliLicenciaTransito;
+            txtCodigo.Text = f.IdConductor.ToString();
+            txtTarjetaOperacion.Text = f.FtTarjetaOperacion;
+            comboEstado.SelectedItem = f.FtEstado;
+            txtNumRTMyG.Text = f.FtNumRtmyG.ToString();
+            txtNumPolizaSoat.Text = f.FtNumeroPolizaSOAT.ToString();
+            txtNumPoliza.Text = f.FtNumeroPolizaRCE.ToString();
+            txtLicenciaT.Text = f.FtLicenciaTransito.ToString();
+            comboGasesGasolina.SelectedItem = f.FtEmisionGasesGasolina;
+            comboGasesDiesel.SelectedItem = f.FtEmisionesGasesDiesel;
+            comboLucesP.SelectedItem = f.FtLucesPrincipal;
+            comboPFrenado.SelectedItem = f.FtGrupoFreno;
+            comboAlineacion.SelectedItem = f.FtAlineacion;
+            comboAdherencia.SelectedItem = f.FtAdherencia;
+            comboRuido.SelectedItem = f.FtEmisionRuido;
+            txtGrupoFrenos.Text = f.FtGrupoFreno;
+            txtGrupoSuspension.Text = f.FtGrupoSuspension;
+            txtGrupoDir.Text = f.FtGrupoDireccion;
+            txtRinesyLlantas.Text = f.FtRinLLanta;
+            txtGrupoLuces.Text = f.FtGrupoLuces;
+            txtGrupoVidrios.Text = f.FtGrupoVidrio;
+            txtGrupoTransmision.Text = f.FtGrupoTransmision;
+            txtGrupoMotor.Text = f.FtGrupoMotor;
+            txtRevisionEnterior.Text = f.FtRevisionExterior;
+            txtRevisionInterior.Text = f.FtRevisionInterior;
+            txtapto.Text = f.FtApto;
+            txtEmpresa.Text = f.Empresa;
+            txtCodigo.Text = f.IdConductor.ToString();
+            txtInspectores.Text = f.FtInspectores;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

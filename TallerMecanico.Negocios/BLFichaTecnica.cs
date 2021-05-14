@@ -11,10 +11,10 @@ namespace TallerMecanico.Negocios
 	public class BLFichaTecnica
 	{
 
-		public Productos ProductoTraerPorId(int Id)
+		public FichaTecnica FichaTraerPorId(int Id)
 		{
-			DAOProductos daProducto = new DAOProductos();
-			return daProducto.TraerPorId(Id);
+			DAOFichaTecnica dAOFichaTecnica = new DAOFichaTecnica();
+			return dAOFichaTecnica.TraerPorId(Id);
 		}
 
 		public int Insertar(FichaTecnica fichaTecnica)
@@ -31,7 +31,7 @@ namespace TallerMecanico.Negocios
 		public string ObtenerConsecutivo()
 		{
 			DAOGeneral daoGeneral = new DAOGeneral();
-			string Consecutivo = daoGeneral.ObeterConsecutivo("Producto");
+			string Consecutivo = daoGeneral.ObeterConsecutivo("Mantenimiento");
 			return Consecutivo;
 		}
 	}
