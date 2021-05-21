@@ -43,7 +43,7 @@ namespace TallerMecanico.Datos
             return lista;
         }
 
-            public Cliente TraerPorId(int Id)
+        public Cliente TraerPorId(int Id)
         {
             Cliente Cliente = new Cliente();
             using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
@@ -118,6 +118,37 @@ namespace TallerMecanico.Datos
                 n = cmd.ExecuteNonQuery();
             }
             return n;
+        }
+
+        public Cliente TraerPorDoc(int pDoc)
+        {
+            Cliente Cliente = new Cliente();
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("TraerClientePorDocumento", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Documento", pDoc);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    dr.Read();
+                    Cliente = new Cliente(
+                        (int)dr["Id"],
+                        (int)dr["IdConductor"],
+                        (string)dr["Nombres"],
+                        (string)dr["Apellidos"],
+                        (string)dr["Licencia"],
+                        (string)dr["Correo"],
+                        (string)dr["Celular"],
+                        (string)dr["Direccion"],
+                        (string)dr["CliUsuario"],
+                        (DateTime)dr["CliFechaReg"],
+                        (string)dr["CliUsuarioEdita"],
+                        (DateTime)dr["CliFechaEdita"]);
+                }
+            }
+            return Cliente;
         }
     }
 }

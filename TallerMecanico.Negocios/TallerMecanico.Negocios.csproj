@@ -83,6 +83,8 @@
     <Compile Include="BLCompra.cs" />
     <Compile Include="BLFichaTecnica.cs" />
     <Compile Include="BLGeneral.cs" />
+    <Compile Include="BLMantenimiento.cs" />
+    <Compile Include="BLMantenimientoDet.cs" />
     <Compile Include="BLProducto.cs" />
     <Compile Include="BLSeguridad.cs" />
     <Compile Include="BLVehiculo.cs" />

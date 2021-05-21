@@ -69,6 +69,7 @@ namespace TallerMecanico.Datos
             }
             return n;
         }
+
         public int Actualizar(FichaTecnica fichaTecnica)
         {
             int n = -1; using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
@@ -111,6 +112,7 @@ namespace TallerMecanico.Datos
             }
             return n;
         }
+
         public FichaTecnica TraerPorId(int Id)
         {
             FichaTecnica FichaTecnica = new FichaTecnica();

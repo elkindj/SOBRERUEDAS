@@ -134,9 +134,14 @@ namespace TallerMecanico
            openChidForm(new FrmVehiculo());
         }
 
+        private void btnProgramarIn_Click(object sender, EventArgs e)
+        {
+            openChidForm(new FrmMantenimiento());
+        }
+
         private void btnMantenimientoIn_Click(object sender, EventArgs e)
         {
-            openChidForm(new FrmFichaTecnica());
+            openChidForm(new FrmMantenimientoDet());
         }
 
         #endregion
@@ -148,6 +153,5 @@ namespace TallerMecanico
             frmLogin.ShowDialog();
             this.Close();
         }
-
     }
 }

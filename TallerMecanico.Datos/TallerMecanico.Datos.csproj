@@ -55,6 +55,8 @@
     <Compile Include="DAOCompra.cs" />
     <Compile Include="DAOFichaTecnica.cs" />
     <Compile Include="DAOGeneral.cs" />
+    <Compile Include="DAOMantenimiento.cs" />
+    <Compile Include="DAOMantenimientoDet.cs" />
     <Compile Include="DAOProductos.cs" />
     <Compile Include="DAOUsuario.cs" />
     <Compile Include="DAOVehiculo.cs" />

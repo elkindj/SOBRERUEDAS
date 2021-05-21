@@ -71,7 +71,8 @@ D:\Project\SOBRERUEDAS\Cod\TallerMecanico\bin\Debug\zh-CHT\Microsoft.ReportViewe
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.csprojAssemblyReference.cache
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.FrmCategoria.resources
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.FrmClientes.resources
-D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.FrmFichaTecnica.resources
+D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.FrmMantenimiento.resources
+D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.FrmMantenimientoDet.resources
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.FrmListaProductos.resources
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.FrmLogin.resources
 D:\Project\SOBRERUEDAS\Cod\TallerMecanico\obj\Debug\TallerMecanico.FrmPrincipal.resources

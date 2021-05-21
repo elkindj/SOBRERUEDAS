@@ -28,6 +28,7 @@ namespace TallerMecanico.Negocios
 			DAOFichaTecnica dAOFichaTecnica = new DAOFichaTecnica();
 			return dAOFichaTecnica.Actualizar(fichaTecnica);
 		}
+
 		public string ObtenerConsecutivo()
 		{
 			DAOGeneral daoGeneral = new DAOGeneral();

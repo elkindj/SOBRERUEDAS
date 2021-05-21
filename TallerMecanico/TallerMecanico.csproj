@@ -95,11 +95,17 @@
     <Compile Include="FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmFichaTecnica.cs">
+    <Compile Include="FrmMantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmFichaTecnica.Designer.cs">
-      <DependentUpon>FrmFichaTecnica.cs</DependentUpon>
+    <Compile Include="FrmMantenimiento.Designer.cs">
+      <DependentUpon>FrmMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMantenimientoDet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoDet.Designer.cs">
+      <DependentUpon>FrmMantenimientoDet.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmListaProductos.cs">
       <SubType>Form</SubType>
@@ -177,8 +183,11 @@
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmFichaTecnica.resx">
-      <DependentUpon>FrmFichaTecnica.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMantenimiento.resx">
+      <DependentUpon>FrmMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoDet.resx">
+      <DependentUpon>FrmMantenimientoDet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListaProductos.resx">
       <DependentUpon>FrmListaProductos.cs</DependentUpon>

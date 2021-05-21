@@ -34,6 +34,7 @@ namespace TallerMecanico
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.pnMantenimiento = new System.Windows.Forms.Panel();
             this.btnMantenimientoIn = new FontAwesome.Sharp.IconButton();
+            this.btnProgramarIn = new FontAwesome.Sharp.IconButton();
             this.btnVehiculo = new FontAwesome.Sharp.IconButton();
             this.btnCliente = new FontAwesome.Sharp.IconButton();
             this.bntMantenimiento = new FontAwesome.Sharp.IconButton();
@@ -71,13 +72,14 @@ namespace TallerMecanico
             this.pnMenu.Controls.Add(this.pnLogo);
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(203, 808);
+            this.pnMenu.Size = new System.Drawing.Size(355, 994);
             this.pnMenu.TabIndex = 0;
             // 
             // btnSalir
             // 
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
@@ -88,9 +90,10 @@ namespace TallerMecanico
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 24;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(0, 480);
+            this.btnSalir.Location = new System.Drawing.Point(0, 954);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(203, 35);
+            this.btnSalir.Size = new System.Drawing.Size(355, 40);
             this.btnSalir.TabIndex = 14;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -100,12 +103,14 @@ namespace TallerMecanico
             // pnMantenimiento
             // 
             this.pnMantenimiento.Controls.Add(this.btnMantenimientoIn);
+            this.pnMantenimiento.Controls.Add(this.btnProgramarIn);
             this.pnMantenimiento.Controls.Add(this.btnVehiculo);
             this.pnMantenimiento.Controls.Add(this.btnCliente);
             this.pnMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnMantenimiento.Location = new System.Drawing.Point(0, 380);
+            this.pnMantenimiento.Location = new System.Drawing.Point(0, 515);
+            this.pnMantenimiento.Margin = new System.Windows.Forms.Padding(4);
             this.pnMantenimiento.Name = "pnMantenimiento";
-            this.pnMantenimiento.Size = new System.Drawing.Size(203, 100);
+            this.pnMantenimiento.Size = new System.Drawing.Size(355, 175);
             this.pnMantenimiento.TabIndex = 13;
             // 
             // btnMantenimientoIn
@@ -121,15 +126,40 @@ namespace TallerMecanico
             this.btnMantenimientoIn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMantenimientoIn.IconSize = 24;
             this.btnMantenimientoIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimientoIn.Location = new System.Drawing.Point(0, 50);
+            this.btnMantenimientoIn.Location = new System.Drawing.Point(0, 105);
+            this.btnMantenimientoIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnMantenimientoIn.Name = "btnMantenimientoIn";
-            this.btnMantenimientoIn.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnMantenimientoIn.Size = new System.Drawing.Size(203, 25);
-            this.btnMantenimientoIn.TabIndex = 16;
+            this.btnMantenimientoIn.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnMantenimientoIn.Size = new System.Drawing.Size(355, 35);
+            this.btnMantenimientoIn.TabIndex = 17;
             this.btnMantenimientoIn.Text = "Mantenimiento";
             this.btnMantenimientoIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMantenimientoIn.UseVisualStyleBackColor = true;
             this.btnMantenimientoIn.Click += new System.EventHandler(this.btnMantenimientoIn_Click);
+            // 
+            // btnProgramarIn
+            // 
+            this.btnProgramarIn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProgramarIn.FlatAppearance.BorderSize = 0;
+            this.btnProgramarIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProgramarIn.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnProgramarIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProgramarIn.ForeColor = System.Drawing.Color.Silver;
+            this.btnProgramarIn.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.btnProgramarIn.IconColor = System.Drawing.Color.White;
+            this.btnProgramarIn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnProgramarIn.IconSize = 24;
+            this.btnProgramarIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProgramarIn.Location = new System.Drawing.Point(0, 70);
+            this.btnProgramarIn.Margin = new System.Windows.Forms.Padding(4);
+            this.btnProgramarIn.Name = "btnProgramarIn";
+            this.btnProgramarIn.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnProgramarIn.Size = new System.Drawing.Size(355, 35);
+            this.btnProgramarIn.TabIndex = 16;
+            this.btnProgramarIn.Text = "Programar";
+            this.btnProgramarIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProgramarIn.UseVisualStyleBackColor = true;
+            this.btnProgramarIn.Click += new System.EventHandler(this.btnProgramarIn_Click);
             // 
             // btnVehiculo
             // 
@@ -144,10 +174,11 @@ namespace TallerMecanico
             this.btnVehiculo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVehiculo.IconSize = 24;
             this.btnVehiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVehiculo.Location = new System.Drawing.Point(0, 25);
+            this.btnVehiculo.Location = new System.Drawing.Point(0, 35);
+            this.btnVehiculo.Margin = new System.Windows.Forms.Padding(4);
             this.btnVehiculo.Name = "btnVehiculo";
-            this.btnVehiculo.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnVehiculo.Size = new System.Drawing.Size(203, 25);
+            this.btnVehiculo.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnVehiculo.Size = new System.Drawing.Size(355, 35);
             this.btnVehiculo.TabIndex = 15;
             this.btnVehiculo.Text = "Vehiculos";
             this.btnVehiculo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -167,9 +198,10 @@ namespace TallerMecanico
             this.btnCliente.IconSize = 24;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCliente.Location = new System.Drawing.Point(0, 0);
+            this.btnCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnCliente.Size = new System.Drawing.Size(203, 25);
+            this.btnCliente.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnCliente.Size = new System.Drawing.Size(355, 35);
             this.btnCliente.TabIndex = 14;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -188,9 +220,10 @@ namespace TallerMecanico
             this.bntMantenimiento.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.bntMantenimiento.IconSize = 24;
             this.bntMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntMantenimiento.Location = new System.Drawing.Point(0, 345);
+            this.bntMantenimiento.Location = new System.Drawing.Point(0, 475);
+            this.bntMantenimiento.Margin = new System.Windows.Forms.Padding(4);
             this.bntMantenimiento.Name = "bntMantenimiento";
-            this.bntMantenimiento.Size = new System.Drawing.Size(203, 35);
+            this.bntMantenimiento.Size = new System.Drawing.Size(355, 40);
             this.bntMantenimiento.TabIndex = 12;
             this.bntMantenimiento.Text = "Mantenimiento";
             this.bntMantenimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -204,9 +237,10 @@ namespace TallerMecanico
             this.pnInventario.Controls.Add(this.btnProducto);
             this.pnInventario.Controls.Add(this.btnCategoria);
             this.pnInventario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnInventario.Location = new System.Drawing.Point(0, 220);
+            this.pnInventario.Location = new System.Drawing.Point(0, 300);
+            this.pnInventario.Margin = new System.Windows.Forms.Padding(4);
             this.pnInventario.Name = "pnInventario";
-            this.pnInventario.Size = new System.Drawing.Size(203, 125);
+            this.pnInventario.Size = new System.Drawing.Size(355, 175);
             this.pnInventario.TabIndex = 11;
             // 
             // btnVenta
@@ -222,10 +256,11 @@ namespace TallerMecanico
             this.btnVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVenta.IconSize = 24;
             this.btnVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVenta.Location = new System.Drawing.Point(0, 75);
+            this.btnVenta.Location = new System.Drawing.Point(0, 105);
+            this.btnVenta.Margin = new System.Windows.Forms.Padding(4);
             this.btnVenta.Name = "btnVenta";
-            this.btnVenta.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnVenta.Size = new System.Drawing.Size(203, 25);
+            this.btnVenta.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnVenta.Size = new System.Drawing.Size(355, 35);
             this.btnVenta.TabIndex = 13;
             this.btnVenta.Text = "Ventas";
             this.btnVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -244,10 +279,11 @@ namespace TallerMecanico
             this.btnCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCompra.IconSize = 24;
             this.btnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompra.Location = new System.Drawing.Point(0, 50);
+            this.btnCompra.Location = new System.Drawing.Point(0, 70);
+            this.btnCompra.Margin = new System.Windows.Forms.Padding(4);
             this.btnCompra.Name = "btnCompra";
-            this.btnCompra.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnCompra.Size = new System.Drawing.Size(203, 25);
+            this.btnCompra.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnCompra.Size = new System.Drawing.Size(355, 35);
             this.btnCompra.TabIndex = 12;
             this.btnCompra.Text = "Compras";
             this.btnCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -267,10 +303,11 @@ namespace TallerMecanico
             this.btnProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProducto.IconSize = 24;
             this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.Location = new System.Drawing.Point(0, 25);
+            this.btnProducto.Location = new System.Drawing.Point(0, 35);
+            this.btnProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnProducto.Size = new System.Drawing.Size(203, 25);
+            this.btnProducto.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnProducto.Size = new System.Drawing.Size(355, 35);
             this.btnProducto.TabIndex = 11;
             this.btnProducto.Text = "Productos";
             this.btnProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -291,9 +328,10 @@ namespace TallerMecanico
             this.btnCategoria.IconSize = 24;
             this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategoria.Location = new System.Drawing.Point(0, 0);
+            this.btnCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnCategoria.Size = new System.Drawing.Size(203, 25);
+            this.btnCategoria.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnCategoria.Size = new System.Drawing.Size(355, 35);
             this.btnCategoria.TabIndex = 10;
             this.btnCategoria.Text = "Categoria";
             this.btnCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -313,9 +351,10 @@ namespace TallerMecanico
             this.btnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventario.IconSize = 24;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(0, 185);
+            this.btnInventario.Location = new System.Drawing.Point(0, 260);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(4);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(203, 35);
+            this.btnInventario.Size = new System.Drawing.Size(355, 40);
             this.btnInventario.TabIndex = 10;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -327,9 +366,10 @@ namespace TallerMecanico
             this.pnAdministrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(106)))), ((int)(((byte)(239)))));
             this.pnAdministrar.Controls.Add(this.btnUsuario);
             this.pnAdministrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnAdministrar.Location = new System.Drawing.Point(0, 135);
+            this.pnAdministrar.Location = new System.Drawing.Point(0, 190);
+            this.pnAdministrar.Margin = new System.Windows.Forms.Padding(4);
             this.pnAdministrar.Name = "pnAdministrar";
-            this.pnAdministrar.Size = new System.Drawing.Size(203, 50);
+            this.pnAdministrar.Size = new System.Drawing.Size(355, 70);
             this.pnAdministrar.TabIndex = 9;
             // 
             // btnUsuario
@@ -347,9 +387,10 @@ namespace TallerMecanico
             this.btnUsuario.IconSize = 24;
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuario.Location = new System.Drawing.Point(0, 0);
+            this.btnUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnUsuario.Size = new System.Drawing.Size(203, 25);
+            this.btnUsuario.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnUsuario.Size = new System.Drawing.Size(355, 35);
             this.btnUsuario.TabIndex = 9;
             this.btnUsuario.Text = "Usuarios";
             this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -370,9 +411,10 @@ namespace TallerMecanico
             this.btnAdministrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdministrar.IconSize = 24;
             this.btnAdministrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdministrar.Location = new System.Drawing.Point(0, 100);
+            this.btnAdministrar.Location = new System.Drawing.Point(0, 150);
+            this.btnAdministrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdministrar.Name = "btnAdministrar";
-            this.btnAdministrar.Size = new System.Drawing.Size(203, 35);
+            this.btnAdministrar.Size = new System.Drawing.Size(355, 40);
             this.btnAdministrar.TabIndex = 8;
             this.btnAdministrar.Text = "Administrar";
             this.btnAdministrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -384,8 +426,9 @@ namespace TallerMecanico
             this.pnLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(106)))), ((int)(((byte)(239)))));
             this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Size = new System.Drawing.Size(203, 100);
+            this.pnLogo.Size = new System.Drawing.Size(355, 150);
             this.pnLogo.TabIndex = 0;
             // 
             // pnFrmPrincipal
@@ -393,28 +436,31 @@ namespace TallerMecanico
             this.pnFrmPrincipal.AutoScroll = true;
             this.pnFrmPrincipal.Controls.Add(this.pictureBox1);
             this.pnFrmPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnFrmPrincipal.Location = new System.Drawing.Point(203, 0);
+            this.pnFrmPrincipal.Location = new System.Drawing.Point(355, 0);
+            this.pnFrmPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.pnFrmPrincipal.Name = "pnFrmPrincipal";
-            this.pnFrmPrincipal.Size = new System.Drawing.Size(1230, 808);
+            this.pnFrmPrincipal.Size = new System.Drawing.Size(1556, 994);
             this.pnFrmPrincipal.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(514, 313);
+            this.pictureBox1.Location = new System.Drawing.Point(643, 385);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 182);
+            this.pictureBox1.Size = new System.Drawing.Size(239, 224);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1433, 808);
+            this.ClientSize = new System.Drawing.Size(1911, 994);
             this.Controls.Add(this.pnFrmPrincipal);
             this.Controls.Add(this.pnMenu);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal2";
@@ -439,7 +485,7 @@ namespace TallerMecanico
         private FontAwesome.Sharp.IconButton btnUsuario;
         private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.Panel pnMantenimiento;
-        private FontAwesome.Sharp.IconButton btnMantenimientoIn;
+        private FontAwesome.Sharp.IconButton btnProgramarIn;
         private FontAwesome.Sharp.IconButton btnVehiculo;
         private FontAwesome.Sharp.IconButton btnCliente;
         private FontAwesome.Sharp.IconButton bntMantenimiento;
@@ -449,5 +495,6 @@ namespace TallerMecanico
         private FontAwesome.Sharp.IconButton btnProducto;
         private FontAwesome.Sharp.IconButton btnCategoria;
         private FontAwesome.Sharp.IconButton btnInventario;
+        private FontAwesome.Sharp.IconButton btnMantenimientoIn;
     }
 }

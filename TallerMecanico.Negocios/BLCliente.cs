@@ -15,11 +15,13 @@ namespace TallerMecanico.Negocios
             DAOCliente daCliente = new DAOCliente();
             return daCliente.Listar();
         }
+
         public Cliente ClienteTraerPorId(int Id)
         {
             DAOCliente daCliente = new DAOCliente();
             return daCliente.TraerPorId(Id);
         }
+
         public int Insertar(Cliente Cliente)
         {
             DAOCliente daCliente = new DAOCliente();
@@ -36,6 +38,12 @@ namespace TallerMecanico.Negocios
         public void GrabarCompra(Cliente pCompra)
         {
             dAOCliente.Insertar(pCompra);
+        }
+
+        public Cliente ClienteTraerPorDoc(int pDoc)
+        {
+            DAOCliente daCliente = new DAOCliente();
+            return daCliente.TraerPorDoc(pDoc);
         }
     }
 }

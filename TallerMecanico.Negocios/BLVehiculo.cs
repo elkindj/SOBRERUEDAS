@@ -33,5 +33,11 @@ namespace TallerMecanico.Negocios
             DAOVehiculo daoVehiculo = new DAOVehiculo();
             return daoVehiculo.Actualizar(vehiculo);
         }
+
+        public Vehiculo VehiculoTraerPorPlaca(int pIdCliente, string pPlaca)
+        {
+            DAOVehiculo daoVehiculo = new DAOVehiculo();
+            return daoVehiculo.TraerPorPlaca(pIdCliente, pPlaca);
+        }
     }
 }

@@ -115,5 +115,34 @@ namespace TallerMecanico.Datos
             }
             return n;
         }
+
+        public Vehiculo TraerPorPlaca(int pIdCliente, string pPlaca)
+        {
+            Vehiculo vehiculo = new Vehiculo();
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("TraerVehiculoPorPlaca", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdCliente", pIdCliente);
+                cmd.Parameters.AddWithValue("@Placa", pPlaca);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    dr.Read();
+                    vehiculo = new Vehiculo((int)dr["Id"],
+                       (int)dr["IdCliente"],
+                       (string)dr["Placa"],
+                       (string)dr["Clase"],
+                       (string)dr["Marca"],
+                       (string)dr["Linea"],
+                       (string)dr["Combustible"],
+                       (string)dr["Modelo"],
+                       (string)dr["Usuario"],
+                       (DateTime)dr["FechaReg"]);
+                }
+            }
+            return vehiculo;
+        }
     }
 }

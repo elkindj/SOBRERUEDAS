@@ -28,7 +28,7 @@ namespace TallerMecanico
             if (usu != null && usu.Count() > 0)
             {
                 UsuarioLogeado.Id = usu[0].IdUsuario;
-                UsuarioLogeado.Nombre = usu[0].Usu_Nombre;
+                UsuarioLogeado.Nombre = usu[0].Usu_Nombre + " " + usu[0].Usu_ApellidoPat + " " + usu[0].Usu_ApellidoMat;
                 UsuarioLogeado.IdPerfil = usu[0].IdPerfil;
                 this.Visible = false;
                 FrmPrincipal frmPrincipal = new FrmPrincipal();
