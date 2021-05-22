@@ -23,8 +23,28 @@ namespace TallerMecanico
 
         private void validarPerfil()
         {
-            if (UsuarioLogeado.IdPerfil == 3)
+            //1   Administrador Usuarios con privilegios
+            //2   Asistente Usuarios de ventas
+            //3   Mecanico Usuairos operativo
+
+            if (UsuarioLogeado.IdPerfil == 2)
+            {
                 btnAdministrar.Visible = false;
+                btnCategoria.Visible = false;
+                btnProducto.Visible = false;
+                //btnProgramarIn.Visible = false;
+                btnMantenimientoIn.Visible = false;
+            }
+
+            if (UsuarioLogeado.IdPerfil == 3)
+            {
+                btnAdministrar.Visible = false;
+                btnInventario.Visible = false;
+                btnCliente.Visible = false;
+                btnVehiculo.Visible = false;
+                btnReportesIn.Visible = false;
+                btnProgramarIn.Visible = false;
+            }
         }
 
         #region evenMenuPrincipal
@@ -34,6 +54,7 @@ namespace TallerMecanico
             pnAdministrar.Visible = false;
             pnInventario.Visible = false;
             pnMantenimiento.Visible = false;
+            pnReportes.Visible = false;
         }
 
         private void hideSubMenu()
@@ -57,7 +78,8 @@ namespace TallerMecanico
                 pSubMenu.Visible = false;
         }
 
-        private void openChidForm(Form pChildForm) {
+        private void openChidForm(Form pChildForm)
+        {
             if (activeForm != null)
                 activeForm.Close();
             activeForm = pChildForm;
@@ -83,6 +105,11 @@ namespace TallerMecanico
         private void btnMantenimiento_Click(object sender, EventArgs e)
         {
             showSubMenu(pnMantenimiento);
+        }
+
+        private void btnReportesIn_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnReportes);
         }
 
         #endregion
@@ -115,9 +142,7 @@ namespace TallerMecanico
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            //openChidForm(new FrmVentas());
-            ReporteFacturaVenta reporteFacturaVenta = new ReporteFacturaVenta();
-            reporteFacturaVenta.ShowDialog();
+            openChidForm(new FrmVentas());
         }
 
         #endregion
@@ -131,7 +156,7 @@ namespace TallerMecanico
 
         private void btnVehiculo_Click(object sender, EventArgs e)
         {
-           openChidForm(new FrmVehiculo());
+            openChidForm(new FrmVehiculo());
         }
 
         private void btnProgramarIn_Click(object sender, EventArgs e)
@@ -142,6 +167,42 @@ namespace TallerMecanico
         private void btnMantenimientoIn_Click(object sender, EventArgs e)
         {
             openChidForm(new FrmMantenimientoDet());
+        }
+
+        #endregion
+
+        #region SubMenuReportes
+
+        private void btnRFichaTecnicaIn_Click(object sender, EventArgs e)
+        {
+            //openChidForm(new FrmMantenimientoDet());
+        }
+
+        private void btnRListaClientesIn_Click(object sender, EventArgs e)
+        {
+            //openChidForm(new FrmMantenimientoDet());
+        }
+
+        private void btnRListaComprasIn_Click(object sender, EventArgs e)
+        {
+            //openChidForm(new FrmMantenimientoDet());
+        }
+
+        private void btnRListaVentasIn_Click(object sender, EventArgs e)
+        {
+            //openChidForm(new FrmMantenimientoDet());
+            ReporteFacturaVenta reporteFacturaVenta = new ReporteFacturaVenta();
+            reporteFacturaVenta.ShowDialog();
+        }
+
+        private void btnRreciboPagoin_Click(object sender, EventArgs e)
+        {
+            //openChidForm(new FrmMantenimientoDet());
+        }
+
+        private void btnRInventarioIn_Click(object sender, EventArgs e)
+        {
+            //openChidForm(new FrmMantenimientoDet());
         }
 
         #endregion

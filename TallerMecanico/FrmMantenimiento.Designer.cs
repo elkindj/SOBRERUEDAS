@@ -31,12 +31,12 @@ namespace TallerMecanico
         {
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDocumentoMec = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtApellidoMec = new System.Windows.Forms.TextBox();
+            this.txtNombreMec = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtDocumento = new System.Windows.Forms.TextBox();
@@ -54,11 +54,8 @@ namespace TallerMecanico
             this.label1 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnHistory = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -67,6 +64,12 @@ namespace TallerMecanico
             this.label13 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvProgramacion = new System.Windows.Forms.DataGridView();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mecanico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -88,12 +91,12 @@ namespace TallerMecanico
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.txtDocumentoMec);
             this.groupBox4.Controls.Add(this.label24);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.txtApellidoMec);
+            this.groupBox4.Controls.Add(this.txtNombreMec);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Location = new System.Drawing.Point(7, 278);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
@@ -103,13 +106,14 @@ namespace TallerMecanico
             this.groupBox4.TabIndex = 45;
             this.groupBox4.TabStop = false;
             // 
-            // textBox2
+            // txtDocumentoMec
             // 
-            this.textBox2.Location = new System.Drawing.Point(195, 34);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(280, 22);
-            this.textBox2.TabIndex = 17;
+            this.txtDocumentoMec.Location = new System.Drawing.Point(195, 34);
+            this.txtDocumentoMec.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDocumentoMec.Name = "txtDocumentoMec";
+            this.txtDocumentoMec.Size = new System.Drawing.Size(280, 22);
+            this.txtDocumentoMec.TabIndex = 17;
+            this.txtDocumentoMec.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDocumentoMec_KeyUp);
             // 
             // label24
             // 
@@ -143,23 +147,23 @@ namespace TallerMecanico
             this.label8.TabIndex = 21;
             this.label8.Text = "NUMERO  DOCUMENTO";
             // 
-            // textBox3
+            // txtApellidoMec
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(985, 30);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(267, 22);
-            this.textBox3.TabIndex = 19;
+            this.txtApellidoMec.Enabled = false;
+            this.txtApellidoMec.Location = new System.Drawing.Point(985, 30);
+            this.txtApellidoMec.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellidoMec.Name = "txtApellidoMec";
+            this.txtApellidoMec.Size = new System.Drawing.Size(267, 22);
+            this.txtApellidoMec.TabIndex = 19;
             // 
-            // textBox4
+            // txtNombreMec
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(573, 34);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(312, 22);
-            this.textBox4.TabIndex = 18;
+            this.txtNombreMec.Enabled = false;
+            this.txtNombreMec.Location = new System.Drawing.Point(573, 34);
+            this.txtNombreMec.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreMec.Name = "txtNombreMec";
+            this.txtNombreMec.Size = new System.Drawing.Size(312, 22);
+            this.txtNombreMec.TabIndex = 18;
             // 
             // label11
             // 
@@ -343,63 +347,33 @@ namespace TallerMecanico
             this.label12.TabIndex = 19;
             this.label12.Text = "MARCA";
             // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(975, 558);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(100, 28);
-            this.btnNuevo.TabIndex = 37;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(1106, 628);
+            this.btnSalir.Location = new System.Drawing.Point(1088, 532);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(100, 28);
+            this.btnSalir.Size = new System.Drawing.Size(198, 28);
             this.btnSalir.TabIndex = 51;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(1106, 558);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(100, 28);
-            this.btnActualizar.TabIndex = 38;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(927, 460);
+            this.btnGuardar.Location = new System.Drawing.Point(1088, 460);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 28);
+            this.btnGuardar.Size = new System.Drawing.Size(198, 28);
             this.btnGuardar.TabIndex = 39;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnHistory
-            // 
-            this.btnHistory.Location = new System.Drawing.Point(1034, 592);
-            this.btnHistory.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(100, 28);
-            this.btnHistory.TabIndex = 67;
-            this.btnHistory.Text = "Historia";
-            this.btnHistory.UseVisualStyleBackColor = true;
-            // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(1143, 592);
+            this.btnEditar.Location = new System.Drawing.Point(1088, 496);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(100, 28);
+            this.btnEditar.Size = new System.Drawing.Size(198, 28);
             this.btnEditar.TabIndex = 68;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -469,12 +443,73 @@ namespace TallerMecanico
             // dgvProgramacion
             // 
             this.dgvProgramacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProgramacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cliente,
+            this.Placa,
+            this.Mecanico,
+            this.Estado,
+            this.Fecha,
+            this.Observaciones});
             this.dgvProgramacion.Location = new System.Drawing.Point(18, 460);
             this.dgvProgramacion.Name = "dgvProgramacion";
             this.dgvProgramacion.RowHeadersWidth = 51;
             this.dgvProgramacion.RowTemplate.Height = 24;
-            this.dgvProgramacion.Size = new System.Drawing.Size(874, 196);
+            this.dgvProgramacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProgramacion.Size = new System.Drawing.Size(1063, 312);
             this.dgvProgramacion.TabIndex = 69;
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "Cliente";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.MinimumWidth = 6;
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            this.Cliente.Width = 125;
+            // 
+            // Placa
+            // 
+            this.Placa.DataPropertyName = "Placa";
+            this.Placa.HeaderText = "Placa";
+            this.Placa.MinimumWidth = 6;
+            this.Placa.Name = "Placa";
+            this.Placa.ReadOnly = true;
+            this.Placa.Width = 125;
+            // 
+            // Mecanico
+            // 
+            this.Mecanico.DataPropertyName = "Mecanico";
+            this.Mecanico.HeaderText = "Mecanico";
+            this.Mecanico.MinimumWidth = 6;
+            this.Mecanico.Name = "Mecanico";
+            this.Mecanico.Width = 125;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 125;
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "Fecha";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 125;
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.DataPropertyName = "Obs";
+            this.Observaciones.HeaderText = "Observaciones";
+            this.Observaciones.MinimumWidth = 6;
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.ReadOnly = true;
+            this.Observaciones.Width = 125;
             // 
             // FrmMantenimiento
             // 
@@ -484,14 +519,11 @@ namespace TallerMecanico
             this.AutoScrollMargin = new System.Drawing.Size(3, 5);
             this.AutoScrollMinSize = new System.Drawing.Size(1, 2);
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1317, 677);
+            this.ClientSize = new System.Drawing.Size(1317, 784);
             this.Controls.Add(this.dgvProgramacion);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnHistory);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
@@ -533,19 +565,16 @@ namespace TallerMecanico
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnHistory;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDocumentoMec;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtApellidoMec;
+        private System.Windows.Forms.TextBox txtNombreMec;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtClase;
         private System.Windows.Forms.TextBox txtObs;
@@ -553,5 +582,11 @@ namespace TallerMecanico
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dgvProgramacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Placa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mecanico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
     }
 }

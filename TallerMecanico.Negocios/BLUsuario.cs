@@ -19,6 +19,7 @@ namespace TallerMecanico.Negocios
         {
             List<Usuario> usu = new List<Usuario>();
             string contraseñTem = Encriptar(pContrsena);
+            //string con = DesEncriptar("MQAyADMANAA=");
 
             if (pUsuario != "" || pContrsena != "")
             {
