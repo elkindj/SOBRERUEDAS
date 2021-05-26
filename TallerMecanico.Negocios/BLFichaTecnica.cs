@@ -35,5 +35,10 @@ namespace TallerMecanico.Negocios
 			string Consecutivo = daoGeneral.ObeterConsecutivo("Mantenimiento");
 			return Consecutivo;
 		}
+		public List<FichaTecnica> Listar()
+		{
+			DAOFichaTecnica daoGeneral = new DAOFichaTecnica();
+			return daoGeneral.Listar();
+		}
 	}
 }

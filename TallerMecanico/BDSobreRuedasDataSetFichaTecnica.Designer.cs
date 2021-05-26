@@ -20,9 +20,9 @@ namespace TallerMecanico {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("BDSobreRuedasDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("BDSobreRuedasDataSetFichaTecnica")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class BDSobreRuedasDataSet1 : global::System.Data.DataSet {
+    public partial class BDSobreRuedasDataSetFichaTecnica : global::System.Data.DataSet {
         
         private ListarFichaTecnicaDataTable tableListarFichaTecnica;
         
@@ -30,7 +30,7 @@ namespace TallerMecanico {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public BDSobreRuedasDataSet1() {
+        public BDSobreRuedasDataSetFichaTecnica() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TallerMecanico {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected BDSobreRuedasDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected BDSobreRuedasDataSetFichaTecnica(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace TallerMecanico {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            BDSobreRuedasDataSet1 cln = ((BDSobreRuedasDataSet1)(base.Clone()));
+            BDSobreRuedasDataSetFichaTecnica cln = ((BDSobreRuedasDataSetFichaTecnica)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace TallerMecanico {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "BDSobreRuedasDataSet1";
+            this.DataSetName = "BDSobreRuedasDataSetFichaTecnica";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/BDSobreRuedasDataSet11.xsd";
+            this.Namespace = "http://tempuri.org/BDSobreRuedasDataSetFichaTecnica.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableListarFichaTecnica = new ListarFichaTecnicaDataTable();
@@ -225,7 +225,7 @@ namespace TallerMecanico {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            BDSobreRuedasDataSet1 ds = new BDSobreRuedasDataSet1();
+            BDSobreRuedasDataSetFichaTecnica ds = new BDSobreRuedasDataSetFichaTecnica();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -979,7 +979,7 @@ namespace TallerMecanico {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                BDSobreRuedasDataSet1 ds = new BDSobreRuedasDataSet1();
+                BDSobreRuedasDataSetFichaTecnica ds = new BDSobreRuedasDataSetFichaTecnica();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1973,7 +1973,7 @@ namespace TallerMecanico {
         }
     }
 }
-namespace TallerMecanico.BDSobreRuedasDataSet1TableAdapters {
+namespace TallerMecanico.BDSobreRuedasDataSetFichaTecnicaTableAdapters {
     
     
     /// <summary>
@@ -2154,7 +2154,7 @@ namespace TallerMecanico.BDSobreRuedasDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BDSobreRuedasDataSet1.ListarFichaTecnicaDataTable dataTable) {
+        public virtual int Fill(BDSobreRuedasDataSetFichaTecnica.ListarFichaTecnicaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2167,9 +2167,9 @@ namespace TallerMecanico.BDSobreRuedasDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BDSobreRuedasDataSet1.ListarFichaTecnicaDataTable GetData() {
+        public virtual BDSobreRuedasDataSetFichaTecnica.ListarFichaTecnicaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            BDSobreRuedasDataSet1.ListarFichaTecnicaDataTable dataTable = new BDSobreRuedasDataSet1.ListarFichaTecnicaDataTable();
+            BDSobreRuedasDataSetFichaTecnica.ListarFichaTecnicaDataTable dataTable = new BDSobreRuedasDataSetFichaTecnica.ListarFichaTecnicaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2243,7 +2243,7 @@ namespace TallerMecanico.BDSobreRuedasDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(BDSobreRuedasDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(BDSobreRuedasDataSetFichaTecnica dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -2253,7 +2253,7 @@ namespace TallerMecanico.BDSobreRuedasDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(BDSobreRuedasDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(BDSobreRuedasDataSetFichaTecnica dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -2263,7 +2263,7 @@ namespace TallerMecanico.BDSobreRuedasDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(BDSobreRuedasDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(BDSobreRuedasDataSetFichaTecnica dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -2297,7 +2297,7 @@ namespace TallerMecanico.BDSobreRuedasDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(BDSobreRuedasDataSet1 dataSet) {
+        public virtual int UpdateAll(BDSobreRuedasDataSetFichaTecnica dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

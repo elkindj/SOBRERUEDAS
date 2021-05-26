@@ -162,6 +162,56 @@ namespace TallerMecanico.Datos
             }
             return FichaTecnica;
         }
+        public List<FichaTecnica> Listar() { 
+            List<FichaTecnica> lista = new List<FichaTecnica>();
+            using (SqlConnection con = new SqlConnection(databaseConexion.CadenaConexion))
+            {
+                con.Open(); SqlCommand cmd = new SqlCommand("ListarFichaTecnica", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        FichaTecnica c = new FichaTecnica(
+                         (int)dr["IdConsecutivo"],
+                         (string)dr["FtTarjetaOperacion"],
+                         (string)dr["FtEstado"],
+                         (int)dr["FtNumRtmyG"],
+                         (int)dr["FtNumeroPolizaSOAT"],
+                         (int)dr["FtNumeroPolizaRCE"],
+                         (int)dr["FtLicenciaTransito"],
+                         (string)dr["FtEmisionGasesGasolina"],
+                         (string)dr["FtEmisionesGasesDiesel"],
+                         (string)dr["FtLucesPrincipal"],
+                         (string)dr["FtPruebaFreno"],
+                         (string)dr["FtAlineacion"],
+                         (string)dr["FtAdherencia"],
+                         (string)dr["FtEmisionRuido"],
+                         (string)dr["FtGrupoFreno"],
+                         (string)dr["FtGrupoSuspension"],
+                         (string)dr["FtGrupoDireccion"],
+                         (string)dr["FtRinLLanta"],
+                         (string)dr["FtGrupoLuces"],
+                         (string)dr["FtGrupoVidrio"],
+                         (string)dr["FtGrupoTransmision"],
+                         (string)dr["FtGrupoMotor"],
+                         (string)dr["FtRevisionInterior"],
+                         (string)dr["FtRevisionExterior"],
+                         (string)dr["FtApto"],
+                         (string)dr["FtEmpresa"],
+                         (int)dr["IdConductor"],
+                         (string)dr["FtInspectores"],
+                         (string)dr["FtUsuario"],
+                         (string)dr["FtUsuarioEdita"],
+                         (DateTime)dr["FtFechaReg"],
+                         (DateTime)dr["FtFechaEdita"]);
+                        lista.Add(c);
+                    }
+                }
+            }
+            return lista;
+        }
 
     }
 }
