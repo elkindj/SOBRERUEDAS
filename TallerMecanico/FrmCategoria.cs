@@ -63,7 +63,7 @@ namespace TallerMecanico
         private void ActivarButton(bool Estado)
         {
             //btnNuevo.Enabled = Estado;
-            btnGrabar.Enabled = Estado;
+            btnGuardar.Enabled = Estado;
             //btnEliminar.Enabled = Estado;
             btnSalir.Enabled = Estado;
         }
@@ -75,7 +75,7 @@ namespace TallerMecanico
 
         private void CargarDatos()
         {
-            btnGrabar.Enabled = false;
+            btnGuardar.Enabled = false;
             btnEditar.Enabled = false;
             if (lista == null)
             {
@@ -107,7 +107,7 @@ namespace TallerMecanico
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Close();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -132,62 +132,12 @@ namespace TallerMecanico
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            _nuevo = true;
-            ActivarControlDatos(gbDatos, true);
-            btnEditar.Text = "Cancelar";
-            btnEditar.Enabled = true;
-            ActivarButton(true);
-            LimpiarControl(gbDatos);
-            //txtCodigo.Focus();
-            // textBox1.Focus();
 
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            string user = LoadUser();
-            int n = -1;
-            if (_nuevo)
-            {
-                c = new Categoria(0, txtCodigo.Text,
-                txtNombre.Text,
-                txtObservacion.Text,
-                checkBoxEstado.Checked,
-                user,
-                user,
-                DateTime.Now
-                );
-                n = blCategoria.Insertar(c);
-            }
-            else
-            {
-                c.Codigo = txtCodigo.Text;
-                c.Nombre = txtNombre.Text;
-                c.Observacion = txtObservacion.Text;
-                c.Estado = checkBoxEstado.Checked;
-                c.UsuarioReg = user;
-                c.UsuarioEdita = user;
-                //c.FechaEdita = DateTime.Now;
-                c.FechaReg = DateTime.Now;
-                n = blCategoria.Actualizar(c);
-            }
-            if (n > 0)
-            {
-                MessageBox.Show("Datos grabados correctamente", "Aviso",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ActivarControlDatos(gbDatos, false);
-                ActivarButton(true);
-                dgvDatos.Enabled = true;
-                LimpiarControl(gbDatos);
-                btnEditar.Text = "Editar";
-                lista = blCategoria.Listar();
-                CargarDatos();
-            }
-            else
-            {
-                MessageBox.Show("Error al grabar", "Aviso",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
 
@@ -213,7 +163,7 @@ namespace TallerMecanico
                     txtObservacion.Text = c.Observacion;
                     ActivarControlDatos(gbDatos, true);
                     ActivarButton(false);
-                    btnGrabar.Enabled = true;
+                    btnGuardar.Enabled = true;
                     dgvDatos.Enabled = false;
                     btnEditar.Text = "Cancelar";
                 }
@@ -301,6 +251,99 @@ namespace TallerMecanico
         private void btnGrabar_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            _nuevo = true;
+            ActivarControlDatos(gbDatos, true);
+            btnEditar.Text = "Cancelar";
+            btnEditar.Enabled = true;
+            ActivarButton(true);
+            LimpiarControl(gbDatos);
+            //txtCodigo.Focus();
+            // textBox1.Focus();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string user = LoadUser();
+            int n = -1;
+            if (_nuevo)
+            {
+                c = new Categoria(0, txtCodigo.Text,
+                txtNombre.Text,
+                txtObservacion.Text,
+                checkBoxEstado.Checked,
+                user,
+                user,
+                DateTime.Now
+                );
+                n = blCategoria.Insertar(c);
+            }
+            else
+            {
+                c.Codigo = txtCodigo.Text;
+                c.Nombre = txtNombre.Text;
+                c.Observacion = txtObservacion.Text;
+                c.Estado = checkBoxEstado.Checked;
+                c.UsuarioReg = user;
+                c.UsuarioEdita = user;
+                //c.FechaEdita = DateTime.Now;
+                c.FechaReg = DateTime.Now;
+                n = blCategoria.Actualizar(c);
+            }
+            if (n > 0)
+            {
+                MessageBox.Show("Datos grabados correctamente", "Aviso",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ActivarControlDatos(gbDatos, false);
+                ActivarButton(true);
+                dgvDatos.Enabled = true;
+                LimpiarControl(gbDatos);
+                btnEditar.Text = "Editar";
+                lista = blCategoria.Listar();
+                CargarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Error al grabar", "Aviso",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEditar_Click_2(object sender, EventArgs e)
+        {
+            _nuevo = false;
+            if (btnEditar.Text == "Cancelar")
+            {
+                LimpiarControl(gbDatos);
+                ActivarControlDatos(gbDatos, false);
+                ActivarButton(true);
+                dgvDatos.Enabled = true;
+                btnEditar.Text = "Editar";
+            }
+            else
+            {
+                if (dgvDatos.RowCount > 0)
+                {
+                    c = blCategoria.CategoriaTraerPorId((int)dgvDatos[0, dgvDatos.
+                    CurrentRow.Index].Value);
+                    txtCodigo.Text = c.Codigo;
+                    txtNombre.Text = c.Nombre;
+                    txtObservacion.Text = c.Observacion;
+                    ActivarControlDatos(gbDatos, true);
+                    ActivarButton(false);
+                    btnGuardar.Enabled = true;
+                    dgvDatos.Enabled = false;
+                    btnEditar.Text = "Cancelar";
+                }
+            }
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

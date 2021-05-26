@@ -30,7 +30,6 @@ namespace TallerMecanico
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
@@ -69,39 +68,25 @@ namespace TallerMecanico
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.btnNuevo);
-            this.groupBox1.Location = new System.Drawing.Point(577, 119);
+            this.groupBox1.Location = new System.Drawing.Point(577, 88);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 125);
+            this.groupBox1.Size = new System.Drawing.Size(128, 140);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCancelar.IconColor = System.Drawing.Color.Black;
-            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancelar.Location = new System.Drawing.Point(16, 49);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
             // btnEditar
             // 
             this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnEditar.IconColor = System.Drawing.Color.Black;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditar.Location = new System.Drawing.Point(97, 49);
+            this.btnEditar.Location = new System.Drawing.Point(6, 77);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(116, 23);
             this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -112,9 +97,9 @@ namespace TallerMecanico
             this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnGuardar.IconColor = System.Drawing.Color.Black;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardar.Location = new System.Drawing.Point(97, 18);
+            this.btnGuardar.Location = new System.Drawing.Point(6, 48);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(116, 23);
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -125,21 +110,22 @@ namespace TallerMecanico
             this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSalir.IconColor = System.Drawing.Color.Black;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.Location = new System.Drawing.Point(59, 78);
+            this.btnSalir.Location = new System.Drawing.Point(6, 106);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(116, 23);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnNuevo
             // 
             this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnNuevo.IconColor = System.Drawing.Color.Black;
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevo.Location = new System.Drawing.Point(15, 19);
+            this.btnNuevo.Location = new System.Drawing.Point(6, 19);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.Size = new System.Drawing.Size(116, 23);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -175,7 +161,7 @@ namespace TallerMecanico
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(10, 123);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 15);
+            this.label8.Size = new System.Drawing.Size(42, 13);
             this.label8.TabIndex = 15;
             this.label8.Text = "Modelo";
             // 
@@ -198,7 +184,7 @@ namespace TallerMecanico
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(10, 97);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 15);
+            this.label7.Size = new System.Drawing.Size(64, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "Combustible";
             // 
@@ -215,7 +201,7 @@ namespace TallerMecanico
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(184, 71);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 15);
+            this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Linea";
             // 
@@ -231,7 +217,7 @@ namespace TallerMecanico
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(10, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 15);
+            this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Marca";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -241,7 +227,7 @@ namespace TallerMecanico
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 15);
+            this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Placa";
             // 
@@ -250,7 +236,7 @@ namespace TallerMecanico
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(200, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
+            this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Clase";
             // 
@@ -259,7 +245,7 @@ namespace TallerMecanico
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(151, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 15);
+            this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Codigo Cliente";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -269,7 +255,7 @@ namespace TallerMecanico
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 15);
+            this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Codigo Vehiculo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -431,7 +417,6 @@ namespace TallerMecanico
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton btnEditar;
-        private FontAwesome.Sharp.IconButton btnCancelar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtModelo;

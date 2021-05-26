@@ -143,6 +143,13 @@ namespace TallerMecanico
 
         }
 
+        private void ActivarButton(bool Estado)
+        {
+            //btnNuevo.Enabled = Estado;
+            btnGuardar.Enabled = Estado;
+            //btnEliminar.Enabled = Estado;
+            btnSalir.Enabled = Estado;
+        }
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -156,7 +163,16 @@ namespace TallerMecanico
         private void btnEditar_Click(object sender, EventArgs e)
         {
             _nuevo = false;
-            
+            if (btnEditar.Text == "Cancelar")
+            {
+                LimpiarControl(gbDatos);
+                ActivarControlDatos(gbDatos, false);
+                ActivarButton(true);
+                dgvDatos.Enabled = true;
+                btnEditar.Text = "Editar";
+            }
+            else
+            {
                 if (dgvDatos.RowCount > 0)
                 {
                     vehiculo = blVehiculo.VehiculoTraerPorId((int)dgvDatos[0, dgvDatos.
@@ -175,8 +191,10 @@ namespace TallerMecanico
                     //ActivarButton(false);
                     //btnGrabar.Enabled = true;
                     dgvDatos.Enabled = false;
-                    //btnEditar.Text = "Cancelar";
+                    btnEditar.Text = "Cancelar";
                 }
+            }
+           
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -194,6 +212,11 @@ namespace TallerMecanico
                     ((TextBox)item).Clear();
                 }
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

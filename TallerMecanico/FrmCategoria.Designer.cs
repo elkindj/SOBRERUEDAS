@@ -29,7 +29,6 @@ namespace TallerMecanico
         /// </summary>
         private void InitializeComponent()
         {
-            FontAwesome.Sharp.IconButton btnNuevo;
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.checkBoxEstado = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,36 +40,20 @@ namespace TallerMecanico
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gbControl = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.btnGrabar = new FontAwesome.Sharp.IconButton();
-            this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            btnNuevo = new FontAwesome.Sharp.IconButton();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.gbDatos.SuspendLayout();
             this.gbControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnNuevo
-            // 
-            btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnNuevo.ForeColor = System.Drawing.Color.Transparent;
-            btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            btnNuevo.IconColor = System.Drawing.Color.MidnightBlue;
-            btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            btnNuevo.IconSize = 30;
-            btnNuevo.Location = new System.Drawing.Point(6, 30);
-            btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new System.Drawing.Size(30, 30);
-            btnNuevo.TabIndex = 5;
-            btnNuevo.UseVisualStyleBackColor = false;
             // 
             // gbDatos
             // 
@@ -86,7 +69,7 @@ namespace TallerMecanico
             this.gbDatos.ForeColor = System.Drawing.Color.MidnightBlue;
             this.gbDatos.Location = new System.Drawing.Point(17, 42);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(639, 244);
+            this.gbDatos.Size = new System.Drawing.Size(340, 244);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Formulario";
@@ -189,79 +172,19 @@ namespace TallerMecanico
             // 
             this.gbControl.BackColor = System.Drawing.Color.AliceBlue;
             this.gbControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gbControl.Controls.Add(this.btnCancelar);
             this.gbControl.Controls.Add(this.btnSalir);
-            this.gbControl.Controls.Add(this.btnGrabar);
             this.gbControl.Controls.Add(this.btnEditar);
-            this.gbControl.Controls.Add(btnNuevo);
+            this.gbControl.Controls.Add(this.btnGuardar);
+            this.gbControl.Controls.Add(this.btnNuevo);
             this.gbControl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbControl.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.gbControl.Location = new System.Drawing.Point(662, 42);
+            this.gbControl.Location = new System.Drawing.Point(379, 54);
             this.gbControl.Name = "gbControl";
-            this.gbControl.Size = new System.Drawing.Size(188, 69);
+            this.gbControl.Size = new System.Drawing.Size(188, 178);
             this.gbControl.TabIndex = 1;
             this.gbControl.TabStop = false;
             this.gbControl.Text = "Acciones";
             this.gbControl.Enter += new System.EventHandler(this.gbControl_Enter);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.btnCancelar.IconColor = System.Drawing.Color.MidnightBlue;
-            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnCancelar.IconSize = 30;
-            this.btnCancelar.Location = new System.Drawing.Point(114, 30);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(30, 30);
-            this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnSalir.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.btnSalir.IconColor = System.Drawing.Color.MidnightBlue;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnSalir.IconSize = 30;
-            this.btnSalir.Location = new System.Drawing.Point(150, 30);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(30, 30);
-            this.btnSalir.TabIndex = 8;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // btnGrabar
-            // 
-            this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrabar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnGrabar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.btnGrabar.IconColor = System.Drawing.Color.MidnightBlue;
-            this.btnGrabar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnGrabar.IconSize = 30;
-            this.btnGrabar.Location = new System.Drawing.Point(78, 30);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(30, 30);
-            this.btnGrabar.TabIndex = 7;
-            this.btnGrabar.UseVisualStyleBackColor = true;
-            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click_1);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnEditar.IconColor = System.Drawing.Color.MidnightBlue;
-            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnEditar.IconSize = 30;
-            this.btnEditar.Location = new System.Drawing.Point(42, 30);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(30, 30);
-            this.btnEditar.TabIndex = 6;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
             // dgvDatos
             // 
@@ -278,7 +201,7 @@ namespace TallerMecanico
             this.dgvDatos.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvDatos.Location = new System.Drawing.Point(17, 303);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(833, 223);
+            this.dgvDatos.Size = new System.Drawing.Size(622, 223);
             this.dgvDatos.TabIndex = 2;
             this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
             // 
@@ -310,12 +233,60 @@ namespace TallerMecanico
             this.estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Location = new System.Drawing.Point(6, 31);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(176, 30);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(6, 65);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(176, 30);
+            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(6, 101);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(176, 30);
+            this.btnEditar.TabIndex = 2;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_2);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(6, 137);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(175, 30);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(862, 540);
+            this.ClientSize = new System.Drawing.Size(651, 540);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.gbControl);
             this.Controls.Add(this.label4);
@@ -352,9 +323,9 @@ namespace TallerMecanico
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estado;
         private System.Windows.Forms.CheckBox checkBoxEstado;
-        private FontAwesome.Sharp.IconButton btnEditar;
-        private FontAwesome.Sharp.IconButton btnGrabar;
-        private FontAwesome.Sharp.IconButton btnSalir;
-        private FontAwesome.Sharp.IconButton btnCancelar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
