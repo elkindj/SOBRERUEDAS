@@ -175,34 +175,34 @@ namespace TallerMecanico
 
         private void btnRFichaTecnicaIn_Click(object sender, EventArgs e)
         {
-            //openChidForm(new FrmMantenimientoDet());
+            openChidForm(new ReporteFichaTecn());
         }
 
         private void btnRListaClientesIn_Click(object sender, EventArgs e)
         {
-            //openChidForm(new FrmMantenimientoDet());
+            openChidForm(new FrmReport());
         }
 
         private void btnRListaComprasIn_Click(object sender, EventArgs e)
         {
-            //openChidForm(new FrmMantenimientoDet());
+           // openChidForm(new FrmMantenimientoDet());
         }
 
         private void btnRListaVentasIn_Click(object sender, EventArgs e)
         {
-            //openChidForm(new FrmMantenimientoDet());
-            ReporteFacturaVenta reporteFacturaVenta = new ReporteFacturaVenta();
-            reporteFacturaVenta.ShowDialog();
+            openChidForm(new ReporteFacturaVenta());
+           // ReporteFacturaVenta reporteFacturaVenta = new ReporteFacturaVenta();
+           // reporteFacturaVenta.ShowDialog();
         }
 
         private void btnRreciboPagoin_Click(object sender, EventArgs e)
         {
-            //openChidForm(new FrmMantenimientoDet());
+            openChidForm(new ReporteFacturaVenta());
         }
 
         private void btnRInventarioIn_Click(object sender, EventArgs e)
         {
-            //openChidForm(new FrmMantenimientoDet());
+            openChidForm(new ReporteProducto());
         }
 
         #endregion
